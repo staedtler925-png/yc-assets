@@ -50,10 +50,10 @@ function initKazusaGallery() {
     // HTML構築
     container.innerHTML = `
         <div class="yc-gallery-main-container" style="overflow:hidden; position:relative; width:100%;">
-            <div class="yc-gallery-track" style="display:flex; transition:transform 0.4s ease;">
+            <div class="yc-gallery-track" style="display:flex; flex-wrap:nowrap; transition:transform 0.4s ease;">
                 ${srcList.map(src => `
                     <div style="flex:0 0 100%;">
-                        <img src="${src}" style="width:100%; display:block;">
+                        <img src="${src}" style="width:100%; display:block; pointer-events:none;">
                     </div>
                 `).join('')}
             </div>
