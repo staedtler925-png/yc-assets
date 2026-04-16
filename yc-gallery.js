@@ -548,7 +548,7 @@
                     </div>
                 </div>
             </div>
-        `
+        `,
         'custom': `
             <div class="yc-custom-wrapper">
                 <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
@@ -626,7 +626,7 @@
                     <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn-orange">制作のご相談はこちら</a>
                 </div>
             </div>
-        `
+        `,
     };
 
     // ==========================================
