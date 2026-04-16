@@ -1211,3 +1211,25 @@ a.yc-btn-orange {
     background: #2e7d32;
     color: #fff;
 }
+
+/* PC用の列幅指定をスマホで解除 */
+.yc-price-table-scroll th:nth-child(1),
+.yc-price-table-scroll td:nth-child(1),
+.yc-price-table-scroll th:nth-child(2),
+.yc-price-table-scroll td:nth-child(2),
+.yc-price-table-scroll th:nth-child(3),
+.yc-price-table-scroll td:nth-child(3),
+.yc-price-table-scroll th:nth-child(4),
+.yc-price-table-scroll td:nth-child(4) {
+    width: auto !important;
+    max-width: none !important;
+}
+
+.yc-price-table-scroll td:nth-child(1) {
+    white-space: nowrap;
+}
+
+.yc-price-table-scroll td:nth-child(2),
+.yc-price-table-scroll td:nth-child(4) {
+    word-break: normal;
+}
