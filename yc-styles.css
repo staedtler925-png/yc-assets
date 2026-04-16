@@ -905,13 +905,13 @@ a.yc-btn-orange {
 }
 
 .yc-price-table-scroll th {
-    background: #ED4700;
+    background: #0c4d9c;
     color: #fff;
     font-weight: bold;
 }
 
 .yc-price-table-scroll tbody tr:hover {
-    background: #fdf5f2;
+    background: #a0a09f;
 }
 
 /* 列幅 */
