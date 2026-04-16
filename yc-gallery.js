@@ -5,7 +5,7 @@
 function initKazusaGallery() {
     console.log("スライダー初期化開始");
 
-    const rawImages = document.querySelectorAll('.itemImgSlide img, #slideImg img');
+    const rawImages = document.querySelectorAll('img');
 
     if (!rawImages || rawImages.length === 0) {
         console.log("画像未検出 → 中断");
