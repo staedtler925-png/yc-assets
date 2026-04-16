@@ -1288,3 +1288,73 @@ a.yc-btn-orange {
    }
 
 }
+
+/* =========================================
+   16. price table polish
+   視認性・タップ感の微調整
+========================================= */
+
+/* --- PC / 共通 --- */
+
+/* 分類を少し見やすく */
+.yc-price-table-scroll td:nth-child(1) {
+    letter-spacing: 0.03em;
+}
+
+/* 価格の視認性アップ */
+.yc-price-table-scroll td:nth-child(3) {
+    font-size: 15px;
+    letter-spacing: 0.02em;
+}
+
+/* hoverを少し自然に */
+.yc-price-table-scroll tbody tr:hover,
+.yc-price-table-scroll-bike tbody tr:hover {
+    background: #f3f6fa;
+}
+
+/* --- スマホ / タブレット --- */
+@media (max-width: 768px) {
+
+    /* 分類の見やすさアップ */
+    .yc-price-table-scroll td:nth-child(1) {
+        letter-spacing: 0.04em;
+    }
+
+    /* 価格を少しだけ強調 */
+    .yc-price-table-scroll td:nth-child(3) {
+        font-size: 15px;
+        letter-spacing: 0.02em;
+    }
+
+    /* タップ時の反応 */
+    .yc-price-table-scroll tbody tr:active,
+    .yc-price-table-scroll-bike tbody tr:active {
+        background: #eef3f8;
+    }
+}
+
+/* --- 超小型デバイス --- */
+@media (max-width: 400px) {
+
+    /* 横スクロール時も価格を見やすく */
+    .yc-price-table-scroll td:nth-child(3) {
+        font-size: 14px;
+        letter-spacing: 0.02em;
+    }
+
+    /* 備考だけ折り返す */
+    .yc-price-table-scroll td:nth-child(4) {
+        white-space: normal;
+        word-break: break-word;
+        color: #777;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* タップ時の反応 */
+    .yc-price-table-scroll tbody tr:active,
+    .yc-price-table-scroll-bike tbody tr:active {
+        background: #eef3f8;
+    }
+}
