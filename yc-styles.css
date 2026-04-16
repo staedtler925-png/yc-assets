@@ -905,7 +905,7 @@ a.yc-btn-orange {
 }
 
 .yc-price-table-scroll th {
-    background: #2F2E2E;
+    background: #ED4700;
     color: #fff;
     font-weight: bold;
 }
@@ -969,34 +969,78 @@ a.yc-btn-orange {
         line-height: 1.9;
     }
 
-    .yc-price-table-scroll tbody {
-        max-height: 60vh;
+    .yc-price-table-wrap {
+        border: none;
     }
 
+    .yc-price-table-scroll,
+    .yc-price-table-scroll thead,
+    .yc-price-table-scroll tbody,
+    .yc-price-table-scroll tr,
     .yc-price-table-scroll th,
     .yc-price-table-scroll td {
-        padding: 10px 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .yc-price-table-scroll thead {
+        display: none;
+    }
+
+    .yc-price-table-scroll tbody {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .yc-price-table-scroll tbody tr {
+        display: grid;
+        grid-template-columns: 72px 1fr auto;
+        grid-template-areas:
+            "cat work price"
+            ". note note";
+        gap: 6px 10px;
+        padding: 12px;
+        margin-bottom: 12px;
+        border: 1px solid #eee;
+        background: #fff;
+    }
+
+    .yc-price-table-scroll td {
+        padding: 0;
+        border: none;
         font-size: 13px;
+        line-height: 1.6;
     }
 
-    .yc-price-table-scroll th:nth-child(1),
     .yc-price-table-scroll td:nth-child(1) {
-        width: 18%;
+        grid-area: cat;
+        width: auto;
+        color: #666;
+        font-weight: bold;
+        font-size: 12px;
     }
 
-    .yc-price-table-scroll th:nth-child(2),
     .yc-price-table-scroll td:nth-child(2) {
-        width: 34%;
+        grid-area: work;
+        width: auto;
+        color: #2F2E2E;
     }
 
-    .yc-price-table-scroll th:nth-child(3),
     .yc-price-table-scroll td:nth-child(3) {
-        width: 20%;
+        grid-area: price;
+        width: auto;
+        white-space: nowrap;
+        color: #ED4700;
+        font-weight: bold;
+        text-align: right;
     }
 
-    .yc-price-table-scroll th:nth-child(4),
     .yc-price-table-scroll td:nth-child(4) {
-        width: 28%;
+        grid-area: note;
+        width: auto;
+        color: #777;
+        font-size: 12px;
+        margin-top: 2px;
     }
 
     .yc-price-table-cta .yc-btn-orange {
