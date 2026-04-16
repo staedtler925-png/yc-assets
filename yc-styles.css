@@ -1,29 +1,52 @@
-/* 1. 共通スタイル・既存干渉の削除 */
-.main, .about-content, h2.title, .entry-title, #fixedHeader {
+/* =========================================
+   YANAGI CYCLE ABOUT SPA styles
+   安全寄りフル版
+========================================= */
+
+/* 1. 既存ABOUT本文の非表示
+   必要最小限に留めつつ、今の表示を維持 */
+.main,
+.about-content,
+#fixedHeader {
     display: none !important;
 }
 
+/* 既存テーマ側のABOUTタイトル類が残る場合の保険 */
+h2.title,
+.entry-title {
+    display: none !important;
+}
+
+/* 2. ルート */
 #yc-router-root {
     background: #fff;
     color: #333;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* 2. モーダル拡大（共通） */
+#yc-router-root *,
+#yc-router-root *::before,
+#yc-router-root *::after {
+    box-sizing: border-box;
+}
+
+/* 3. モーダル */
 #ycModal {
     display: none;
     position: fixed;
     z-index: 10000;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: center;
     cursor: zoom-out;
+    padding: 20px;
 }
 
 #ycModal img {
@@ -31,10 +54,10 @@
     max-height: 95%;
     object-fit: contain;
     background: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* 3. レイアウト共通 */
+/* 4. 一覧・共通ラッパー */
 .yc-wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -47,7 +70,7 @@
     }
 }
 
-/* 4. 一覧ページ */
+/* 5. 一覧ページ */
 .yc-grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -72,12 +95,13 @@
     font-weight: inherit;
     margin: 0;
     display: inline;
+    line-height: 1.5;
 }
 
 .yc-model-text p {
     font-size: 14px;
     color: #605E5E;
-    line-height: 1.8em;
+    line-height: 1.8;
     margin-top: 20px;
     text-align: center;
     font-weight: normal;
@@ -88,9 +112,14 @@
     color: inherit;
 }
 
+.yc-btn-detail:hover {
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
     .yc-model-section {
         flex: 0 0 100%;
+        max-width: 100%;
         margin-bottom: 50px;
     }
 
@@ -99,26 +128,30 @@
     }
 }
 
-/* 5. ギャラリー共通 */
+/* 6. ギャラリー共通 */
 .yc-gallery {
     margin-bottom: 60px;
 }
 
-.yc-gallery-main {
+#yc-router-root .yc-gallery-main {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden !important;
     background: #f5f5f5;
 }
 
-.yc-gallery-main-track {
-    display: flex;
+#yc-router-root .yc-gallery-main-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    transform: translateX(0);
 }
 
-.yc-gallery-main-slide {
-    min-width: 100%;
+#yc-router-root .yc-gallery-main-slide {
+    min-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
     box-sizing: border-box;
 }
 
@@ -134,7 +167,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     color: #fff;
     border: none;
     width: 44px;
@@ -146,11 +179,13 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
+    padding: 0;
+    line-height: 1;
 }
 
 .yc-gallery-prev:hover,
 .yc-gallery-next:hover {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .yc-gallery-prev {
@@ -189,7 +224,9 @@
     gap: 8px;
     padding: 12px 0 0;
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .yc-gallery-thumbs::-webkit-scrollbar {
@@ -198,12 +235,14 @@
 
 .yc-gallery-thumb {
     flex: 0 0 72px;
+    width: 72px;
     height: 72px;
     object-fit: cover;
     cursor: pointer;
     border: 2px solid transparent;
     opacity: 0.6;
     transition: border-color 0.2s, opacity 0.2s;
+    display: block;
 }
 
 .yc-gallery-thumb.is-active {
@@ -215,9 +254,15 @@
     .yc-gallery-main-slide img {
         height: 280px;
     }
+
+    .yc-gallery-prev,
+    .yc-gallery-next {
+        width: 40px;
+        height: 40px;
+    }
 }
 
-/* 6. 詳細ページ共通 */
+/* 7. 詳細ページ共通 */
 .yc-detail-wrapper {
     background: #fff;
     color: #333;
@@ -238,26 +283,36 @@
     letter-spacing: 0.2em;
 }
 
+.yc-back-btn:hover {
+    color: #ED4700;
+}
+
 .yc-detail-head h1 {
-    font-family: 'Chelsea Market', cursive;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     font-size: 34px;
     color: #ED4700;
     text-align: center;
     margin: 20px 0 40px;
+    line-height: 1.3;
+    font-weight: 700;
+    padding: 0 20px;
 }
 
 .yc-detail-main {
     display: flex;
     gap: 50px;
     padding: 0 20px;
+    align-items: flex-start;
 }
 
 .yc-description-col {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .yc-side-col {
     width: 320px;
+    min-width: 0;
 }
 
 .yc-description-col h2 {
@@ -265,6 +320,7 @@
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
+    line-height: 1.5;
 }
 
 .yc-description-col h3 {
@@ -272,11 +328,12 @@
     color: #ED4700;
     margin: 30px 0 10px;
     font-weight: bold;
+    line-height: 1.6;
 }
 
 .yc-description-col p {
     font-size: 15px;
-    line-height: 2.0;
+    line-height: 2;
     margin-bottom: 15px;
 }
 
@@ -290,11 +347,14 @@
     padding: 12px 5px;
     border-bottom: 1px solid #eee;
     font-size: 14px;
+    vertical-align: top;
+    line-height: 1.7;
 }
 
 .yc-price {
     font-size: 14px;
     margin-bottom: 25px;
+    line-height: 1.7;
 }
 
 .yc-price span {
@@ -302,7 +362,9 @@
     font-weight: bold;
 }
 
-.yc-btn {
+.yc-btn,
+a.yc-btn,
+a.yc-btn-orange {
     display: block;
     width: 100%;
     padding: 18px 0;
@@ -311,6 +373,7 @@
     font-weight: bold;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: none;
 }
 
 .yc-btn-orange {
@@ -318,10 +381,17 @@
     color: #fff;
 }
 
+.yc-btn-orange:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+/* 8. QUIET系 5:5 */
 .yc-detail-wrapper-equal .yc-detail-main {
     display: flex;
     gap: 40px;
     padding: 0 20px;
+    align-items: flex-start;
 }
 
 .yc-detail-wrapper-equal .yc-description-col,
@@ -331,12 +401,177 @@
     min-width: 0;
 }
 
+/* 9. custom */
+.yc-custom-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+    background: #fff;
+    color: #333;
+    text-align: left;
+}
+
+.yc-custom-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.yc-custom-hero h1 {
+    font-size: 40px;
+    color: #ED4700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.yc-custom-hero p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.yc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.yc-step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.yc-step-num {
+    flex: 0 0 48px;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.yc-step-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.yc-step-body h2 {
+    font-size: 22px;
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.yc-step-body p {
+    font-size: 15px;
+    line-height: 2;
+    margin: 0 0 12px;
+}
+
+.yc-step-body p.en,
+.yc-custom-price .en {
+    color: #777;
+}
+
+.yc-custom-price {
+    margin-top: 60px;
+    padding: 32px 24px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.yc-custom-price h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.yc-price-num {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ED4700;
+    margin: 20px 0;
+}
+
+.yc-custom-price p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.yc-custom-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.yc-custom-cta .yc-btn-orange {
+    display: inline-block;
+    width: auto;
+    min-width: 280px;
+    padding: 18px 28px;
+}
+
+/* 10. レスポンシブ */
 @media (max-width: 800px) {
-    .yc-detail-main {
-        flex-direction: column;
+    .yc-detail-head h1 {
+        font-size: 26px;
+        margin: 10px 0 30px;
     }
 
-    .yc-side-col {
+    .yc-detail-main,
+    .yc-detail-wrapper-equal .yc-detail-main {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .yc-side-col,
+    .yc-detail-wrapper-equal .yc-side-col {
         width: 100%;
+    }
+
+    .yc-back-nav {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .yc-custom-wrapper {
+        padding: 40px 15px 70px;
+    }
+
+    .yc-custom-hero h1 {
+        font-size: 30px;
+    }
+
+    .yc-custom-hero p {
+        font-size: 15px;
+    }
+
+    .yc-step {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+    .yc-step-num {
+        flex: none;
+        font-size: 24px;
+    }
+
+    .yc-step-body h2 {
+        font-size: 20px;
+    }
+
+    .yc-custom-price {
+        padding: 24px 16px;
+    }
+
+    .yc-custom-price h2 {
+        font-size: 24px;
+    }
+
+    .yc-price-num {
+        font-size: 28px;
+    }
+
+    .yc-custom-cta .yc-btn-orange {
+        width: 100%;
+        min-width: 0;
     }
 }
