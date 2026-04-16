@@ -549,6 +549,84 @@
                 </div>
             </div>
         `
+        'custom': `
+            <div class="yc-custom-wrapper">
+                <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
+        
+                <div class="yc-custom-hero">
+                    <h1>CUSTOM FRAME</h1>
+                    <p>YANAGI QUIETなどのスタンダードモデル以外はこちら。<br>あなたの理想の自転車を聞かせてください。</p>
+                </div>
+        
+                <div class="yc-steps">
+                    <div class="yc-step">
+                        <div class="yc-step-num">❶</div>
+                        <div class="yc-step-body">
+                            <h2>理想の一台について、お話を聞かせてください。</h2>
+                            <p>オーダーメイドは難しく敷居が高いと思われがちですが、専門的な知識は必要ありません。どのようなコンセプト・車種であれば理想の一台になるのかを話し合いましょう。</p>
+                            <p class="en">Made-to-order is difficult and seems to be a high threshold, but specialized knowledge is unnecessary. Let's discuss what concept and model would make your ideal bicycle.</p>
+                        </div>
+                    </div>
+        
+                    <div class="yc-step">
+                        <div class="yc-step-num">❷</div>
+                        <div class="yc-step-body">
+                            <h2>理想の一台を設計。</h2>
+                            <p>CADシステムを使用して理想の一台のための設計をします。設計は体に100％フィット。コンセプトに忠実で「走るフレーム」を設計します。</p>
+                            <p class="en">Using a CAD system, we design your ideal bicycle — a frame that fits your body 100% and stays true to the concept.</p>
+                        </div>
+                    </div>
+        
+                    <div class="yc-step">
+                        <div class="yc-step-num">❸</div>
+                        <div class="yc-step-body">
+                            <h2>フレームの素材の選定。</h2>
+                            <p>フレームビルディングに使用する素材はクロモリ（クロムモリブデン鋼）のチューブ。重量があって丈夫なものから、乗った瞬間その軽さに驚くようなものまで。コンセプトと車種に最適なものを各チューブメーカーより選び出します。</p>
+                            <p class="en">The material used for frame building is chromoly tubing. From heavier and durable options to surprisingly lightweight ones — we select the best from each tube manufacturer to match your concept.</p>
+                        </div>
+                    </div>
+        
+                    <div class="yc-step">
+                        <div class="yc-step-num">❹</div>
+                        <div class="yc-step-body">
+                            <h2>フレーム製作。</h2>
+                            <p>フレームビルダーが丹精を込めて製作します。製作にはある一定期間を要しますので、その間に制作風景を見に来ていただくのも良いかも知れません。製作の経過をご自身の目で見られるのも、オーダーメイドならではです。</p>
+                            <p class="en">Our frame builder crafts your frame with great care. Since production takes time, you're welcome to visit and see the work in progress — a unique privilege of ordering custom.</p>
+                        </div>
+                    </div>
+        
+                    <div class="yc-step">
+                        <div class="yc-step-num">❺</div>
+                        <div class="yc-step-body">
+                            <h2>ペインティング。</h2>
+                            <p>色の選択は無限大。当店にある色見本から選んで頂いても結構ですし、逆にそれをお持ち込みになっても結構です。さらには、イメージを伝えてもらうだけでも。例えばある風景に映えるカラーリング、なんて指定でも面白いかもしれません。</p>
+                            <p class="en">The choice of color is infinite. Pick from our samples, bring your own reference, or simply describe an image — even something like "colors that suit a certain landscape" works perfectly.</p>
+                        </div>
+                    </div>
+        
+                    <div class="yc-step">
+                        <div class="yc-step-num">❻</div>
+                        <div class="yc-step-body">
+                            <h2>組み付け。</h2>
+                            <p>当店はフレーム工房である以前に、数多くの組み付けやカスタム・修理を行ってきた自転車店がベースです。安全に確実に、最高のフィーリングを生み出すブレーキや変速器といったメカ調整。格好良く組み上げるセンス。百戦錬磨のメカニックが組み付けを行います。</p>
+                            <p class="en">Before being a frame workshop, we are a bicycle shop with extensive experience in assembly, custom work and repairs. Our seasoned mechanics handle every adjustment with precision and style.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="yc-custom-price">
+                    <h2>価格の目安について</h2>
+                    <p class="en">Estimated price</p>
+                    <div class="yc-price-num">¥235,000〜（税抜）</div>
+                    <p>オリジナルフレーム＆フォークの制作（単色塗装込み）<br>選定パイプ・取付小物・カスタム塗装など、仕様により料金が加算されます。<br>詳しくはお問い合わせください。</p>
+                    <p class="en">Production of original frame & fork (including single color painting). Charges are added according to specifications such as selected pipes, mounting accessories, and custom paint. Please inquire for details.</p>
+                </div>
+        
+                <div class="yc-custom-cta">
+                    <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn-orange">制作のご相談はこちら</a>
+                </div>
+            </div>
+        `
     };
 
     // ==========================================
