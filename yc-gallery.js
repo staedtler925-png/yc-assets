@@ -2,6 +2,8 @@
  * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS
  * CSSで横に並べた画像を、実際にスライドさせるための「脳みそ」です。
  */
+console.log('yc-gallery.js loaded! V2');
+
 function initKazusaGallery() {
     console.log("スライダー初期化開始...");
 
