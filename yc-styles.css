@@ -96,84 +96,49 @@
 }
 
 /* ============================================================
-   YANAGI CYCLE - ギャラリー・スライダー最終兵器設定
-   BASEの標準CSSや外部JSの干渉をすべて無効化します
+   YANAGI CYCLE ギャラリー完全復旧設定
+   元のHTML構造と新しい構造のどちらが来ても横並びを強制します
    ============================================================ */
 
-/* 1. 外枠：絶対に1枚分しか見せない設定 */
-#yc-router-root .yc-gallery-container {
+/* 1. コンテナ：BASEの flex 干渉を無効化 */
+#yc-router-root .yc-gallery-container,
+#yc-router-root .itemImgSlide {
     display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
     position: relative !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important; /* はみ出しを「死んでも」隠す */
-    margin: 0 auto 20px !important;
-    padding: 0 !important;
-    z-index: 1 !important;
-    visibility: visible !important;
-    height: auto !important;
+    margin: 0 auto !important;
 }
 
-/* 2. 芯：画像を横一列に鋼鉄の結束で並べる */
-#yc-router-root .yc-gallery-track {
-    display: flex !important;           /* 絶対に横並び */
-    flex-direction: row !important;      /* 絶対に横方向 */
-    flex-wrap: nowrap !important;        /* 絶対に改行させない */
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    list-style: none !important;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-    will-change: transform !important;
-}
-
-/* 3. 画像：1枚が親要素と同じ幅を占有し、横並びを維持する */
-#yc-router-root .yc-gallery-track img {
-    /* BASEの img { width: auto } などを完全に粉砕する */
-    width: 100% !important;
-    min-width: 100% !important;  /* 圧縮を絶対に許さない */
-    max-width: 100% !important;
-    height: auto !important;
-    flex-shrink: 0 !important;   /* これが0でないと横並びが崩れる */
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    object-fit: contain !important;
-    /* 他のJSが勝手に付けるスタイルをリセット */
-    position: static !important;
-    transform: none !important;
-}
-
-/* 4. ナビゲーション（ドット・サムネイル）の強制横並び */
-#yc-router-root .yc-gallery-dots,
-#yc-router-root .yc-gallery-thumbs {
+/* 2. トラック：ここが縦並びの原因。強制的に flex-row にする */
+#yc-router-root .yc-gallery-track,
+#yc-router-root #slideImg {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 8px !important;
-    margin: 15px 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
+    flex-wrap: nowrap !important; /* 絶対に縦に落とさない */
     width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateX(0); /* JSでここを動かす */
 }
 
-/* 5. サムネイルの画像設定 */
-#yc-router-root .yc-gallery-thumb {
-    width: 60px !important;
-    height: 45px !important;
-    flex-shrink: 0 !important;
-    cursor: pointer !important;
-    opacity: 0.5 !important;
-    transition: 0.2s !important;
-    object-fit: cover !important;
+/* 3. 画像：これが「縦並び」を解消する最重要コード */
+#yc-router-root .yc-gallery-track img,
+#yc-router-root #slideImg img {
+    width: 100% !important;
+    min-width: 100% !important; /* 親の幅を100%占有させる */
+    max-width: 100% !important;
+    flex-shrink: 0 !important;   /* 圧縮を拒否＝横に並び続ける */
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
 }
-#yc-router-root .yc-gallery-thumb.is-active {
-    opacity: 1 !important;
-    outline: 2px solid #ED4700 !important;
+
+/* 4. サムネイル・ドット */
+#yc-router-root .yc-gallery-dots {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 10px 0 !important;
+    list-style: none !important;
 }
