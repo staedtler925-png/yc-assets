@@ -108,7 +108,7 @@
             "https://basefile.akamaized.net/yanagicycle-base-shop/69dce73ac2dee/quiet-disc-012.jpg"
         ];
 
-        var gallery = document.querySelector('.yc-gallery');
+        var gallery = document.getElementById('quietDiscGallery');
         var track = document.getElementById('quietTrack');
         var dotsEl = document.getElementById('quietDots');
         var thumbsEl = document.getElementById('quietThumbs');
@@ -218,7 +218,7 @@
             "https://basefile.akamaized.net/yanagicycle-base-shop/69dd983bba4fb/quiet-mud-018.jpg"
         ];
 
-        var gallery = document.querySelector('.yc-gallery');
+        var gallery = document.getElementById('quietMudGallery');
         var track = document.getElementById('quietTrack');
         var dotsEl = document.getElementById('quietDots');
         var thumbsEl = document.getElementById('quietThumbs');
@@ -405,7 +405,7 @@
                 <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
                 <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET Disc</h1></div>
 
-                <div class="yc-gallery">
+                <div class="yc-gallery" id="quietDiscGallery">
                     <div class="yc-gallery-main">
                         <div class="yc-gallery-main-track" id="quietTrack">
                             <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6be3dc14/quiet-disc-001.jpg" alt="QUIET Disc 01"></div>
@@ -474,7 +474,7 @@
                 <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
                 <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET</h1></div>
 
-                <div class="yc-gallery">
+                <div class="yc-gallery" id="quietMudGallery">
                     <div class="yc-gallery-main">
                         <div class="yc-gallery-main-track" id="quietTrack">
                             <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd976ee1b42/quiet-mud-001.jpg" alt="QUIET Mud 01"></div>
@@ -909,6 +909,232 @@
         `,
     };
 
+
+// ==========================================
+// Works data
+// ==========================================
+const worksData = [
+    {
+        slug: 'quiet-for-i',
+        title: 'QUIET for I',
+        category: 'All Road',
+        thumb: 'https://placehold.co/900x600?text=QUIET+for+I',
+        summary: 'オールロードをベースに、日常からロングライドまでを意識した一台。',
+        images: [
+            'https://placehold.co/1200x800?text=QUIET+for+I+01',
+            'https://placehold.co/1200x800?text=QUIET+for+I+02',
+            'https://placehold.co/1200x800?text=QUIET+for+I+03'
+        ],
+        body: `
+            <p>QUIETをベースに、乗り方や用途に合わせて細部を調整した制作事例です。</p>
+            <p>タイヤクリアランス、ポジション、積載とのバランスを重視して製作しました。</p>
+        `
+    },
+    {
+        slug: '6back-tourer-for-t',
+        title: '6back Tourer for T',
+        category: 'Touring',
+        thumb: 'https://placehold.co/900x600?text=6back+Tourer+for+T',
+        summary: 'ツーリング用途を軸に、積載と走行安定性を両立した制作事例。',
+        images: [
+            'https://placehold.co/1200x800?text=6back+Tourer+for+T+01',
+            'https://placehold.co/1200x800?text=6back+Tourer+for+T+02',
+            'https://placehold.co/1200x800?text=6back+Tourer+for+T+03',
+            'https://placehold.co/1200x800?text=6back+Tourer+for+T+04'
+        ],
+        body: `
+            <p>積載時の安定感と、長距離での疲れにくさを重視して設計した一台です。</p>
+            <p>使用環境や荷物量を前提に、細かい部分の仕様を詰めています。</p>
+        `
+    }
+];
+
+
+// ==========================================
+// Works helpers
+// ==========================================
+function getWorkBySlug(slug) {
+    return worksData.find(function (item) {
+        return item.slug === slug;
+    });
+}
+
+function renderWorksList() {
+    var cards = worksData.map(function (item) {
+        return `
+            <article class="yc-works-card">
+                <a href="/about?p=works-${item.slug}" class="yc-works-card-link">
+                    <div class="yc-works-card-thumb">
+                        <img src="${item.thumb}" alt="${item.title}">
+                    </div>
+                    <div class="yc-works-card-body">
+                        <div class="yc-works-card-meta">
+                            <span class="yc-works-card-category">${item.category}</span>
+                        </div>
+                        <h2>${item.title}</h2>
+                        <p>${item.summary}</p>
+                        <span class="yc-works-card-more">詳細を見る</span>
+                    </div>
+                </a>
+            </article>
+        `;
+    }).join('');
+
+    return `
+        <div class="yc-works-page">
+            <div class="yc-back-nav">
+                <a href="/about" class="yc-back-btn">← ABOUT</a>
+            </div>
+
+            <div class="yc-works-hero">
+                <h1>制作事例</h1>
+                <p>
+                    これまで製作したフレームや完成車の事例です。<br>
+                    仕様や用途、雰囲気の参考としてご覧ください。
+                </p>
+            </div>
+
+            <div class="yc-works-grid">
+                ${cards}
+            </div>
+        </div>
+    `;
+}
+
+function renderWorksDetail(slug) {
+    var item = getWorkBySlug(slug);
+
+    if (!item) {
+        return `
+            <div class="yc-works-page">
+                <div class="yc-back-nav">
+                    <a href="/about?p=works" class="yc-back-btn">← WORKS</a>
+                </div>
+                <div class="yc-works-empty">
+                    <h1>制作事例が見つかりませんでした</h1>
+                </div>
+            </div>
+        `;
+    }
+
+    var slides = item.images.map(function (src, i) {
+        return `
+            <div class="yc-gallery-main-slide">
+                <img src="${src}" alt="${item.title} ${i + 1}">
+            </div>
+        `;
+    }).join('');
+
+    return `
+        <div class="yc-works-detail-page">
+            <div class="yc-back-nav">
+                <a href="/about?p=works" class="yc-back-btn">← WORKS</a>
+            </div>
+
+            <div class="yc-detail-head">
+                <h1>${item.title}</h1>
+            </div>
+
+            <div class="yc-gallery yc-works-gallery" id="worksGallery-${item.slug}">
+                <div class="yc-gallery-main">
+                    <div class="yc-gallery-main-track" id="worksTrack-${item.slug}">
+                        ${slides}
+                    </div>
+                    <button class="yc-gallery-prev" id="worksPrev-${item.slug}" type="button">&#10094;</button>
+                    <button class="yc-gallery-next" id="worksNext-${item.slug}" type="button">&#10095;</button>
+                </div>
+                <div class="yc-gallery-dots" id="worksDots-${item.slug}"></div>
+                <div class="yc-gallery-thumbs" id="worksThumbs-${item.slug}"></div>
+            </div>
+
+            <div class="yc-works-detail-main">
+                <div class="yc-works-detail-content">
+                    <div class="yc-works-detail-meta">
+                        <span class="yc-works-card-category">${item.category}</span>
+                    </div>
+                    ${item.body}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function initWorksGallery(slug) {
+    var item = getWorkBySlug(slug);
+    if (!item) return;
+
+    var gallery = document.getElementById('worksGallery-' + slug);
+    var track = document.getElementById('worksTrack-' + slug);
+    var dotsEl = document.getElementById('worksDots-' + slug);
+    var thumbsEl = document.getElementById('worksThumbs-' + slug);
+    var prevBtn = document.getElementById('worksPrev-' + slug);
+    var nextBtn = document.getElementById('worksNext-' + slug);
+
+    if (!gallery || !track || !dotsEl || !thumbsEl || !prevBtn || !nextBtn) return;
+    if (gallery.dataset.ycInitialized === 'true') return;
+
+    gallery.dataset.ycInitialized = 'true';
+
+    var current = 0;
+    var images = item.images;
+
+    dotsEl.innerHTML = '';
+    thumbsEl.innerHTML = '';
+
+    images.forEach(function (src, i) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'yc-gallery-dot' + (i === 0 ? ' is-active' : '');
+        btn.addEventListener('click', function () { goTo(i); });
+        dotsEl.appendChild(btn);
+
+        var thumb = document.createElement('img');
+        thumb.src = src;
+        thumb.alt = item.title + ' ' + (i + 1);
+        thumb.className = 'yc-gallery-thumb' + (i === 0 ? ' is-active' : '');
+        thumb.addEventListener('click', function () { goTo(i); });
+        thumbsEl.appendChild(thumb);
+    });
+
+    function goTo(n) {
+        current = (n + images.length) % images.length;
+        track.style.transform = 'translateX(' + (-current * 100) + '%)';
+
+        dotsEl.querySelectorAll('.yc-gallery-dot').forEach(function (d, i) {
+            d.classList.toggle('is-active', i === current);
+        });
+
+        thumbsEl.querySelectorAll('.yc-gallery-thumb').forEach(function (t, i) {
+            t.classList.toggle('is-active', i === current);
+        });
+
+        if (thumbsEl.children[current]) {
+            thumbsEl.children[current].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(current - 1); });
+    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+    var startX = 0;
+    track.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', function (e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+            goTo(current + (diff > 0 ? 1 : -1));
+        }
+    });
+
+    goTo(0);
+}
+
     // ==========================================
     // D. ルーター制御
     // ==========================================
@@ -919,7 +1145,13 @@
         var params = new URLSearchParams(window.location.search);
         var pageKey = params.get('p');
 
-        if (pageKey && pages[pageKey]) {
+        if (pageKey === 'works') {
+            root.innerHTML = renderWorksList();
+        } else if (pageKey && pageKey.indexOf('works-') === 0) {
+            var slug = pageKey.replace('works-', '');
+            root.innerHTML = renderWorksDetail(slug);
+            initWorksGallery(slug);
+        } else if (pageKey && pages[pageKey]) {
             root.innerHTML = pages[pageKey];
 
             if (pageKey === 'kazusa') initKazusaGallery();
