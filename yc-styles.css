@@ -766,3 +766,63 @@ a.yc-btn-orange {
         padding: 18px 20px;
     }
 }
+
+/* 12. price-mod-bike 用追加スタイル */
+.yc-price-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 50px 0 20px;
+    padding-left: 12px;
+    line-height: 1.5;
+}
+
+.yc-price-section-title.sport {
+    color: #ED4700;
+    border-left: 4px solid #ED4700;
+}
+
+.yc-price-section-title.city {
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.yc-price-notice {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+    padding-left: 4px;
+    line-height: 1.8;
+}
+
+.yc-price-group-title.sport {
+    background: #ED4700;
+}
+
+.yc-price-group-title.city {
+    background: #2e7d32;
+}
+
+.yc-price-row:hover {
+    background: #fafafa;
+}
+
+.yc-price-row-price.sport {
+    color: #ED4700;
+}
+
+.yc-price-row-price.city {
+    color: #2e7d32;
+}
+
+@media (max-width: 640px) {
+    .yc-price-section-title {
+        font-size: 18px;
+        margin: 40px 0 16px;
+        padding-left: 10px;
+    }
+
+    .yc-price-notice {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+}
