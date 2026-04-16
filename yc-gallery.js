@@ -1,76 +1,71 @@
 /**
- * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（v6: 執念の全方位探索）
+ * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（v7: 完全自立型）
  */
 function initKazusaGallery() {
-    console.log("スライダー初期化開始(v6)...");
+    console.log("スライダー完全再構築開始(v7)...");
 
-    // BASEの画像が入る可能性がある場所を片っ端から探す
-    const track = document.querySelector('.yc-gallery-main-track') || 
-                  document.querySelector('#slideImg') || 
-                  document.querySelector('.itemImgSlide div') ||
-                  document.querySelector('.itemImgSlide ul');
-
-    const container = document.querySelector('.yc-gallery-container') || 
-                      document.querySelector('.itemImgSlide');
-
-    // まだ要素自体がない場合
-    if (!track || !container) {
-        console.log("箱（Container/Track）が見つかりません。再試行中...");
+    // 1. BASEが標準で出力している「生画像」を全部集める
+    const rawImages = document.querySelectorAll('.itemImgSlide img, #slideImg img');
+    if (rawImages.length === 0) {
+        console.log("BASEの画像がまだ見つかりません。再試行中...");
         setTimeout(initKazusaGallery, 500);
         return;
     }
 
-    // 画像が「0枚」でないか確認
-    const images = track.querySelectorAll('img');
-    if (images.length === 0) {
-        console.log("箱は見つかりましたが、画像がまだ読み込まれていません。再試行中...");
-        setTimeout(initKazusaGallery, 500);
-        return;
+    // 画像URLのリストを作成（重複削除）
+    const srcList = Array.from(rawImages).map(img => img.src).filter((src, i, self) => self.indexOf(src) === i);
+    console.log("画像URL抽出成功:", srcList);
+
+    // 2. 既存のスライダーエリアを特定、または作成
+    let container = document.querySelector('.yc-gallery-container');
+    if (!container) {
+        // もしHTMLに枠がなければ、BASEの標準エリアを乗っ取る
+        container = document.querySelector('.itemImgSlide');
+        if(!container) return;
     }
 
-    const totalImages = images.length;
-    console.log("ターゲット捕捉成功！画像枚数:", totalImages);
+    // 3. HTML構造をJSから強制的に書き換える（ここがミソ）
+    container.innerHTML = `
+        <div class="yc-gallery-main-container" style="overflow:hidden; position:relative; width:100%;">
+            <div class="yc-gallery-track" style="display:flex; transition:transform 0.4s ease; width:100%;">
+                ${srcList.map(src => `<div style="min-width:100%;"><img src="${src}" style="width:100%; display:block;"></div>`).join('')}
+            </div>
+            <div class="yc-gallery-dots" style="display:flex; justify-content:center; gap:8px; padding:10px 0;"></div>
+        </div>
+    `;
 
-    // --- ここからスライダーの処理 ---
-    let currentIndex = 0;
+    const track = container.querySelector('.yc-gallery-track');
+    const dotsContainer = container.querySelector('.yc-gallery-dots');
+    const total = srcList.length;
+    let current = 0;
 
-    // ドット生成
-    let dotsContainer = document.querySelector('.yc-gallery-dots');
-    if (!dotsContainer) {
-        dotsContainer = document.createElement('div');
-        dotsContainer.className = 'yc-gallery-dots';
-        container.appendChild(dotsContainer);
-    }
-    dotsContainer.innerHTML = '';
-
-    const dots = [];
-    for (let i = 0; i < totalImages; i++) {
+    // 4. ドット生成
+    srcList.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.className = 'yc-gallery-dot' + (i === 0 ? ' is-active' : '');
-        dot.style.cursor = "pointer";
-        dot.addEventListener('click', () => goToSlide(i));
+        dot.style.cssText = "width:10px; height:10px; border-radius:50%; background:#ccc; cursor:pointer;";
+        if(i === 0) dot.style.background = "#ED4700"; // アクティブ色
+        dot.onclick = () => goTo(i);
         dotsContainer.appendChild(dot);
-        dots.push(dot);
+    });
+
+    function goTo(n) {
+        current = n;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        Array.from(dotsContainer.children).forEach((dot, i) => {
+            dot.style.background = (i === current) ? "#ED4700" : "#ccc";
+        });
     }
 
-    function goToSlide(index) {
-        currentIndex = index;
-        track.style.transition = "transform 0.4s ease-in-out";
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        dots.forEach((d, idx) => d.classList.toggle('is-active', idx === currentIndex));
-    }
-
-    // スワイプ対応
+    // 5. スワイプ
     let startX = 0;
-    track.addEventListener('touchstart', (e) => { startX = e.touches[0].pageX; }, {passive: true});
-    track.addEventListener('touchend', (e) => {
-        const endX = e.changedTouches[0].pageX;
-        if (startX > endX + 50 && currentIndex < totalImages - 1) goToSlide(currentIndex + 1);
-        else if (startX < endX - 50 && currentIndex > 0) goToSlide(currentIndex - 1);
-    }, {passive: true});
+    track.ontouchstart = (e) => { startX = e.touches[0].pageX; };
+    track.ontouchend = (e) => {
+        const diff = startX - e.changedTouches[0].pageX;
+        if (Math.abs(diff) > 50) goTo(Math.max(0, Math.min(total - 1, current + (diff > 0 ? 1 : -1))));
+    };
 
-    console.log("スライダーが正常に起動しました！");
+    console.log("スライダーの再構築が完了しました！");
 }
 
-// 実行
 initKazusaGallery();
