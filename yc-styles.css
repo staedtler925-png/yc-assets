@@ -443,6 +443,7 @@ a.yc-btn-orange {
 }
 
 .yc-step-num {
+    color: #ED4700;
     flex: 0 0 48px;
     font-size: 28px;
     line-height: 1;
