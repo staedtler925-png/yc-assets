@@ -172,4 +172,4 @@ function startKazusaGallery() {
 }
 
 // 起動
-startKazusaGallery();
+// startKazusaGallery();
