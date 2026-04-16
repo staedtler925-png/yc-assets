@@ -826,3 +826,181 @@ a.yc-btn-orange {
         margin-bottom: 16px;
     }
 }
+/* =========================================
+   price-mod-frame テーブル版
+========================================= */
+
+.yc-price-table-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    background: #fff;
+    color: #333;
+    text-align: left;
+}
+
+.yc-price-table-hero {
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+.yc-price-table-hero h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2F2E2E;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.yc-price-table-hero p {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 2;
+    color: #555;
+}
+
+.yc-price-table-wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+}
+
+.yc-price-table-scroll {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.yc-price-table-scroll thead,
+.yc-price-table-scroll tbody {
+    display: block;
+    width: 100%;
+}
+
+.yc-price-table-scroll thead tr,
+.yc-price-table-scroll tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.yc-price-table-scroll tbody {
+    max-height: 680px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.yc-price-table-scroll th,
+.yc-price-table-scroll td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+
+.yc-price-table-scroll th {
+    background: #2F2E2E;
+    color: #fff;
+    font-weight: bold;
+}
+
+.yc-price-table-scroll tbody tr:hover {
+    background: #fdf5f2;
+}
+
+/* 列幅 */
+.yc-price-table-scroll th:nth-child(1),
+.yc-price-table-scroll td:nth-child(1) {
+    width: 16%;
+}
+
+.yc-price-table-scroll th:nth-child(2),
+.yc-price-table-scroll td:nth-child(2) {
+    width: 36%;
+}
+
+.yc-price-table-scroll th:nth-child(3),
+.yc-price-table-scroll td:nth-child(3) {
+    width: 18%;
+    white-space: nowrap;
+    color: #ED4700;
+    font-weight: bold;
+}
+
+.yc-price-table-scroll th:nth-child(4),
+.yc-price-table-scroll td:nth-child(4) {
+    width: 30%;
+    color: #777;
+}
+
+.yc-price-table-cta {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.yc-price-table-cta .yc-btn-orange {
+    display: inline-block;
+    width: auto;
+    min-width: 280px;
+    padding: 18px 28px;
+}
+
+@media (max-width: 768px) {
+    .yc-price-table-page {
+        padding: 30px 15px 60px;
+    }
+
+    .yc-price-table-hero {
+        margin-bottom: 28px;
+    }
+
+    .yc-price-table-hero h1 {
+        font-size: 24px;
+    }
+
+    .yc-price-table-hero p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .yc-price-table-scroll tbody {
+        max-height: 60vh;
+    }
+
+    .yc-price-table-scroll th,
+    .yc-price-table-scroll td {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+
+    .yc-price-table-scroll th:nth-child(1),
+    .yc-price-table-scroll td:nth-child(1) {
+        width: 18%;
+    }
+
+    .yc-price-table-scroll th:nth-child(2),
+    .yc-price-table-scroll td:nth-child(2) {
+        width: 34%;
+    }
+
+    .yc-price-table-scroll th:nth-child(3),
+    .yc-price-table-scroll td:nth-child(3) {
+        width: 20%;
+    }
+
+    .yc-price-table-scroll th:nth-child(4),
+    .yc-price-table-scroll td:nth-child(4) {
+        width: 28%;
+    }
+
+    .yc-price-table-cta .yc-btn-orange {
+        width: 100%;
+        min-width: 0;
+    }
+}
