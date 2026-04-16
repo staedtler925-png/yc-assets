@@ -1,17 +1,19 @@
 /**
- * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（粘り強いVer.）
+ * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（main-track完全捕捉Ver.）
  */
-console.log('yc-gallery.js loaded! V3');
-
 function initKazusaGallery() {
-    console.log("スライダー初期化開始...");
+    console.log("スライダー初期化開始(v5)...");
 
-    const track = document.querySelector('.yc-gallery-track') || document.querySelector('#slideImg');
-    const container = document.querySelector('.yc-gallery-container') || document.querySelector('.itemImgSlide');
+    // 実際のHTMLに存在する .yc-gallery-main-track を最優先で探す
+    const track = document.querySelector('.yc-gallery-main-track') || 
+                  document.querySelector('.yc-gallery-track') || 
+                  document.querySelector('#slideImg');
 
-    // 要素がない場合は、0.5秒後に自分自身をもう一度呼び出す
+    const container = document.querySelector('.yc-gallery-container') || 
+                      document.querySelector('.itemImgSlide');
+
     if (!track || !container) {
-        console.log("要素がまだないので、0.5秒後に再試行します...");
+        console.log("ターゲットが見つかりません。再試行中...");
         setTimeout(initKazusaGallery, 500);
         return;
     }
@@ -20,9 +22,11 @@ function initKazusaGallery() {
     const totalImages = images.length;
     
     if (totalImages <= 1) {
-        console.log("画像が1枚以下なので終了します");
+        console.log("画像が1枚以下（" + totalImages + "枚）のため終了。");
         return;
     }
+
+    console.log("ターゲット捕捉成功！画像枚数:", totalImages);
 
     let currentIndex = 0;
 
@@ -39,6 +43,7 @@ function initKazusaGallery() {
     for (let i = 0; i < totalImages; i++) {
         const dot = document.createElement('div');
         dot.className = 'yc-gallery-dot' + (i === 0 ? ' is-active' : '');
+        dot.style.cursor = "pointer";
         dot.addEventListener('click', () => goToSlide(i));
         dotsContainer.appendChild(dot);
         dots.push(dot);
@@ -48,25 +53,19 @@ function initKazusaGallery() {
         currentIndex = index;
         track.style.transition = "transform 0.4s ease-in-out";
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('is-active', i === currentIndex);
-        });
+        dots.forEach((d, idx) => d.classList.toggle('is-active', idx === currentIndex));
     }
 
-    // スワイプ
+    // スワイプ対応
     let startX = 0;
     track.addEventListener('touchstart', (e) => { startX = e.touches[0].pageX; }, {passive: true});
     track.addEventListener('touchend', (e) => {
         const endX = e.changedTouches[0].pageX;
-        if (startX > endX + 50) {
-            if (currentIndex < totalImages - 1) goToSlide(currentIndex + 1);
-        } else if (startX < endX - 50) {
-            if (currentIndex > 0) goToSlide(currentIndex - 1);
-        }
+        if (startX > endX + 50 && currentIndex < totalImages - 1) goToSlide(currentIndex + 1);
+        else if (startX < endX - 50 && currentIndex > 0) goToSlide(currentIndex - 1);
     }, {passive: true});
 
     console.log("スライダーが正常に起動しました！");
 }
 
-// 実行開始
 initKazusaGallery();
