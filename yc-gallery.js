@@ -52,7 +52,7 @@ function initKazusaGallery() {
         <div class="yc-gallery-main-container" style="overflow:hidden; position:relative; width:100%;">
             <div class="yc-gallery-track" style="display:flex; transition:transform 0.4s ease;">
                 ${srcList.map(src => `
-                    <div style="min-width:100%;">
+                    <div style="flex:0 0 100%;">
                         <img src="${src}" style="width:100%; display:block;">
                     </div>
                 `).join('')}
@@ -60,7 +60,7 @@ function initKazusaGallery() {
             <div class="yc-gallery-dots" style="display:flex; justify-content:center; gap:8px; padding:10px 0;"></div>
         </div>
     `;
-
+    
     const track = container.querySelector('.yc-gallery-track');
     const dotsContainer = container.querySelector('.yc-gallery-dots');
 
