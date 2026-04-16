@@ -1,33 +1,37 @@
 /**
- * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（main-track完全捕捉Ver.）
+ * YANAGI CYCLE - ギャラリー・スライダー最終兵器JS（v6: 執念の全方位探索）
  */
 function initKazusaGallery() {
-    console.log("スライダー初期化開始(v5)...");
+    console.log("スライダー初期化開始(v6)...");
 
-    // 実際のHTMLに存在する .yc-gallery-main-track を最優先で探す
+    // BASEの画像が入る可能性がある場所を片っ端から探す
     const track = document.querySelector('.yc-gallery-main-track') || 
-                  document.querySelector('.yc-gallery-track') || 
-                  document.querySelector('#slideImg');
+                  document.querySelector('#slideImg') || 
+                  document.querySelector('.itemImgSlide div') ||
+                  document.querySelector('.itemImgSlide ul');
 
     const container = document.querySelector('.yc-gallery-container') || 
                       document.querySelector('.itemImgSlide');
 
+    // まだ要素自体がない場合
     if (!track || !container) {
-        console.log("ターゲットが見つかりません。再試行中...");
+        console.log("箱（Container/Track）が見つかりません。再試行中...");
         setTimeout(initKazusaGallery, 500);
         return;
     }
 
+    // 画像が「0枚」でないか確認
     const images = track.querySelectorAll('img');
-    const totalImages = images.length;
-    
-    if (totalImages <= 1) {
-        console.log("画像が1枚以下（" + totalImages + "枚）のため終了。");
+    if (images.length === 0) {
+        console.log("箱は見つかりましたが、画像がまだ読み込まれていません。再試行中...");
+        setTimeout(initKazusaGallery, 500);
         return;
     }
 
+    const totalImages = images.length;
     console.log("ターゲット捕捉成功！画像枚数:", totalImages);
 
+    // --- ここからスライダーの処理 ---
     let currentIndex = 0;
 
     // ドット生成
@@ -68,4 +72,5 @@ function initKazusaGallery() {
     console.log("スライダーが正常に起動しました！");
 }
 
+// 実行
 initKazusaGallery();
