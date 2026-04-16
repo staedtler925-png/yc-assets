@@ -1239,52 +1239,46 @@ a.yc-btn-orange {
 ========================================= */
 @media (max-width: 400px) {
 
-    /* 外枠を横スクロールに */
+    /* 横スクロール */
     .yc-price-table-wrap {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        position: relative;
     }
 
-    /* テーブルを通常の横並びに戻す */
+    /* テーブルを普通に戻す */
     .yc-price-table-scroll {
+        display: table;
         min-width: 520px;
+        border-collapse: collapse;
     }
 
-    .yc-price-table-scroll,
-    .yc-price-table-scroll thead,
+    .yc-price-table-scroll thead {
+        display: table-header-group;
+    }
+
     .yc-price-table-scroll tbody {
-        display: block;
+        display: table-row-group;
+        max-height: none;
+        overflow: visible;
     }
 
-    .yc-price-table-scroll thead tr,
-    .yc-price-table-scroll tbody tr {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
+    .yc-price-table-scroll tr {
+        display: table-row;
     }
 
-    /* ヘッダーを通常テーブルに戻す */
-    .yc-price-table-scroll thead tr {
-        display: table;
-        background: inherit;
-    }
-
-    .yc-price-table-scroll thead th,
+    .yc-price-table-scroll th,
     .yc-price-table-scroll td {
         display: table-cell;
-        width: auto;
-        white-space: nowrap;
-    }
-
-    /* gridレイアウトを無効化 */
-    .yc-price-table-scroll tbody tr {
-        display: table;
-    }
-
-    /* スマホ用のgrid指定をリセット */
-    .yc-price-table-scroll td {
         padding: 10px 12px;
         border-bottom: 1px solid #eee;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    /* ヘッダー色は維持 */
+    .yc-price-table-scroll thead th {
+        color: #fff;
     }
 
 }
