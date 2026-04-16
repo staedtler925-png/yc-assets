@@ -627,6 +627,98 @@
                 </div>
             </div>
         `,
+        'price-mod-frame': `
+            <div class="yc-price-wrapper">
+                <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← HOME</a></div>
+        
+                <div class="yc-price-hero">
+                    <h1>フレーム修理、カスタム工賃表</h1>
+                    <p>主にスチール（クロモリ）フレームを中心にカスタム、レストア、改造を可能な範囲で承ります。<br>
+                    また遠方の方、フレームをお送りいただくことで対応が可能です。<br>
+                    表にない加工もお気軽にお問い合わせください。</p>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">小物<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">Wレバー台座取り付け（左右ペア）</span><span class="yc-price-row-price">￥5,500</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">センタースタンド台座取り付け</span><span class="yc-price-row-price">￥7,260</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">チェーフック取り付け</span><span class="yc-price-row-price">￥3,520</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ポンプペグ取り付け</span><span class="yc-price-row-price">￥5,500</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ダボ穴取り付け</span><span class="yc-price-row-price">￥1,650</span><span class="yc-price-row-note">1箇所につき</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">アウター受け取り付け</span><span class="yc-price-row-price">￥2,200</span><span class="yc-price-row-note">1箇所につき</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ライト台座取り付け</span><span class="yc-price-row-price">￥2,750〜</span><span class="yc-price-row-note">形状、難易度による</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">内装穴</span><span class="yc-price-row-price">￥5,500</span><span class="yc-price-row-note">1箇所につき。ガイド無し、蓋と穴のみ</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">塗装<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フロントフォーク剥離・全塗装</span><span class="yc-price-row-price">￥28,600〜</span><span class="yc-price-row-note">単色ソリッドカラーの価格。メタリック・パールベース、塗分け等は別途加算</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フレームセット剥離・全塗装</span><span class="yc-price-row-price">￥69,300〜</span><span class="yc-price-row-note">単色ソリッドカラーの価格。メタリック・パールベース、塗分け等は別途加算</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">部分塗装</span><span class="yc-price-row-price">￥13,200〜</span><span class="yc-price-row-note">2か所まで。色によっては再現不可。</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">ブレーキ<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ディスクブレーキ台座取り付け</span><span class="yc-price-row-price">￥13,200</span><span class="yc-price-row-note">スチールフレーム、インターナショナルスタンダード</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ディスクブレーキ台座取り付け</span><span class="yc-price-row-price">￥22,000</span><span class="yc-price-row-note">アルミ、補強ブリッジ込み</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フロントフォーク、キャリパーブレーキ穴開け</span><span class="yc-price-row-price">￥2,200</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ディスクブレーキ台座取り付け</span><span class="yc-price-row-price">￥16,500</span><span class="yc-price-row-note">正爪、スチールフレーム</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">カンチ、Vブレーキ台座取り付け</span><span class="yc-price-row-price">￥12,100</span><span class="yc-price-row-note">片側</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">キャリパーブレーキブリッジ取り付け</span><span class="yc-price-row-price">￥12,100</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">センタープル台座取り付け</span><span class="yc-price-row-price">￥12,100</span><span class="yc-price-row-note">片側、ブレーキバネ引っ掛け穴直付け可</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">フォーク<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">コラムねじ山修正</span><span class="yc-price-row-price">￥2,200</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フォークコラム溝切</span><span class="yc-price-row-price">￥3,960</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フォークコラム延長（スレッドレス）</span><span class="yc-price-row-price">￥7,040</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フォークコラム延長（スレッド）</span><span class="yc-price-row-price">￥9,240</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">パイプ差し替え<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">チェーンステー差し替え</span><span class="yc-price-row-price">￥33,000〜</span><span class="yc-price-row-note">1本につき。パイプ種類、難易度により変動</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">メインパイプ差し替え</span><span class="yc-price-row-price">￥33,000〜</span><span class="yc-price-row-note">1本につき。パイプ種類、難易度により変動</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">シートステー差し替え</span><span class="yc-price-row-price">￥22,000〜</span><span class="yc-price-row-note">1本につき。パイプ種類、難易度により変動</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ヘッドパイプ差し替え</span><span class="yc-price-row-price">￥33,000〜</span><span class="yc-price-row-note">例、1インチ用パイプ→オーバーサイズあるいは44mmヘッドなど</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">カスタムラック、ステム<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">リアラック製作（大サイズ、メッキ）</span><span class="yc-price-row-price">￥44,000〜</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ステム製作（フィレット仕上げ、研磨、メッキ）</span><span class="yc-price-row-price">￥33,000〜</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">ステム製作（フィレット仕上げ、塗装込み）</span><span class="yc-price-row-price">￥33,000〜</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フロントラック製作（小サイズ、メッキ）</span><span class="yc-price-row-price">￥27,500〜</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">エンド<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">バック広げ</span><span class="yc-price-row-price">￥4,400</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フォークエンド平行だし</span><span class="yc-price-row-price">￥2,200</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">エンドスロット拡張</span><span class="yc-price-row-price">￥4,400</span><span class="yc-price-row-note">例：フォークエンド8mm→9mm</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">リアエンド差し替え</span><span class="yc-price-row-price">￥33,000〜</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">アライメント<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フロントフォーク精度チェック、修正</span><span class="yc-price-row-price">￥3,300〜</span><span class="yc-price-row-note">度合い、難易度により変動</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">フレーム精度チェック、修正</span><span class="yc-price-row-price">￥4,400〜</span><span class="yc-price-row-note">度合い、難易度により変動</span></div>
+                </div>
+        
+                <div class="yc-price-group">
+                    <div class="yc-price-group-title">その他<span class="yc-price-label">価格（税込）</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">パイプ凹みのロー埋め（小）</span><span class="yc-price-row-price">￥4,400</span><span class="yc-price-row-note">軽量パイプは不可</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">パイプ凹みのロー埋め（中）</span><span class="yc-price-row-price">￥5,500</span><span class="yc-price-row-note">軽量パイプは不可</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">パイプ凹みのロー埋め（大）</span><span class="yc-price-row-price">￥6,600</span><span class="yc-price-row-note">軽量パイプは不可</span></div>
+                    <div class="yc-price-row"><span class="yc-price-row-label">小物、ブレーキ台座など除去</span><span class="yc-price-row-price">￥1,650〜</span><span class="yc-price-row-note">一箇所につき。サイズ、面積により変動</span></div>
+                </div>
+        
+                <div class="yc-price-cta">
+                    <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn-orange">お問い合わせ</a>
+                </div>
+            </div>
+        `,
     };
 
     // ==========================================
