@@ -27,14 +27,12 @@ function initKazusaGallery() {
         `;
         document.head.appendChild(style);
     }
-    
+
     // 画像取得（BASE商品画像のみ）
     const srcList = Array.from(document.querySelectorAll('img'))
         .map(img => img.src)
-        .filter(src =>
-            src.includes('basefile.akamaized.net') // 商品画像だけ
-        )
-        .filter((src, i, self) => self.indexOf(src) === i); // 重複削除
+        .filter(src => src.includes('basefile.akamaized.net'))
+        .filter((src, i, self) => self.indexOf(src) === i);
 
     if (srcList.length < 2) {
         console.log("画像不足 → 待機");
@@ -59,9 +57,8 @@ function initKazusaGallery() {
         if (container.dataset.ycImageCount == srcList.length) {
             console.log("変更なし → スキップ");
             return true;
-        } else {
-            console.log("画像変化検知 → 再構築");
         }
+        console.log("画像変化検知 → 再構築");
     }
 
     container.dataset.ycInitialized = "true";
@@ -70,22 +67,25 @@ function initKazusaGallery() {
     // HTML構築
     container.innerHTML = `
         <div class="yc-gallery-main-container" style="overflow:hidden; position:relative; width:100%;">
-            <div class="yc-gallery-track" style="display:flex; flex-wrap:nowrap; transition:transform 0.4s ease;">
+            <div class="yc-gallery-track" style="transition:transform 0.4s ease;">
                 ${srcList.map(src => `
-                    <div style="flex:0 0 100%;">
-                        <img src="${src}" style="width:100%; display:block; pointer-events:none;">
+                    <div>
+                        <img src="${src}" style="pointer-events:none;">
                     </div>
                 `).join('')}
             </div>
             <div class="yc-gallery-dots" style="display:flex; justify-content:center; gap:8px; padding:10px 0;"></div>
         </div>
     `;
-    
+
     const track = container.querySelector('.yc-gallery-track');
     const dotsContainer = container.querySelector('.yc-gallery-dots');
 
     let current = 0;
     const total = srcList.length;
+
+    // 念押し（CSS競合対策）
+    track.style.setProperty('display', 'flex', 'important');
 
     // ドット生成
     dotsContainer.innerHTML = "";
@@ -100,8 +100,10 @@ function initKazusaGallery() {
 
     function goTo(n) {
         current = n;
-        track.style.transform = `translateX(-${current * (100 / total)}%)`;
-    
+
+        // ★ここが重要（100%ずつスライド）
+        track.style.transform = `translateX(-${current * 100}%)`;
+
         Array.from(dotsContainer.children).forEach((dot, i) => {
             dot.style.background = (i === current) ? "#ED4700" : "#ccc";
         });
@@ -133,13 +135,11 @@ function initKazusaGallery() {
  */
 function startKazusaGallery() {
 
-    // load後
     window.addEventListener('load', () => {
         console.log(`window.load発火 (${YC_VERSION})`);
         initKazusaGallery();
     });
 
-    // DOM変化監視
     const observer = new MutationObserver(() => {
         const success = initKazusaGallery();
         if (success) {
@@ -152,7 +152,6 @@ function startKazusaGallery() {
         subtree: true
     });
 
-    // 保険リトライ
     let retry = 0;
     const interval = setInterval(() => {
         if (initKazusaGallery() || retry > 20) {
