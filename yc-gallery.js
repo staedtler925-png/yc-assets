@@ -69,8 +69,8 @@ function initKazusaGallery() {
         <div class="yc-gallery-main-container" style="overflow:hidden; position:relative; width:100%;">
             <div class="yc-gallery-track" style="transition:transform 0.4s ease;">
                 ${srcList.map(src => `
-                    <div>
-                        <img src="${src}" style="pointer-events:none;">
+                    <div style="flex:0 0 100%;">
+                        <img src="${src}" style="width:100%; display:block; pointer-events:none;">
                     </div>
                 `).join('')}
             </div>
