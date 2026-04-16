@@ -1102,7 +1102,7 @@ a.yc-btn-orange {
          
       .yc-price-table-scroll tbody tr {
           display: grid;
-          grid-template-columns: 1fr auto;
+          grid-template-columns: minmax(240px, 1fr) auto;
           grid-template-areas:
               "cat cat"
               "work price"
