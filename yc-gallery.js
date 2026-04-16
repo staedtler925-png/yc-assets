@@ -10,22 +10,32 @@ function initKazusaGallery() {
 
     // CSS強制注入（1回だけ）
     if (!document.getElementById('yc-gallery-style')) {
-        const style = document.createElement('style');
-        style.id = 'yc-gallery-style';
-        style.innerHTML = `
-        .yc-gallery-track {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-        }
-        .yc-gallery-track > div {
-            flex: 0 0 100% !important;
-        }
-        .yc-gallery-track img {
-            width: 100% !important;
-            display: block !important;
-        }
-        `;
-        document.head.appendChild(style);
+    const style = document.createElement('style');
+    style.id = 'yc-gallery-style';
+    style.innerHTML = `
+    .yc-gallery-main-container {
+        width: 100% !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+    
+    .yc-gallery-track {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        transition: transform 0.4s ease !important;
+    }
+    
+    .yc-gallery-track > div {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .yc-gallery-track img {
+        width: 100% !important;
+        display: block !important;
+    }
+    `;
+    document.head.appendChild(style);
     }
 
     // 画像取得（BASE商品画像のみ）
