@@ -929,7 +929,7 @@ a.yc-btn-orange {
 .yc-price-table-scroll td:nth-child(3) {
     width: 18%;
     white-space: nowrap;
-    color: #ED4700;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -1030,7 +1030,7 @@ a.yc-btn-orange {
         grid-area: price;
         width: auto;
         white-space: nowrap;
-        color: #ED4700;
+        color: #000;
         font-weight: bold;
         text-align: right;
     }
