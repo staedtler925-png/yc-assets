@@ -39,7 +39,7 @@ function initKazusaGallery() {
     }
 
     // 画像取得（BASE商品画像のみ）
-    const srcList = Array.from(document.querySelectorAll('img'))
+    const srcList = Array.from(container.querySelectorAll('img'))
         .map(img => img.src)
         .filter(src => src.includes('basefile.akamaized.net'))
         .filter((src, i, self) => self.indexOf(src) === i);
