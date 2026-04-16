@@ -1004,199 +1004,210 @@ a.yc-btn-orange {
 /* =========================================
    15. テーブル版 スマホ
 ========================================= */
-   @media (max-width: 768px) {
-       .yc-price-table-page {
-           padding: 30px 12px 60px;
-       }
-   
-       .yc-price-table-hero {
-           margin-bottom: 28px;
-       }
-   
-       .yc-price-table-hero h1 {
-           font-size: 24px;
-       }
-   
-       .yc-price-table-hero p {
-           font-size: 14px;
-           line-height: 1.9;
-       }
-   
-       .yc-price-table-section-title {
-           font-size: 20px;
-           margin: 38px 0 12px;
-           padding-left: 10px;
-       }
-   
-       .yc-price-table-notice {
-           font-size: 12px;
-           margin-bottom: 12px;
-       }
-   
-       /* テーブル枠を独立BOX化 */
-       .yc-price-table-wrap {
-           width: calc(100% - 16px);
-           margin: 0 auto 24px;
-           border: 3px solid #d9d9d9;
-           border-radius: 8px;
-           overflow: hidden;
-           background: #fff;
-           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-       }
-   
-       .yc-price-table-scroll,
-       .yc-price-table-scroll thead,
-       .yc-price-table-scroll tbody,
-       .yc-price-table-scroll tr,
-       .yc-price-table-scroll th,
-       .yc-price-table-scroll td {
-           display: block;
-           width: 100%;
-       }
-   
-       /* ヘッダー固定 */
-       .yc-price-table-scroll thead {
-           position: sticky;
-           top: 0;
-           z-index: 10;
-       }
-   
-       .yc-price-table-scroll thead tr {
-           display: grid;
-           grid-template-columns: 72px 1fr auto;
-           padding: 10px 12px;
-           font-size: 12px;
-           color: #fff;
-       }
-   
-       .yc-price-table-scroll thead th {
-           border: none;
-           padding: 0;
-           font-size: 12px;
-           color: #fff !important;
-           background: transparent;
-       }
-   
-       /* price-mod-frame は青 */
-       .yc-price-table-scroll thead tr {
-           background: #0c4d9c;
-       }
-   
-       /* bike の見出し行色 */
-       .yc-price-table-scroll-bike-sport thead tr {
-           background: #ED4700;
-       }
-   
-       .yc-price-table-scroll-bike-city thead tr {
-           background: #2e7d32;
-       }
-   
-       /* tbody を固定高スクロールに戻す */
-       .yc-price-table-scroll tbody {
-           max-height: 52vh;
-           overflow-y: auto;
-           overflow-x: hidden;
-           -webkit-overflow-scrolling: touch;
-           background: #fff;
-       }
-         
-      .yc-price-table-scroll tbody tr {
-          display: grid;
-          grid-template-columns: minmax(240px, 1fr) auto;
-          grid-template-areas:
-              "cat cat"
-              "work price"
-              "note note";
-          gap: 0;
-          padding: 12px;
-          margin-bottom: 0;
-          border-top: none;
-          border-left: none;
-          border-right: none;
-          border-bottom: 1px solid #eee;
-          background: #fff;
-      }
-      
-      .yc-price-table-scroll td:nth-child(1) {
-          grid-area: cat;
-          color: #0c4d9c;
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 1.5;
-          padding-bottom: 6px;
-          border-bottom: none;
-      }
+@media (max-width: 768px) {
+    .yc-price-table-page {
+        padding: 30px 12px 60px;
+    }
 
-      .yc-price-table-scroll-bike-sport td:nth-child(1) {
-          color: #ED4700;
-      }
-      
-      .yc-price-table-scroll-bike-city td:nth-child(1) {
-          color: #2e7d32;
-      }
-      
-      .yc-price-table-scroll td:nth-child(2) {
-          grid-area: work;
-          color: #2F2E2E;
-          line-height: 1.6;
-          padding-top: 6px;
-      }
-      
-      .yc-price-table-scroll td:nth-child(3) {
-          grid-area: price;
-          white-space: nowrap;
-          color: #000;
-          font-weight: bold;
-          text-align: right;
-          align-self: start;
-          padding-top: 6px;
-      }
-      
-      .yc-price-table-scroll td:nth-child(4) {
-          grid-area: note;
-          color: #777;
-          font-size: 12px;
-          line-height: 1.6;
-          padding-top: 6px;
-          border-top: none;
-      }      
-       .yc-price-table-scroll tbody tr:hover,
-       .yc-price-table-scroll-bike tbody tr:hover {
-           background: #f3f6fa;
-       }
-   
-       .yc-price-table-cta .yc-btn-orange {
-           width: 100%;
-           min-width: 0;
-       }
-   }
-   
-   /* bikeテーブルのthead色 */
-   .yc-price-table-scroll-bike-sport th {
-       background: #ED4700;
-       color: #fff;
-   }
-   
-   .yc-price-table-scroll-bike-city th {
-       background: #2e7d32;
-       color: #fff;
-   }
-   
-   /* スマホ固定ヘッダーも同色にする */
-   @media (max-width: 768px) {
-       .yc-price-table-scroll-bike-sport thead tr {
-           background: #ED4700;
-       }
-   
-       .yc-price-table-scroll-bike-city thead tr {
-           background: #2e7d32;
-       }
-   }
+    .yc-price-table-hero {
+        margin-bottom: 28px;
+    }
 
-   @media (max-width: 768px) {
-   
-       .yc-price-table-scroll td {
-           border-bottom: none !important;
-       }
-   
-   }
+    .yc-price-table-hero h1 {
+        font-size: 24px;
+    }
+
+    .yc-price-table-hero p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .yc-price-table-section-title {
+        font-size: 20px;
+        margin: 38px 0 12px;
+        padding-left: 10px;
+    }
+
+    .yc-price-table-notice {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    /* テーブル枠を独立BOX化 */
+    .yc-price-table-wrap {
+        width: calc(100% - 16px);
+        margin: 0 auto 24px;
+        border: 3px solid #d9d9d9;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .yc-price-table-scroll,
+    .yc-price-table-scroll thead,
+    .yc-price-table-scroll tbody,
+    .yc-price-table-scroll tr,
+    .yc-price-table-scroll th,
+    .yc-price-table-scroll td {
+        display: block;
+        width: 100%;
+    }
+
+    /* ヘッダー固定 */
+    .yc-price-table-scroll thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+.yc-price-table-scroll thead tr {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) auto;
+    grid-template-areas:
+        "cat cat"
+        "work price"
+        "note note";
+    padding: 10px 12px;
+    font-size: 12px;
+    color: #fff;
+    background: #0c4d9c;
+}
+
+.yc-price-table-scroll thead th {
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    color: #fff !important;
+    background: transparent;
+}
+
+/* 各セルの配置 */
+.yc-price-table-scroll thead th:nth-child(1) {
+    grid-area: cat;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.yc-price-table-scroll thead th:nth-child(2) {
+    grid-area: work;
+}
+
+.yc-price-table-scroll thead th:nth-child(3) {
+    grid-area: price;
+    text-align: right;
+}
+
+.yc-price-table-scroll thead th:nth-child(4) {
+    grid-area: note;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+    /* bike の見出し行色 */
+    .yc-price-table-scroll-bike-sport thead tr {
+        background: #ED4700;
+    }
+
+    .yc-price-table-scroll-bike-city thead tr {
+        background: #2e7d32;
+    }
+
+    /* tbody を固定高スクロール */
+    .yc-price-table-scroll tbody {
+        max-height: 52vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        background: #fff;
+    }
+
+    .yc-price-table-scroll tbody tr {
+        display: grid;
+        grid-template-columns: minmax(240px, 1fr) auto;
+        grid-template-areas:
+            "cat cat"
+            "work price"
+            "note note";
+        gap: 0;
+        padding: 12px;
+        margin-bottom: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+    }
+
+    .yc-price-table-scroll td {
+        border: none !important;
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .yc-price-table-scroll td:nth-child(1) {
+        grid-area: cat;
+        color: #0c4d9c;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.5;
+        padding-bottom: 6px;
+        border-bottom: none;
+    }
+
+    .yc-price-table-scroll-bike-sport td:nth-child(1) {
+        color: #ED4700;
+    }
+
+    .yc-price-table-scroll-bike-city td:nth-child(1) {
+        color: #2e7d32;
+    }
+
+    .yc-price-table-scroll td:nth-child(2) {
+        grid-area: work;
+        color: #2F2E2E;
+        line-height: 1.6;
+        padding-top: 6px;
+    }
+
+    .yc-price-table-scroll td:nth-child(3) {
+        grid-area: price;
+        white-space: nowrap;
+        color: #000;
+        font-weight: bold;
+        text-align: right;
+        align-self: start;
+        padding-top: 6px;
+    }
+
+    .yc-price-table-scroll td:nth-child(4) {
+        grid-area: note;
+        color: #777;
+        font-size: 12px;
+        line-height: 1.6;
+        padding-top: 6px;
+        border-top: none;
+    }
+
+    .yc-price-table-scroll tbody tr:hover,
+    .yc-price-table-scroll-bike tbody tr:hover {
+        background: #f3f6fa;
+    }
+
+    .yc-price-table-cta .yc-btn-orange {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* bikeテーブルのthead色（PC用） */
+.yc-price-table-scroll-bike-sport th {
+    background: #ED4700;
+    color: #fff;
+}
+
+.yc-price-table-scroll-bike-city th {
+    background: #2e7d32;
+    color: #fff;
+}
