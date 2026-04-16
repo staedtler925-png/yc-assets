@@ -80,8 +80,8 @@ function initKazusaGallery() {
 
     function goTo(n) {
         current = n;
-        track.style.transform = `translateX(-${current * 100}%)`;
-
+        track.style.transform = `translateX(-${current * (100 / total)}%)`;
+    
         Array.from(dotsContainer.children).forEach((dot, i) => {
             dot.style.background = (i === current) ? "#ED4700" : "#ccc";
         });
