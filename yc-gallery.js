@@ -1,24 +1,23 @@
 /**
- * YANAGI CYCLE - ギャラリー・スライダー（安定版）
+ * YANAGI CYCLE - ギャラリー・スライダー
+ * VERSION: V2
  */
 
+const YC_VERSION = "V2";
+
 function initKazusaGallery() {
-    console.log("スライダー初期化開始");
+    console.log(`スライダー初期化開始 (${YC_VERSION})`);
 
-    const rawImages = document.querySelectorAll('img');
-
-    if (!rawImages || rawImages.length === 0) {
-        console.log("画像未検出 → 中断");
-        return false;
-    }
-
-    // URL抽出（重複除去）
-    const srcList = Array.from(rawImages)
+    // 画像取得（BASE商品画像のみ）
+    const srcList = Array.from(document.querySelectorAll('img'))
         .map(img => img.src)
-        .filter((src, i, self) => self.indexOf(src) === i);
+        .filter(src =>
+            src.includes('basefile.akamaized.net') // 商品画像だけ
+        )
+        .filter((src, i, self) => self.indexOf(src) === i); // 重複削除
 
-    if (srcList.length === 0) {
-        console.log("画像URL取得失敗");
+    if (srcList.length < 2) {
+        console.log("画像不足 → 待機");
         return false;
     }
 
@@ -35,13 +34,18 @@ function initKazusaGallery() {
         }
     }
 
-    // 既に構築済みならスキップ（二重実行防止）
+    // 再構築判定
     if (container.dataset.ycInitialized === "true") {
-        console.log("すでに初期化済み");
-        return true;
+        if (container.dataset.ycImageCount == srcList.length) {
+            console.log("変更なし → スキップ");
+            return true;
+        } else {
+            console.log("画像変化検知 → 再構築");
+        }
     }
 
     container.dataset.ycInitialized = "true";
+    container.dataset.ycImageCount = srcList.length;
 
     // HTML構築
     container.innerHTML = `
@@ -64,6 +68,7 @@ function initKazusaGallery() {
     const total = srcList.length;
 
     // ドット生成
+    dotsContainer.innerHTML = "";
     srcList.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.style.cssText = "width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;";
@@ -82,7 +87,7 @@ function initKazusaGallery() {
         });
     }
 
-    // スワイプ対応
+    // スワイプ
     let startX = 0;
 
     track.addEventListener('touchstart', (e) => {
@@ -98,28 +103,27 @@ function initKazusaGallery() {
         }
     });
 
-    console.log("スライダー構築完了");
+    console.log(`スライダー構築完了 (${YC_VERSION})`);
     return true;
 }
 
 
 /**
- * 初期化制御（BASE対策）
+ * 初期化制御（BASE完全対応）
  */
 function startKazusaGallery() {
 
-    // ① load後に1回実行
+    // load後
     window.addEventListener('load', () => {
-        console.log("window.load発火");
+        console.log(`window.load発火 (${YC_VERSION})`);
         initKazusaGallery();
     });
 
-    // ② MutationObserverで後追い
+    // DOM変化監視
     const observer = new MutationObserver(() => {
         const success = initKazusaGallery();
         if (success) {
-            observer.disconnect();
-            console.log("Observer停止");
+            console.log("Observer待機継続（画像変化監視）");
         }
     });
 
@@ -128,10 +132,10 @@ function startKazusaGallery() {
         subtree: true
     });
 
-    // ③ 最終保険（遅延再試行）
+    // 保険リトライ
     let retry = 0;
     const interval = setInterval(() => {
-        if (initKazusaGallery() || retry > 10) {
+        if (initKazusaGallery() || retry > 20) {
             clearInterval(interval);
         }
         retry++;
