@@ -1,13 +1,33 @@
 /**
  * YANAGI CYCLE - ギャラリー・スライダー
- * VERSION: V2
+ * VERSION: V3
  */
 
-const YC_VERSION = "V2";
+const YC_VERSION = "V3";
 
 function initKazusaGallery() {
     console.log(`スライダー初期化開始 (${YC_VERSION})`);
 
+    // CSS強制注入（1回だけ）
+    if (!document.getElementById('yc-gallery-style')) {
+        const style = document.createElement('style');
+        style.id = 'yc-gallery-style';
+        style.innerHTML = `
+        .yc-gallery-track {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+        }
+        .yc-gallery-track > div {
+            flex: 0 0 100% !important;
+        }
+        .yc-gallery-track img {
+            width: 100% !important;
+            display: block !important;
+        }
+        `;
+        document.head.appendChild(style);
+    }
+    
     // 画像取得（BASE商品画像のみ）
     const srcList = Array.from(document.querySelectorAll('img'))
         .map(img => img.src)
