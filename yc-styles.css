@@ -318,6 +318,19 @@
     color: #fff;
 }
 
+.yc-detail-wrapper-equal .yc-detail-main {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.yc-detail-wrapper-equal .yc-description-col,
+.yc-detail-wrapper-equal .yc-side-col {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+}
+
 @media (max-width: 800px) {
     .yc-detail-main {
         flex-direction: column;
