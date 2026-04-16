@@ -729,7 +729,7 @@
                 <div class="yc-price-table-notice">※ 価格には部品代金は含まれません。</div>
         
                 <div class="yc-price-table-wrap">
-                    <table class="yc-price-table-scroll yc-price-table-scroll-bike">
+                    <table class="yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-sport">
                         <thead>
                             <tr>
                                 <th>分類</th>
@@ -830,7 +830,7 @@
                 <div class="yc-price-table-notice">※ 価格には部品代金は含まれません。</div>
         
                 <div class="yc-price-table-wrap yc-price-table-wrap-city">
-                    <table class="yc-price-table-scroll yc-price-table-scroll-bike">
+                    <table class="yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-city">
                         <thead>
                             <tr>
                                 <th>分類</th>
