@@ -1,17 +1,15 @@
 /* =========================================
    YANAGI CYCLE ABOUT SPA styles
-   安全寄りフル版
+   完全統合版
 ========================================= */
 
-/* 1. 既存ABOUT本文の非表示
-   必要最小限に留めつつ、今の表示を維持 */
+/* 1. 既存ABOUT本文の非表示 */
 .main,
 .about-content,
 #fixedHeader {
     display: none !important;
 }
 
-/* 既存テーマ側のABOUTタイトル類が残る場合の保険 */
 h2.title,
 .entry-title {
     display: none !important;
@@ -508,7 +506,7 @@ a.yc-btn-orange {
     padding: 18px 28px;
 }
 
-/* 10. レスポンシブ */
+/* 10. 詳細ページレスポンシブ */
 @media (max-width: 800px) {
     .yc-detail-head h1 {
         font-size: 26px;
@@ -600,7 +598,7 @@ a.yc-btn-orange {
     }
 }
 
-/* 11. 価格ページ共通 */
+/* 11. 旧価格ページ共通（互換維持） */
 .yc-price-wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -663,7 +661,7 @@ a.yc-btn-orange {
 }
 
 .yc-price-row:hover {
-    background: #fdf5f2;
+    background: #fafafa;
 }
 
 .yc-price-row-label {
@@ -767,7 +765,7 @@ a.yc-btn-orange {
     }
 }
 
-/* 12. price-mod-bike 用追加スタイル */
+/* 12. 旧 price-mod-bike 用互換スタイル */
 .yc-price-section-title {
     font-size: 20px;
     font-weight: bold;
@@ -802,10 +800,6 @@ a.yc-btn-orange {
     background: #2e7d32;
 }
 
-.yc-price-row:hover {
-    background: #fafafa;
-}
-
 .yc-price-row-price.sport {
     color: #ED4700;
 }
@@ -826,8 +820,9 @@ a.yc-btn-orange {
         margin-bottom: 16px;
     }
 }
+
 /* =========================================
-   price-mod-frame テーブル版
+   13. テーブル版 共通
 ========================================= */
 
 .yc-price-table-page {
@@ -911,7 +906,7 @@ a.yc-btn-orange {
 }
 
 .yc-price-table-scroll tbody tr:hover {
-    background: #a0a09f;
+    background: #f3f6fa;
 }
 
 /* 列幅 */
@@ -929,7 +924,7 @@ a.yc-btn-orange {
 .yc-price-table-scroll td:nth-child(3) {
     width: 18%;
     white-space: nowrap;
-    color: #fff;
+    color: #000;
     font-weight: bold;
 }
 
@@ -937,6 +932,14 @@ a.yc-btn-orange {
 .yc-price-table-scroll td:nth-child(4) {
     width: 30%;
     color: #777;
+}
+
+/* thead だけ白文字 */
+.yc-price-table-scroll thead th:nth-child(3),
+.yc-price-table-scroll thead th:nth-child(4),
+.yc-price-table-scroll thead th:nth-child(2),
+.yc-price-table-scroll thead th:nth-child(1) {
+    color: #fff;
 }
 
 .yc-price-table-cta {
@@ -950,6 +953,57 @@ a.yc-btn-orange {
     min-width: 280px;
     padding: 18px 28px;
 }
+
+/* =========================================
+   14. price-mod-bike テーブル統一版
+========================================= */
+
+.yc-price-table-section-title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 50px 0 14px;
+    padding-left: 12px;
+}
+
+.yc-price-table-section-title.sport {
+    color: #ED4700;
+    border-left: 4px solid #ED4700;
+}
+
+.yc-price-table-section-title.city {
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.yc-price-table-notice {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    padding-left: 4px;
+}
+
+.yc-price-table-wrap-city {
+    margin-top: 0;
+}
+
+.yc-price-table-scroll-bike tbody tr:hover {
+    background: #f3f6fa;
+}
+
+.yc-price-table-scroll-bike th:nth-child(3),
+.yc-price-table-scroll-bike td:nth-child(3) {
+    color: #000;
+}
+
+.yc-price-table-scroll-bike thead th {
+    color: #fff;
+}
+
+/* =========================================
+   15. テーブル版 スマホ
+========================================= */
 
 @media (max-width: 768px) {
     .yc-price-table-page {
@@ -973,6 +1027,17 @@ a.yc-btn-orange {
         border: none;
     }
 
+    .yc-price-table-section-title {
+        font-size: 20px;
+        margin: 38px 0 12px;
+        padding-left: 10px;
+    }
+
+    .yc-price-table-notice {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
     .yc-price-table-scroll,
     .yc-price-table-scroll thead,
     .yc-price-table-scroll tbody,
@@ -984,7 +1049,26 @@ a.yc-btn-orange {
     }
 
     .yc-price-table-scroll thead {
-        display: none;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .yc-price-table-scroll thead tr {
+        display: grid;
+        grid-template-columns: 72px 1fr auto;
+        background: #0c4d9c;
+        color: #fff;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .yc-price-table-scroll thead th {
+        border: none;
+        padding: 0;
+        font-size: 12px;
+        color: #fff !important;
+        background: transparent;
     }
 
     .yc-price-table-scroll tbody {
@@ -1014,7 +1098,6 @@ a.yc-btn-orange {
 
     .yc-price-table-scroll td:nth-child(1) {
         grid-area: cat;
-        width: auto;
         color: #666;
         font-weight: bold;
         font-size: 12px;
@@ -1022,13 +1105,11 @@ a.yc-btn-orange {
 
     .yc-price-table-scroll td:nth-child(2) {
         grid-area: work;
-        width: auto;
         color: #2F2E2E;
     }
 
     .yc-price-table-scroll td:nth-child(3) {
         grid-area: price;
-        width: auto;
         white-space: nowrap;
         color: #000;
         font-weight: bold;
@@ -1037,10 +1118,14 @@ a.yc-btn-orange {
 
     .yc-price-table-scroll td:nth-child(4) {
         grid-area: note;
-        width: auto;
         color: #777;
         font-size: 12px;
         margin-top: 2px;
+    }
+
+    .yc-price-table-scroll tbody tr:hover,
+    .yc-price-table-scroll-bike tbody tr:hover {
+        background: #f3f6fa;
     }
 
     .yc-price-table-cta .yc-btn-orange {
