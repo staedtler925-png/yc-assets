@@ -1076,19 +1076,28 @@ a.yc-btn-orange {
         overflow: visible;
     }
 
-    .yc-price-table-scroll tbody tr {
-        display: grid;
-        grid-template-columns: 72px 1fr auto;
-        grid-template-areas:
-            "cat work price"
-            ". note note";
-        gap: 6px 10px;
-        padding: 12px;
-        margin-bottom: 12px;
-        border: 1px solid #eee;
-        background: #fff;
-    }
-
+   .yc-price-table-scroll tbody tr {
+       display: grid;
+       grid-template-columns: 72px 1fr auto;
+       grid-template-areas:
+           "cat work price"
+           ". note note";
+       gap: 6px 10px;
+       padding: 12px;
+       margin-bottom: 0;
+       border-top: none;
+       border-left: none;
+       border-right: none;
+       border-bottom: 1px solid #eee;
+       background: #fff;
+   }
+   
+      @media (max-width: 768px) {
+          .yc-price-table-scroll tbody tr:first-child {
+              border-top: 1px solid #eee;
+          }
+      }
+   
     .yc-price-table-scroll td {
         padding: 0;
         border: none;
