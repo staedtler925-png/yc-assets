@@ -1099,61 +1099,58 @@ a.yc-btn-orange {
            -webkit-overflow-scrolling: touch;
            background: #fff;
        }
-   
-       .yc-price-table-scroll tbody tr {
-           display: grid;
-           grid-template-columns: 72px 1fr auto;
-           grid-template-areas:
-               "cat work price"
-               ". note note";
-           gap: 6px 10px;
-           padding: 12px;
-           margin-bottom: 0;
-           border-top: none;
-           border-left: none;
-           border-right: none;
-           border-bottom: 1px solid #eee;
-           background: #fff;
-       }
-   
-       .yc-price-table-scroll tbody tr:first-child {
-           border-top: 1px solid #eee;
-       }
-   
-       .yc-price-table-scroll td {
-           padding: 0;
-           border: none;
-           font-size: 13px;
-           line-height: 1.6;
-       }
-   
-       .yc-price-table-scroll td:nth-child(1) {
-           grid-area: cat;
-           color: #666;
-           font-weight: bold;
-           font-size: 12px;
-       }
-   
-       .yc-price-table-scroll td:nth-child(2) {
-           grid-area: work;
-           color: #2F2E2E;
-       }
-   
-       .yc-price-table-scroll td:nth-child(3) {
-           grid-area: price;
-           white-space: nowrap;
-           color: #000;
-           font-weight: bold;
-           text-align: right;
-       }
-   
-       .yc-price-table-scroll td:nth-child(4) {
-           grid-area: note;
-           color: #777;
-           font-size: 12px;
-           margin-top: 2px;
-       }
-   
+         
+      .yc-price-table-scroll tbody tr {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-template-areas:
+              "cat cat"
+              "work price"
+              "note note";
+          gap: 8px 10px;
+          padding: 12px;
+          margin-bottom: 0;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid #eee;
+          background: #fff;
+      }
+      
+      .yc-price-table-scroll td:nth-child(1) {
+          grid-area: cat;
+          color: #0c4d9c;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 1.5;
+          padding-bottom: 6px;
+          border-bottom: 1px solid #e6e6e6;
+      }
+      
+      .yc-price-table-scroll td:nth-child(2) {
+          grid-area: work;
+          color: #2F2E2E;
+          line-height: 1.6;
+      }
+      
+      .yc-price-table-scroll td:nth-child(3) {
+          grid-area: price;
+          white-space: nowrap;
+          color: #000;
+          font-weight: bold;
+          text-align: right;
+          align-self: start;
+      }
+      
+      .yc-price-table-scroll td:nth-child(4) {
+          grid-area: note;
+          color: #777;
+          font-size: 12px;
+          line-height: 1.6;
+          padding-top: 6px;
+          border-top: 1px solid #f0f0f0;
+      }
+      
        .yc-price-table-scroll tbody tr:hover,
        .yc-price-table-scroll-bike tbody tr:hover {
            background: #f3f6fa;
