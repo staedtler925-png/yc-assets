@@ -1192,3 +1192,11 @@ a.yc-btn-orange {
            background: #2e7d32;
        }
    }
+
+   @media (max-width: 768px) {
+   
+       .yc-price-table-scroll td {
+           border-bottom: none !important;
+       }
+   
+   }
