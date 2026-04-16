@@ -94,3 +94,85 @@
     .yc-price-hero h1 { font-size: 20px; }
     .yc-price-table { font-size: 12px; }
 }
+
+/* ========== ギャラリー・スライダー基本設定 ========== */
+/* スライダー全体の枠 */
+.yc-gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* はみ出た画像を隠す（重要！） */
+    background: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+/* 画像が並ぶ芯の部分 */
+.yc-gallery-track {
+    display: flex; /* 画像を横一列に並べる（重要！） */
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+/* スライダー内の各画像 */
+.yc-gallery-track img {
+    width: 100%;
+    flex-shrink: 0; /* 画像が縮まないように固定 */
+    vertical-align: bottom;
+    object-fit: contain;
+}
+
+/* 左右ボタン */
+.yc-gallery-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 10px;
+}
+.yc-gallery-btn {
+    flex: 1;
+    padding: 15px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ドットナビゲーション */
+.yc-gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+.yc-gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.yc-gallery-dot.is-active {
+    background: #ED4700;
+}
+
+/* サムネイルナビゲーション */
+.yc-gallery-thumbs {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+}
+.yc-gallery-thumb {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    opacity: 0.5;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.yc-gallery-thumb.is-active {
+    opacity: 1;
+    border: 2px solid #ED4700;
+}
