@@ -575,3 +575,26 @@ a.yc-btn-orange {
         min-width: 0;
     }
 }
+
+@media (max-width: 640px) {
+    .yc-custom-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .yc-custom-hero {
+        order: 1;
+    }
+
+    .yc-custom-price {
+        order: 2;
+    }
+
+    .yc-steps {
+        order: 3;
+    }
+
+    .yc-custom-cta {
+        order: 4;
+    }
+}
