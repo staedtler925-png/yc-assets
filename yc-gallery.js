@@ -913,7 +913,7 @@
     // ==========================================
     // Works data
     // ==========================================
-    const GH = 'https://cdn.jsdelivr.net/gh/staedtler925-png/yc-works-images@f643ff6';
+    const GH = 'https://cdn.jsdelivr.net/gh/staedtler925-png/yc-works-images@main';
 
     const worksData = [
         {
@@ -1010,20 +1010,51 @@
         {
             slug: 'adventure-bike-for-m',
             title: 'Adventure Bike for M',
-            thumb: '',
-            images: [],
+            thumb: `${GH}/Adventure_Bike_for_M-01.jpg`,
+            images: [
+            `${GH}/Adventure_Bike_for_M-01.jpg`,
+            `${GH}/Adventure_Bike_for_M-02.jpg`,
+            `${GH}/Adventure_Bike_for_M-03.jpg`,
+            `${GH}/Adventure_Bike_for_M-04.jpg`,
+            `${GH}/Adventure_Bike_for_M-05.jpg`,
+            `${GH}/Adventure_Bike_for_M-06.jpg`,
+            `${GH}/Adventure_Bike_for_M-07.jpg`,
+            `${GH}/Adventure_Bike_for_M-08.jpg`
+            ],
         },
         {
             slug: 'hunter-for-i',
             title: 'Hunter for I',
-            thumb: '',
-            images: [],
+            thumb: `${GH}/Commuter_for_Y-01.jpg`,
+            images: [
+            `${GH}/Commuter_for_Y-01.jpg`,
+            `${GH}/Commuter_for_Y-02.jpg`,
+            `${GH}/Commuter_for_Y-03.jpg`,
+            `${GH}/Commuter_for_Y-04.jpg`,
+            `${GH}/Commuter_for_Y-05.jpg`,
+            `${GH}/Commuter_for_Y-06.jpg`,
+            `${GH}/Commuter_for_Y-07.jpg`,
+            `${GH}/Commuter_for_Y-08.jpg`,
+            `${GH}/Commuter_for_Y-09.jpg`,
+            `${GH}/Commuter_for_Y-10.jpg`
+            ],
         },
         {
             slug: 'commuter-for-y',
             title: 'Commuter for Y',
-            thumb: '',
-            images: [],
+            thumb: `${GH}/Hunter_for_I-01.jpg`,
+            images: [
+            `${GH}/Hunter_for_I-01.jpg`,
+            `${GH}/Hunter_for_I-02.jpg`,
+            `${GH}/Hunter_for_I-03.jpg`,
+            `${GH}/Hunter_for_I-04.jpg`,
+            `${GH}/Hunter_for_I-05.jpg`,
+            `${GH}/Hunter_for_I-06.jpg`,
+            `${GH}/Hunter_for_I-07.jpg`,
+            `${GH}/Hunter_for_I-08.jpg`,
+            `${GH}/Hunter_for_I-09.jpg`,
+            `${GH}/Hunter_for_I-10.jpg`
+            ],
         },
         {
             slug: '6back-tourer-for-t',
