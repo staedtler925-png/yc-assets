@@ -918,9 +918,11 @@ const worksData = [
         slug: 'quiet-for-i',
         title: 'QUIET for I',
         category: 'Works',
-        thumb: '',
+        thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg',
         summary: '制作事例ページです。',
-        images: [],
+        images: [
+        'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg'
+        ],
         /*
         body: `
             <p>制作事例の詳細をここに追加予定です。</p>
