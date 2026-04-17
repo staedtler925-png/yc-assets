@@ -1104,6 +1104,11 @@
 
     function renderWorksList() {
         var cards = worksData.map(function (item) {
+
+            var categoryHtml = item.category
+                ? `<span class="yc-works-card-category">${item.category}</span>`
+                : '';
+
             return `
                 <article class="yc-works-card">
                     <a href="/about?p=works-${item.slug}" class="yc-works-card-link">
@@ -1112,7 +1117,7 @@
                         </div>
                         <div class="yc-works-card-body">
                             <div class="yc-works-card-meta">
-                                <span class="yc-works-card-category">${item.category}</span>
+                                ${categoryHtml}
                             </div>
                             <h2>${item.title}</h2>
                             <p>${item.summary}</p>
