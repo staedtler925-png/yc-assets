@@ -922,6 +922,8 @@ const worksData = [
         summary: '制作事例ページです。',
         images: [
         'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg'
+        'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a45cff79/QUIET_for_I-02.jpg'
+        'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a54530df/QUIET_for_I-03.jpg'
         ],
         /*
         body: `
