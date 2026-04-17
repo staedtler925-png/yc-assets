@@ -923,7 +923,12 @@
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a45cff79/QUIET_for_I-02.jpg',
-            'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a54530df/QUIET_for_I-03.jpg'
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a54530df/QUIET_for_I-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e185d302dc5/QUIET_for_I-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e185dd298d9/QUIET_for_I-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e185ef1531d/QUIET_for_I-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e185f7d7cdc/QUIET_for_I-07.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18600d359b/QUIET_for_I-08.jpg'
             ],
             /*
             body: `
@@ -938,7 +943,15 @@
             category: 'Works',
             thumb: '',
             summary: '制作事例ページです。',
-            images: [],
+            images: [
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1867a02f50/Cozmo-01.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1868721809/Cozmo-02.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1869d47cfd/Cozmo-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e186a7b54d5/Cozmo-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e186b0a3cc5/Cozmo-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e186ba0e1f9/Cozmo-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e186c25908b/Cozmo-07.jpg'
+            ],
             /*
             body: `
                 <p>制作事例の詳細をここに追加予定です。</p>
@@ -1015,7 +1028,18 @@
             category: 'Works',
             thumb: '',
             summary: '制作事例ページです。',
-            images: [],
+            images: [
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18705df430/6back_Tourer_for_T-01.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1871bc8e9a/6back_Tourer_for_T-02.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18724a550e/6back_Tourer_for_T-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18733df101/6back_Tourer_for_T-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1873c56d0e/6back_Tourer_for_T-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e187467d734/6back_Tourer_for_T-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e187518111b/6back_Tourer_for_T-07.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1875a572b8/6back_Tourer_for_T-08.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e187647c68a/6back_Tourer_for_T-09.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e1876dad7e3/6back_Tourer_for_T-10.jpg'
+            ],
             body: ''
         },
         {
