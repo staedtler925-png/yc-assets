@@ -1533,6 +1533,7 @@
             window.scrollTo(0, 0);
         }
 
+        initHomeHeroSlider();
         router();
         window.addEventListener('popstate', router);
     })();
