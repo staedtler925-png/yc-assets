@@ -917,35 +917,174 @@ const worksData = [
     {
         slug: 'quiet-for-i',
         title: 'QUIET for I',
-        category: 'All Road',
-        thumb: 'https://placehold.co/900x600?text=QUIET+for+I',
-        summary: 'オールロードをベースに、日常からロングライドまでを意識した一台。',
-        images: [
-            'https://placehold.co/1200x800?text=QUIET+for+I+01',
-            'https://placehold.co/1200x800?text=QUIET+for+I+02',
-            'https://placehold.co/1200x800?text=QUIET+for+I+03'
-        ],
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        /*
         body: `
-            <p>QUIETをベースに、乗り方や用途に合わせて細部を調整した制作事例です。</p>
-            <p>タイヤクリアランス、ポジション、積載とのバランスを重視して製作しました。</p>
+            <p>制作事例の詳細をここに追加予定です。</p>
         `
+        */
+        body: ''
+    },
+    {
+        slug: 'cozmo',
+        title: 'Cozmo',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        /*
+        body: `
+            <p>制作事例の詳細をここに追加予定です。</p>
+        `
+        */
+        body: ''
+    },
+    {
+        slug: '650b-rando-for-a',
+        title: '650B Rando for A',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'commuter-for-m',
+        title: 'Commuter for M',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: '853-road-for-re-tokyo',
+        title: '853 Road for RE Tokyo',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'quiet-for-n',
+        title: 'QUIET for N',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'adventure-bike-for-m',
+        title: 'Adventure Bike for M',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'hunter-for-i',
+        title: 'Hunter for I',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'commuter-for-y',
+        title: 'Commuter for Y',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
     },
     {
         slug: '6back-tourer-for-t',
         title: '6back Tourer for T',
-        category: 'Touring',
-        thumb: 'https://placehold.co/900x600?text=6back+Tourer+for+T',
-        summary: 'ツーリング用途を軸に、積載と走行安定性を両立した制作事例。',
-        images: [
-            'https://placehold.co/1200x800?text=6back+Tourer+for+T+01',
-            'https://placehold.co/1200x800?text=6back+Tourer+for+T+02',
-            'https://placehold.co/1200x800?text=6back+Tourer+for+T+03',
-            'https://placehold.co/1200x800?text=6back+Tourer+for+T+04'
-        ],
-        body: `
-            <p>積載時の安定感と、長距離での疲れにくさを重視して設計した一台です。</p>
-            <p>使用環境や荷物量を前提に、細かい部分の仕様を詰めています。</p>
-        `
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: '700c-mixte-for-s-1',
+        title: '700c Mixte for S',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'adventure-bike-for-i',
+        title: 'Adventure Bike for I',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'gravel-bike-for-n',
+        title: 'Gravel Bike for N',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: '700c-mixte-for-s-2',
+        title: '700c Mixte for S',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: '700c-mixte-for-s-3',
+        title: '700c Mixte for S',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'commuter-for-i',
+        title: 'Commuter for I',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'quiet-disc-for-s',
+        title: 'Quiet Disc for S',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
+    },
+    {
+        slug: 'kokuo',
+        title: 'Kokuo',
+        category: 'Works',
+        thumb: '',
+        summary: '制作事例ページです。',
+        images: [],
+        body: ''
     }
 ];
 
@@ -1025,6 +1164,8 @@ function renderWorksDetail(slug) {
         `;
     }).join('');
 
+    var bodyHtml = item.body ? item.body : '<p>詳細は準備中です。</p>';
+
     return `
         <div class="yc-works-detail-page">
             <div class="yc-back-nav">
@@ -1035,24 +1176,30 @@ function renderWorksDetail(slug) {
                 <h1>${item.title}</h1>
             </div>
 
-            <div class="yc-gallery yc-works-gallery" id="worksGallery-${item.slug}">
-                <div class="yc-gallery-main">
-                    <div class="yc-gallery-main-track" id="worksTrack-${item.slug}">
-                        ${slides}
+            ${
+                item.images.length
+                    ? `
+                    <div class="yc-gallery yc-works-gallery" id="worksGallery-${item.slug}">
+                        <div class="yc-gallery-main">
+                            <div class="yc-gallery-main-track" id="worksTrack-${item.slug}">
+                                ${slides}
+                            </div>
+                            <button class="yc-gallery-prev" id="worksPrev-${item.slug}" type="button">&#10094;</button>
+                            <button class="yc-gallery-next" id="worksNext-${item.slug}" type="button">&#10095;</button>
+                        </div>
+                        <div class="yc-gallery-dots" id="worksDots-${item.slug}"></div>
+                        <div class="yc-gallery-thumbs" id="worksThumbs-${item.slug}"></div>
                     </div>
-                    <button class="yc-gallery-prev" id="worksPrev-${item.slug}" type="button">&#10094;</button>
-                    <button class="yc-gallery-next" id="worksNext-${item.slug}" type="button">&#10095;</button>
-                </div>
-                <div class="yc-gallery-dots" id="worksDots-${item.slug}"></div>
-                <div class="yc-gallery-thumbs" id="worksThumbs-${item.slug}"></div>
-            </div>
+                    `
+                    : ''
+            }
 
             <div class="yc-works-detail-main">
                 <div class="yc-works-detail-content">
                     <div class="yc-works-detail-meta">
                         <span class="yc-works-card-category">${item.category}</span>
                     </div>
-                    ${item.body}
+                    ${bodyHtml}
                 </div>
             </div>
         </div>
