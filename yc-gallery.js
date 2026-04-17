@@ -913,6 +913,8 @@
     // ==========================================
     // Works data
     // ==========================================
+    const GH = 'https://cdn.jsdelivr.net/gh/staedtler925-png/yc-works-images@main';
+
     const worksData = [
         {
             slug: 'quiet-for-i',
@@ -975,8 +977,19 @@
         {
             slug: '853-road-for-re-tokyo',
             title: '853 Road for RE Tokyo',
-            thumb: '',
-            images: [],
+            thumb: '${GH}/853_Road_for_RE_Tokyo-01.jpg',
+            images: [
+            '${GH}/853_Road_for_RE_Tokyo-01.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-02.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-03.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-04.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-05.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-06.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-07.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-08.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-09.jpg',
+            '${GH}/853_Road_for_RE_Tokyo-10.jpg'
+            ],
         },
         {
             slug: 'quiet-for-n',
