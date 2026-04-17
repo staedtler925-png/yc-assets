@@ -941,7 +941,7 @@
             slug: 'cozmo',
             title: 'Cozmo',
             category: 'Works',
-            thumb: '',
+            thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e1867a02f50/Cozmo-01.jpg',
             summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1867a02f50/Cozmo-01.jpg',
@@ -1026,7 +1026,7 @@
             slug: '6back-tourer-for-t',
             title: '6back Tourer for T',
             category: 'Works',
-            thumb: '',
+            thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e18705df430/6back_Tourer_for_T-01.jpg',
             summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e18705df430/6back_Tourer_for_T-01.jpg',
