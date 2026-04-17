@@ -977,7 +977,7 @@
         {
             slug: '853-road-for-re-tokyo',
             title: '853 Road for RE Tokyo',
-            thumb: `${GH}/853_Road_for_RE_Tokyo-01.jpg`,
+            thumb: `${GH}/853_Road_for_RE_Tokyo-thumb.jpg`,
             images: [
             `${GH}/853_Road_for_RE_Tokyo-01.jpg`,
             `${GH}/853_Road_for_RE_Tokyo-02.jpg`,
@@ -1010,7 +1010,7 @@
         {
             slug: 'adventure-bike-for-m',
             title: 'Adventure Bike for M',
-            thumb: `${GH}/Adventure_Bike_for_M-01.jpg`,
+            thumb: `${GH}/Adventure_Bike_for_M-thumb.jpg`,
             images: [
             `${GH}/Adventure_Bike_for_M-01.jpg`,
             `${GH}/Adventure_Bike_for_M-02.jpg`,
@@ -1025,7 +1025,7 @@
         {
             slug: 'hunter-for-i',
             title: 'Hunter for I',
-            thumb: `${GH}/Commuter_for_Y-01.jpg`,
+            thumb: `${GH}/Commuter_for_Y-thumb.jpg`,
             images: [
             `${GH}/Commuter_for_Y-01.jpg`,
             `${GH}/Commuter_for_Y-02.jpg`,
@@ -1042,7 +1042,7 @@
         {
             slug: 'commuter-for-y',
             title: 'Commuter for Y',
-            thumb: `${GH}/Hunter_for_I-01.jpg`,
+            thumb: `${GH}/Hunter_for_I-thumb.jpg`,
             images: [
             `${GH}/Hunter_for_I-01.jpg`,
             `${GH}/Hunter_for_I-02.jpg`,
@@ -1076,7 +1076,7 @@
         {
             slug: '700c-mixte-for-s-1',
             title: '700c Mixte for S',
-            thumb: `${GH}/700c_Mixte_for_S-1-01.jpg`,
+            thumb: `${GH}/700c_Mixte_for_S-1-thumb.jpg`,
             images: [
             `${GH}/700c_Mixte_for_S-1-01.jpg`,
             `${GH}/700c_Mixte_for_S-1-02.jpg`,
@@ -1093,7 +1093,7 @@
         {
             slug: 'adventure-bike-for-i',
             title: 'Adventure Bike for I',
-            thumb: `${GH}/Adventure_Bike_for_I-01.jpg`,
+            thumb: `${GH}/Adventure_Bike_for_I-thumb.jpg`,
             images: [
             `${GH}/Adventure_Bike_for_I-01.jpg`,
             `${GH}/Adventure_Bike_for_I-02.jpg`,
@@ -1108,7 +1108,7 @@
         {
             slug: 'gravel-bike-for-n',
             title: 'Gravel Bike for N',
-            thumb: `${GH}/Gravel_Bike_for_N-01.jpg`,
+            thumb: `${GH}/Gravel_Bike_for_N-thumb.jpg`,
             images: [
             `${GH}/Gravel_Bike_for_N-01.jpg`,
             `${GH}/Gravel_Bike_for_N-02.jpg`,
@@ -1136,7 +1136,7 @@
         {
             slug: 'commuter-for-i',
             title: 'Commuter for I',
-            thumb: `${GH}/Commuter_for_I-01.jpg`,
+            thumb: `${GH}/Commuter_for_I-thumb.jpg`,
             images: [
             `${GH}/Commuter_for_I-01.jpg`,
             `${GH}/Commuter_for_I-02.jpg`,
@@ -1153,7 +1153,7 @@
         {
             slug: 'quiet-disc-for-s',
             title: 'Quiet Disc for S',
-            thumb: `${GH}/Quiet_Disc_for_S-01.jpg`,
+            thumb: `${GH}/Quiet_Disc_for_S-thumb.jpg`,
             images: [
             `${GH}/Quiet_Disc_for_S-01.jpg`,
             `${GH}/Quiet_Disc_for_S-02.jpg`,
@@ -1169,7 +1169,7 @@
         {
             slug: 'kokuo',
             title: 'Kokuo',
-            thumb: `${GH}/Kokuo-01.jpg`,
+            thumb: `${GH}/Kokuo-thumb.jpg`,
             images: [
             `${GH}/Kokuo-01.jpg`,
             `${GH}/Kokuo-02.jpg`,
