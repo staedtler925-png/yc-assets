@@ -5,17 +5,36 @@
     // HOME Hero Slider
     // ==========================================
     function initHomeHeroSlider() {
+        console.log('🚀 initHomeHeroSlider START');
+
         var hero = document.getElementById('ycHomeHero');
         var track = document.getElementById('ycHomeHeroTrack');
         var prevBtn = document.getElementById('ycHomeHeroPrev');
         var nextBtn = document.getElementById('ycHomeHeroNext');
         var dotsEl = document.getElementById('ycHomeHeroDots');
 
-        if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) return;
-        if (hero.dataset.ycInitialized === 'true') return;
+        console.log('要素チェック', {
+            hero: hero,
+            track: track,
+            prevBtn: prevBtn,
+            nextBtn: nextBtn,
+            dotsEl: dotsEl
+        });
+
+        if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) {
+            console.warn('⚠️ HOMEスライダー要素が足りないので初期化中断');
+            return;
+        }
+
+        if (hero.dataset.ycInitialized === 'true') {
+            console.log('ℹ️ HOMEスライダーは初期化済み');
+            return;
+        }
 
         var slides = track.children;
+
         if (!slides || slides.length <= 1) {
+            console.warn('⚠️ スライド枚数が1枚以下です');
             hero.dataset.ycInitialized = 'true';
             prevBtn.style.display = 'none';
             nextBtn.style.display = 'none';
@@ -39,6 +58,7 @@
                 btn.className = 'yc-home-hero-dot' + (index === 0 ? ' is-active' : '');
                 btn.setAttribute('aria-label', (index + 1) + '枚目へ');
                 btn.addEventListener('click', function () {
+                    console.log('● dot click:', index);
                     goTo(index);
                     restartAuto();
                 });
@@ -57,6 +77,7 @@
             current = (index + slides.length) % slides.length;
             track.style.transform = 'translateX(' + (-current * 100) + '%)';
             updateDots();
+            console.log('➡️ goTo:', current);
         }
 
         function next() {
@@ -72,12 +93,14 @@
             timer = setInterval(function() {
                 next();
             }, 5000);
+            console.log('⏱ auto start');
         }
 
         function stopAuto() {
             if (timer) {
                 clearInterval(timer);
                 timer = null;
+                console.log('⏹ auto stop');
             }
         }
 
@@ -87,11 +110,13 @@
         }
 
         prevBtn.addEventListener('click', function () {
+            console.log('◀ prev click');
             prev();
             restartAuto();
         });
 
         nextBtn.addEventListener('click', function () {
+            console.log('▶ next click');
             next();
             restartAuto();
         });
@@ -110,6 +135,8 @@
             if (!isTouching || !e.changedTouches || !e.changedTouches.length) return;
             var diff = startX - e.changedTouches[0].clientX;
 
+            console.log('📱 swipe diff:', diff);
+
             if (Math.abs(diff) > 40) {
                 if (diff > 0) {
                     next();
@@ -124,6 +151,7 @@
 
         goTo(0);
         startAuto();
+        console.log('✅ HOMEスライダー初期化完了');
     }
 
         // ==========================================
@@ -1504,55 +1532,66 @@
         goTo(0);
     }
 
-        // ==========================================
-        // D. ルーター制御
-        // ==========================================
-        function router() {
-            var root = document.getElementById('yc-router-root');
-            if (!root) return;
-
-            var params = new URLSearchParams(window.location.search);
-            var pageKey = params.get('p');
-
-            if (pageKey === 'works') {
-                root.innerHTML = renderWorksList();
-            } else if (pageKey && pageKey.indexOf('works-') === 0) {
-                var slug = pageKey.replace('works-', '');
-                root.innerHTML = renderWorksDetail(slug);
-                initWorksGallery(slug);
-            } else if (pageKey && pages[pageKey]) {
-                root.innerHTML = pages[pageKey];
-
-                if (pageKey === 'kazusa') initKazusaGallery();
-                if (pageKey === 'quiet-disc') initQuietGallery();
-                if (pageKey === 'quiet-mud') initQuietMudGallery();
-            } else {
-                root.innerHTML = listPage;
-            }
-
-            window.scrollTo(0, 0);
+    // ==========================================
+    // D. ルーター制御
+    // ==========================================
+    function router() {
+        var root = document.getElementById('yc-router-root');
+        if (!root) {
+            console.log('ℹ️ yc-router-root が無いので router は終了（HOMEでは正常）');
+            return;
         }
 
-        function initHomeHeroSlider() {
-            console.log('initHomeHeroSlider start');
+        var params = new URLSearchParams(window.location.search);
+        var pageKey = params.get('p');
 
-            var hero = document.getElementById('ycHomeHero');
-            var track = document.getElementById('ycHomeHeroTrack');
-            var prevBtn = document.getElementById('ycHomeHeroPrev');
-            var nextBtn = document.getElementById('ycHomeHeroNext');
-            var dotsEl = document.getElementById('ycHomeHeroDots');
+        console.log('🧭 router pageKey:', pageKey);
 
-            console.log({
-                hero: !!hero,
-                track: !!track,
-                prevBtn: !!prevBtn,
-                nextBtn: !!nextBtn,
-                dotsEl: !!dotsEl
-            });
+        if (pageKey === 'works') {
+            root.innerHTML = renderWorksList();
+        } else if (pageKey && pageKey.indexOf('works-') === 0) {
+            var slug = pageKey.replace('works-', '');
+            root.innerHTML = renderWorksDetail(slug);
+            initWorksGallery(slug);
+        } else if (pageKey && pages[pageKey]) {
+            root.innerHTML = pages[pageKey];
 
-            if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) return;
+            if (pageKey === 'kazusa') initKazusaGallery();
+            if (pageKey === 'quiet-disc') initQuietGallery();
+            if (pageKey === 'quiet-mud') initQuietMudGallery();
+        } else {
+            root.innerHTML = listPage;
+        }
 
-        initHomeHeroSlider();
-        router();
-        window.addEventListener('popstate', router);
+        window.scrollTo(0, 0);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('🔥 DOMContentLoaded fired (yc-gallery.js)');
+
+        try {
+            console.log('▶ initHomeHeroSlider() 実行前');
+            initHomeHeroSlider();
+            console.log('✅ initHomeHeroSlider() 実行後');
+        } catch (e) {
+            console.error('❌ initHomeHeroSlider error:', e);
+        }
+
+        try {
+            console.log('▶ router() 実行前');
+            router();
+            console.log('✅ router() 実行後');
+        } catch (e) {
+            console.error('❌ router error:', e);
+        }
+    });
+
+    window.addEventListener('popstate', function () {
+        console.log('↩ popstate fired');
+        try {
+            router();
+        } catch (e) {
+            console.error('❌ router error (popstate):', e);
+        }
+    });
     })();
