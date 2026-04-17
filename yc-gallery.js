@@ -1,6 +1,131 @@
     (function () {
         'use strict';
 
+    // ==========================================
+    // HOME Hero Slider
+    // ==========================================
+    function initHomeHeroSlider() {
+        var hero = document.getElementById('ycHomeHero');
+        var track = document.getElementById('ycHomeHeroTrack');
+        var prevBtn = document.getElementById('ycHomeHeroPrev');
+        var nextBtn = document.getElementById('ycHomeHeroNext');
+        var dotsEl = document.getElementById('ycHomeHeroDots');
+
+        if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) return;
+        if (hero.dataset.ycInitialized === 'true') return;
+
+        var slides = track.children;
+        if (!slides || slides.length <= 1) {
+            hero.dataset.ycInitialized = 'true';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            dotsEl.style.display = 'none';
+            return;
+        }
+
+        hero.dataset.ycInitialized = 'true';
+
+        var current = 0;
+        var timer = null;
+        var startX = 0;
+        var isTouching = false;
+
+        dotsEl.innerHTML = '';
+
+        for (var i = 0; i < slides.length; i++) {
+            (function(index) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'yc-home-hero-dot' + (index === 0 ? ' is-active' : '');
+                btn.setAttribute('aria-label', (index + 1) + '枚目へ');
+                btn.addEventListener('click', function () {
+                    goTo(index);
+                    restartAuto();
+                });
+                dotsEl.appendChild(btn);
+            })(i);
+        }
+
+        function updateDots() {
+            var dots = dotsEl.querySelectorAll('.yc-home-hero-dot');
+            dots.forEach(function(dot, i) {
+                dot.classList.toggle('is-active', i === current);
+            });
+        }
+
+        function goTo(index) {
+            current = (index + slides.length) % slides.length;
+            track.style.transform = 'translateX(' + (-current * 100) + '%)';
+            updateDots();
+        }
+
+        function next() {
+            goTo(current + 1);
+        }
+
+        function prev() {
+            goTo(current - 1);
+        }
+
+        function startAuto() {
+            stopAuto();
+            timer = setInterval(function() {
+                next();
+            }, 5000);
+        }
+
+        function stopAuto() {
+            if (timer) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        function restartAuto() {
+            stopAuto();
+            startAuto();
+        }
+
+        prevBtn.addEventListener('click', function () {
+            prev();
+            restartAuto();
+        });
+
+        nextBtn.addEventListener('click', function () {
+            next();
+            restartAuto();
+        });
+
+        hero.addEventListener('mouseenter', stopAuto);
+        hero.addEventListener('mouseleave', startAuto);
+
+        track.addEventListener('touchstart', function (e) {
+            if (!e.touches || !e.touches.length) return;
+            isTouching = true;
+            startX = e.touches[0].clientX;
+            stopAuto();
+        }, { passive: true });
+
+        track.addEventListener('touchend', function (e) {
+            if (!isTouching || !e.changedTouches || !e.changedTouches.length) return;
+            var diff = startX - e.changedTouches[0].clientX;
+
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) {
+                    next();
+                } else {
+                    prev();
+                }
+            }
+
+            isTouching = false;
+            startAuto();
+        }, { passive: true });
+
+        goTo(0);
+        startAuto();
+    }
+
         // ==========================================
         // A. KAZUSA 初期化
         // ==========================================
