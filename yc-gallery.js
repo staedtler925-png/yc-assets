@@ -952,14 +952,25 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189e6d5daa/650B_Rando_for_EFBCA1-02.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189efc840f/650B_Rando_for_EFBCA1-03.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189f91c36d/650B_Rando_for_EFBCA1-04.jpg',
-            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18a114af4a/650B_Rando_for_EFBCA1-05.jpg'
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18a114af4a/650B_Rando_for_EFBCA1-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28f15ee1b6/650B_Rando_for_EFBCA1-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28f327a0cb/650B_Rando_for_EFBCA1-07.jpg'
             ],
         },
         {
             slug: 'commuter-for-m',
             title: 'Commuter for M',
-            thumb: '',
-            images: [],
+            thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e28faad5a56/Commuter_for_M-01.jpg',
+            images: [
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28faad5a56/Commuter_for_M-01.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fb71d898/Commuter_for_M-02.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fc073bf4/Commuter_for_M-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fc8da4fb/Commuter_for_M-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fd24967f/Commuter_for_M-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fdeb4383/Commuter_for_M-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28fe69e019/Commuter_for_M-07.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e28ff2c0311/Commuter_for_M-08.jpg'
+            ],
         },
         {
             slug: '853-road-for-re-tokyo',
@@ -970,8 +981,18 @@
         {
             slug: 'quiet-for-n',
             title: 'QUIET for N',
-            thumb: '',
-            images: [],
+            thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e290a73305b/QUIET_for_N-01.jpg',
+            images: [
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e290a73305b/QUIET_for_N-01.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e290bd0eca2/QUIET_for_N-02.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e290c67555c/QUIET_for_N-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e290f1411f3/QUIET_for_N-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e290faf2766/QUIET_for_N-05.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e29103e1d1b/QUIET_for_N-06.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e2910d9ff37/QUIET_for_N-07.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e29116bd2dd/QUIET_for_N-08.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e2911fbcc61/QUIET_for_N-09.jpg'
+            ],
         },
         {
             slug: 'adventure-bike-for-m',
