@@ -1360,7 +1360,7 @@ a.yc-btn-orange {
 }
 
 /* =========================================
-   works page polish
+   works minimal
 ========================================= */
 
 .yc-works-page,
@@ -1375,7 +1375,7 @@ a.yc-btn-orange {
 
 .yc-works-hero {
     text-align: center;
-    margin: 10px 0 44px;
+    margin: 10px 0 36px;
 }
 
 .yc-works-hero h1 {
@@ -1383,13 +1383,7 @@ a.yc-btn-orange {
     font-weight: bold;
     color: #2F2E2E;
     line-height: 1.4;
-    margin-bottom: 16px;
-}
-
-.yc-works-hero p {
-    font-size: 15px;
-    line-height: 2;
-    color: #666;
+    margin: 0;
 }
 
 .yc-works-grid {
@@ -1414,7 +1408,6 @@ a.yc-btn-orange {
     display: block;
     color: inherit;
     text-decoration: none;
-    height: 100%;
 }
 
 .yc-works-card-thumb {
@@ -1434,71 +1427,30 @@ a.yc-btn-orange {
 }
 
 .yc-works-card-body {
-    padding: 18px;
-}
-
-.yc-works-card-meta {
-    min-height: 20px;
-    margin-bottom: 10px;
-}
-
-.yc-works-card-meta:empty {
-    display: none;
-}
-
-.yc-works-card-category {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    color: #0c4d9c;
-    border: 1px solid #0c4d9c;
-    padding: 4px 8px;
+    padding: 16px 18px;
 }
 
 .yc-works-card h2 {
     font-size: 22px;
     line-height: 1.5;
-    margin: 0 0 10px;
+    margin: 0;
     color: #2F2E2E;
-}
-
-.yc-works-card p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #666;
-    margin: 0 0 14px;
-}
-
-.yc-works-card-more {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
-    color: #ED4700;
-}
-
-.yc-works-detail-main {
-    margin-top: 30px;
-}
-
-.yc-works-detail-content {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.yc-works-detail-content p {
-    font-size: 15px;
-    line-height: 2;
-    margin-bottom: 16px;
 }
 
 .yc-works-empty {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
+.yc-works-empty p,
 .yc-works-empty h1 {
-    font-size: 24px;
-    color: #2F2E2E;
+    color: #666;
+}
+
+.yc-works-gallery .yc-gallery-main-slide img {
+    height: 520px;
+    object-fit: contain;
+    background: #f5f5f5;
 }
 
 @media (max-width: 768px) {
@@ -1508,16 +1460,11 @@ a.yc-btn-orange {
     }
 
     .yc-works-hero {
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
 
     .yc-works-hero h1 {
         font-size: 24px;
-    }
-
-    .yc-works-hero p {
-        font-size: 14px;
-        line-height: 1.9;
     }
 
     .yc-works-grid {
@@ -1529,7 +1476,7 @@ a.yc-btn-orange {
         font-size: 20px;
     }
 
-    .yc-works-card-body {
-        padding: 16px;
+    .yc-works-gallery .yc-gallery-main-slide img {
+        height: 300px;
     }
 }
