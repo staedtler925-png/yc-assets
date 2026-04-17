@@ -1093,8 +1093,9 @@
         {
             slug: 'adventure-bike-for-i',
             title: 'Adventure Bike for I',
-            thumb: `${GH}/Adventure_Bike_for_I-02.jpg`,
+            thumb: `${GH}/Adventure_Bike_for_I-01.jpg`,
             images: [
+            `${GH}/Adventure_Bike_for_I-01.jpg`,
             `${GH}/Adventure_Bike_for_I-02.jpg`,
             `${GH}/Adventure_Bike_for_I-03.jpg`,
             `${GH}/Adventure_Bike_for_I-04.jpg`,
