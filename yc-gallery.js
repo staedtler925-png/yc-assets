@@ -917,9 +917,7 @@
         {
             slug: 'quiet-for-i',
             title: 'QUIET for I',
-            category: 'Works',
             thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg',
-            summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1793b531f3/QUIET_for_I-01.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e17a45cff79/QUIET_for_I-02.jpg',
@@ -930,14 +928,11 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e185f7d7cdc/QUIET_for_I-07.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e18600d359b/QUIET_for_I-08.jpg'
             ],
-            body: ''
         },
         {
             slug: 'cozmo',
             title: 'Cozmo',
-            category: 'Works',
             thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e1867a02f50/Cozmo-01.jpg',
-            summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1867a02f50/Cozmo-01.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1868721809/Cozmo-02.jpg',
@@ -947,14 +942,11 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e186ba0e1f9/Cozmo-06.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e186c25908b/Cozmo-07.jpg'
             ],
-            body: ''
         },
         {
             slug: '650b-rando-for-a',
             title: '650B Rando for A',
-            category: 'Works',
             thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e189d44eb33/650B_Rando_for_EFBCA1-01.jpg',
-            summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189d44eb33/650B_Rando_for_EFBCA1-01.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189e6d5daa/650B_Rando_for_EFBCA1-02.jpg',
@@ -962,68 +954,47 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e189f91c36d/650B_Rando_for_EFBCA1-04.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e18a114af4a/650B_Rando_for_EFBCA1-05.jpg'
             ],
-            body: ''
         },
         {
             slug: 'commuter-for-m',
             title: 'Commuter for M',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: '853-road-for-re-tokyo',
             title: '853 Road for RE Tokyo',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'quiet-for-n',
             title: 'QUIET for N',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'adventure-bike-for-m',
             title: 'Adventure Bike for M',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'hunter-for-i',
             title: 'Hunter for I',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'commuter-for-y',
             title: 'Commuter for Y',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: '6back-tourer-for-t',
             title: '6back Tourer for T',
-            category: 'Works',
             thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e18705df430/6back_Tourer_for_T-01.jpg',
-            summary: '制作事例ページです。',
             images: [
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e18705df430/6back_Tourer_for_T-01.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1871bc8e9a/6back_Tourer_for_T-02.jpg',
@@ -1036,79 +1007,54 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e187647c68a/6back_Tourer_for_T-09.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e1876dad7e3/6back_Tourer_for_T-10.jpg'
             ],
-            body: ''
         },
         {
             slug: '700c-mixte-for-s-1',
             title: '700c Mixte for S',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'adventure-bike-for-i',
             title: 'Adventure Bike for I',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'gravel-bike-for-n',
             title: 'Gravel Bike for N',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: '700c-mixte-for-s-2',
             title: '700c Mixte for S',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: '700c-mixte-for-s-3',
             title: '700c Mixte for S',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'commuter-for-i',
             title: 'Commuter for I',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'quiet-disc-for-s',
             title: 'Quiet Disc for S',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         },
         {
             slug: 'kokuo',
             title: 'Kokuo',
-            category: 'Works',
             thumb: '',
-            summary: '制作事例ページです。',
             images: [],
-            body: ''
         }
     ];
 
@@ -1124,10 +1070,6 @@
 
     function renderWorksList() {
         var cards = worksData.map(function (item) {
-            var categoryHtml = item.category
-                ? `<span class="yc-works-card-category">${item.category}</span>`
-                : '';
-
             var thumbSrc = item.thumb || 'https://placehold.co/900x600?text=WORKS';
 
             return `
@@ -1137,12 +1079,7 @@
                             <img src="${thumbSrc}" alt="${item.title}">
                         </div>
                         <div class="yc-works-card-body">
-                            <div class="yc-works-card-meta">
-                                ${categoryHtml}
-                            </div>
                             <h2>${item.title}</h2>
-                            <p>${item.summary}</p>
-                            <span class="yc-works-card-more">詳細を見る</span>
                         </div>
                     </a>
                 </article>
@@ -1152,15 +1089,11 @@
         return `
             <div class="yc-works-page">
                 <div class="yc-back-nav">
-                    <a href="/" class="yc-back-btn">← HOME</a>
+                    <a href="/about" class="yc-back-btn">← ABOUT</a>
                 </div>
 
                 <div class="yc-works-hero">
                     <h1>制作事例</h1>
-                    <p>
-                        これまで製作したフレームや完成車の事例です。<br>
-                        仕様や用途、雰囲気の参考としてご覧ください。
-                    </p>
                 </div>
 
                 <div class="yc-works-grid">
@@ -1194,8 +1127,6 @@
             `;
         }).join('');
 
-        var bodyHtml = item.body ? item.body : '<p>詳細は準備中です。</p>';
-
         return `
             <div class="yc-works-detail-page">
                 <div class="yc-back-nav">
@@ -1221,17 +1152,12 @@
                             <div class="yc-gallery-thumbs" id="worksThumbs-${item.slug}"></div>
                         </div>
                         `
-                        : ''
-                }
-
-                <div class="yc-works-detail-main">
-                    <div class="yc-works-detail-content">
-                        <div class="yc-works-detail-meta">
-                            <span class="yc-works-card-category">${item.category}</span>
+                        : `
+                        <div class="yc-works-empty">
+                            <p>画像は準備中です。</p>
                         </div>
-                        ${bodyHtml}
-                    </div>
-                </div>
+                        `
+                }
             </div>
         `;
     }
