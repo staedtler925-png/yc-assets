@@ -1892,3 +1892,428 @@ body.shop #mainHeader {
         line-height: 1.95;
     }
 }
+
+/* =========================================
+   HOME 完成版 微調整セット
+   末尾に追記
+========================================= */
+
+/* HOME全体 */
+.yc-home {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 72px;
+    background: #fff;
+    color: #222;
+}
+
+/* -----------------------------------------
+   HERO
+----------------------------------------- */
+.yc-home-hero {
+    width: 100%;
+    margin: 0 0 42px;
+}
+
+.yc-home-hero-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f6f6f6;
+}
+
+.yc-home-hero-track {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+.yc-home-hero-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+}
+
+.yc-home-hero-slide img {
+    display: block;
+    width: 100%;
+    height: min(72vh, 760px);
+    min-height: 320px;
+    object-fit: cover;
+}
+
+/* 矢印 */
+.yc-home-hero-prev,
+.yc-home-hero-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.78);
+    color: #222;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.yc-home-hero-prev:hover,
+.yc-home-hero-next:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.yc-home-hero-prev {
+    left: 18px;
+}
+
+.yc-home-hero-next {
+    right: 18px;
+}
+
+/* ドット */
+.yc-home-hero-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.yc-home-hero-dot {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.yc-home-hero-dot.is-active {
+    background: #fff;
+    transform: scale(1.24);
+}
+
+/* -----------------------------------------
+   INTRO（使う時のために入れておく）
+----------------------------------------- */
+.yc-home-intro {
+    max-width: 900px;
+    margin: 0 auto 54px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.yc-home-intro h2 {
+    margin: 0 0 18px;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #222;
+}
+
+.yc-home-intro p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 2.1;
+    color: #555;
+}
+
+.yc-home-kicker {
+    margin: 0 0 16px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: #888;
+}
+
+/* -----------------------------------------
+   INFORMATION
+----------------------------------------- */
+.yc-home-info {
+    max-width: 980px;
+    margin: 0 auto 56px;
+    padding: 0 20px;
+}
+
+.yc-home-section-head {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.yc-home-section-head h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: #222;
+}
+
+.yc-home-info-list {
+    border-top: 1px solid #e8e8e8;
+    background: #fff;
+}
+
+.yc-home-info-item {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.yc-home-info-item a {
+    display: block;
+    padding: 18px 8px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.9;
+    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.yc-home-info-item a:hover {
+    background: #fafafa;
+    color: #ED4700;
+    padding-left: 14px;
+}
+
+/* -----------------------------------------
+   商品一覧の見た目をHOMEに合わせて整理
+----------------------------------------- */
+body#shopTopPage .itemList {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto 90px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px 24px;
+    overflow: visible;
+}
+
+body#shopTopPage .item {
+    width: calc(25% - 18px);
+    margin: 0;
+    padding: 0;
+    float: none;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+body#shopTopPage .item .itemImg {
+    width: 100%;
+    height: auto;
+    margin: 0 0 14px;
+    padding: 0;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+body#shopTopPage .item:hover .itemImg {
+    border: none;
+    padding: 0;
+}
+
+body#shopTopPage .item .itemImg a {
+    display: block;
+    position: relative;
+}
+
+body#shopTopPage .item .itemImg a::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+body#shopTopPage .item .itemImg img.image-resize {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+body#shopTopPage .item:hover .itemImg img.image-resize {
+    transform: scale(1.04);
+}
+
+body#shopTopPage .item a {
+    color: #333;
+}
+
+body#shopTopPage .item:hover a {
+    color: #333;
+}
+
+body#shopTopPage .item .itemTitle {
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+body#shopTopPage .item a .itemTitle h2 {
+    width: auto;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.75;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    color: #222;
+}
+
+body#shopTopPage .item .itemDetail .itemPrice {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #666;
+}
+
+body#shopTopPage .item .itemImg a .soldout_cover {
+    background-color: rgba(255, 255, 255, 0.86);
+}
+
+body#shopTopPage .item .itemImg a .soldout_cover p {
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+/* -----------------------------------------
+   ヘッダーとのつながり
+----------------------------------------- */
+body.shop #mainHeader {
+    margin: 0 auto 20px;
+}
+
+/* -----------------------------------------
+   タブレット
+----------------------------------------- */
+@media (max-width: 1024px) {
+    .yc-home {
+        margin-bottom: 56px;
+    }
+
+    .yc-home-hero-slide img {
+        height: min(62vh, 620px);
+    }
+
+    body#shopTopPage .item {
+        width: calc(33.333% - 16px);
+    }
+}
+
+/* -----------------------------------------
+   スマホ
+----------------------------------------- */
+@media (max-width: 768px) {
+    .yc-home {
+        margin-bottom: 40px;
+    }
+
+    .yc-home-hero {
+        margin-bottom: 28px;
+    }
+
+    .yc-home-hero-slide img {
+        height: 56vw;
+        min-height: 240px;
+        max-height: 420px;
+    }
+
+    .yc-home-hero-prev,
+    .yc-home-hero-next {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .yc-home-hero-prev {
+        left: 10px;
+    }
+
+    .yc-home-hero-next {
+        right: 10px;
+    }
+
+    .yc-home-hero-dots {
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .yc-home-intro {
+        margin-bottom: 38px;
+        padding: 0 16px;
+    }
+
+    .yc-home-intro h2 {
+        font-size: 28px;
+    }
+
+    .yc-home-intro p {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .yc-home-info {
+        margin-bottom: 42px;
+        padding: 0 16px;
+    }
+
+    .yc-home-section-head h2 {
+        font-size: 21px;
+    }
+
+    .yc-home-info-item a {
+        padding: 15px 2px;
+        font-size: 13px;
+    }
+
+    body#shopTopPage .itemList {
+        padding: 0 16px;
+        gap: 28px 14px;
+        margin-bottom: 60px;
+    }
+
+    body#shopTopPage .item {
+        width: calc(50% - 7px);
+    }
+
+    body#shopTopPage .item a .itemTitle h2 {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    body#shopTopPage .item .itemDetail .itemPrice {
+        font-size: 12px;
+    }
+}
+
+/* -----------------------------------------
+   小さいスマホ
+----------------------------------------- */
+@media (max-width: 420px) {
+    .yc-home-hero-slide img {
+        min-height: 220px;
+    }
+
+    .yc-home-section-head h2 {
+        letter-spacing: 0.08em;
+    }
+
+    .yc-home-intro h2 {
+        font-size: 24px;
+    }
+
+    .yc-home-intro p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+}
