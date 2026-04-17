@@ -1533,6 +1533,25 @@
             window.scrollTo(0, 0);
         }
 
+        function initHomeHeroSlider() {
+            console.log('initHomeHeroSlider start');
+
+            var hero = document.getElementById('ycHomeHero');
+            var track = document.getElementById('ycHomeHeroTrack');
+            var prevBtn = document.getElementById('ycHomeHeroPrev');
+            var nextBtn = document.getElementById('ycHomeHeroNext');
+            var dotsEl = document.getElementById('ycHomeHeroDots');
+
+            console.log({
+                hero: !!hero,
+                track: !!track,
+                prevBtn: !!prevBtn,
+                nextBtn: !!nextBtn,
+                dotsEl: !!dotsEl
+            });
+
+            if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) return;
+
         initHomeHeroSlider();
         router();
         window.addEventListener('popstate', router);
