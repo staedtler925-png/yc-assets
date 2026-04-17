@@ -913,7 +913,7 @@
     // ==========================================
     // Works data
     // ==========================================
-    const GH = 'https://cdn.jsdelivr.net/gh/staedtler925-png/yc-works-images@main';
+    const GH = 'https://cdn.jsdelivr.net/gh/staedtler925-png/yc-works-images@f643ff6';
 
     const worksData = [
         {
