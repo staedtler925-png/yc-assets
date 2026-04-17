@@ -1156,7 +1156,7 @@
         return `
             <div class="yc-works-page">
                 <div class="yc-back-nav">
-                    <a href="/about" class="yc-back-btn">← ABOUT</a>
+                    <a href="/" class="yc-back-btn">← HOME</a>
                 </div>
 
                 <div class="yc-works-hero">
