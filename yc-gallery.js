@@ -977,7 +977,7 @@
         {
             slug: '853-road-for-re-tokyo',
             title: '853 Road for RE Tokyo',
-            thumb: '${GH}/853_Road_for_RE_Tokyo-01.jpg',
+            thumb: 'https://raw.githubusercontent.com/staedtler925-png/yc-works-images/main/853_Road_for_RE_Tokyo-01.jpg',
             images: [
             '${GH}/853_Road_for_RE_Tokyo-01.jpg',
             '${GH}/853_Road_for_RE_Tokyo-02.jpg',
