@@ -1235,24 +1235,6 @@
             }
         });
 
-        var modal = document.getElementById('ycModal');
-        var modalImg = document.getElementById('ycModalImg');
-
-        if (modal && modalImg) {
-            track.querySelectorAll('img').forEach(function (img) {
-                img.style.cursor = 'zoom-in';
-
-                img.addEventListener('click', function () {
-                    modalImg.src = this.src;
-                    modal.style.display = 'flex';
-                });
-            });
-
-            modal.addEventListener('click', function () {
-                modal.style.display = 'none';
-            });
-        }
-
         goTo(0);
     }
 
