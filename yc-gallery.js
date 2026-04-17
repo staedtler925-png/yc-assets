@@ -930,11 +930,6 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e185f7d7cdc/QUIET_for_I-07.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e18600d359b/QUIET_for_I-08.jpg'
             ],
-            /*
-            body: `
-                <p>制作事例の詳細をここに追加予定です。</p>
-            `
-            */
             body: ''
         },
         {
@@ -952,20 +947,21 @@
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e186ba0e1f9/Cozmo-06.jpg',
             'https://basefile.akamaized.net/yanagicycle-base-shop/69e186c25908b/Cozmo-07.jpg'
             ],
-            /*
-            body: `
-                <p>制作事例の詳細をここに追加予定です。</p>
-            `
-            */
             body: ''
         },
         {
             slug: '650b-rando-for-a',
             title: '650B Rando for A',
             category: 'Works',
-            thumb: '',
+            thumb: 'https://basefile.akamaized.net/yanagicycle-base-shop/69e189d44eb33/650B_Rando_for_EFBCA1-01.jpg',
             summary: '制作事例ページです。',
-            images: [],
+            images: [
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e189d44eb33/650B_Rando_for_EFBCA1-01.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e189e6d5daa/650B_Rando_for_EFBCA1-02.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e189efc840f/650B_Rando_for_EFBCA1-03.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e189f91c36d/650B_Rando_for_EFBCA1-04.jpg',
+            'https://basefile.akamaized.net/yanagicycle-base-shop/69e18a114af4a/650B_Rando_for_EFBCA1-05.jpg'
+            ],
             body: ''
         },
         {
