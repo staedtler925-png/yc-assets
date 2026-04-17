@@ -1104,16 +1104,17 @@
 
     function renderWorksList() {
         var cards = worksData.map(function (item) {
-
             var categoryHtml = item.category
                 ? `<span class="yc-works-card-category">${item.category}</span>`
                 : '';
+
+            var thumbSrc = item.thumb || 'https://placehold.co/900x600?text=WORKS';
 
             return `
                 <article class="yc-works-card">
                     <a href="/about?p=works-${item.slug}" class="yc-works-card-link">
                         <div class="yc-works-card-thumb">
-                            <img src="${item.thumb}" alt="${item.title}">
+                            <img src="${thumbSrc}" alt="${item.title}">
                         </div>
                         <div class="yc-works-card-body">
                             <div class="yc-works-card-meta">
