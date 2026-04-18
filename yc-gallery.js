@@ -159,24 +159,21 @@
         // ==============================
         function initHomeInformation() {
             const list = document.querySelector('.yc-home-info-list');
-            if (!list) return;
+            if (!list) {
+                console.log('yc-home-info-list が見つかりません');
+                return;
+            }
 
-            const API_URL = 'https://script.google.com/macros/s/AKfycbwUE7E8zibrWxtPN5n8LHCQgOrJpPKX6kSyV5Dk8raVqOgPB6eTByjJdFzQGRUTWoB54w/exec';
+            console.log('initHomeInformation start');
 
             list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
 
-            fetch(API_URL + '?t=' + Date.now())
-                .then(res => {
-                    console.log('status:', res.status);
-                    console.log('ok:', res.ok);
-                    console.log('url:', res.url);
-                    return res.text();
-                })
-                .then(text => {
-                    console.log('raw response:', text);
+            const callbackName = 'ycHomeInfoCallback_' + Date.now();
 
-                    const items = JSON.parse(text);
+            window[callbackName] = function(items) {
+                console.log('JSONP callback success:', items);
 
+                try {
                     if (!items || !items.length) {
                         list.innerHTML = '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
                         return;
@@ -188,26 +185,52 @@
                         const article = document.createElement('article');
                         article.className = 'yc-home-info-item';
 
-                        const a = document.createElement('a');
-                        a.href = item.link || '#';
+                        if (item.link) {
+                            const a = document.createElement('a');
+                            a.href = item.link;
+                            a.innerHTML = `
+                                <span class="yc-home-info-date">${item.date || ''}</span>
+                                <span class="yc-home-info-text">${item.text || ''}</span>
+                            `;
+                            article.appendChild(a);
+                        } else {
+                            article.innerHTML = `
+                                <span class="yc-home-info-date">${item.date || ''}</span>
+                                <span class="yc-home-info-text">${item.text || ''}</span>
+                            `;
+                        }
 
-                        const date = item.date
-                            ? new Date(item.date).toLocaleDateString('ja-JP')
-                            : '';
-
-                        a.innerHTML = `
-                            <span class="yc-home-info-date">${date}</span>
-                            <span class="yc-home-info-text">${item.text || ''}</span>
-                        `;
-
-                        article.appendChild(a);
                         list.appendChild(article);
                     });
-                })
-                .catch(err => {
-                    console.error('Information fetch error:', err);
-                    list.innerHTML = '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
-                });
+                } catch (err) {
+                    console.error('Information render error:', err);
+                    list.innerHTML = '<p class="yc-home-info-error">お知らせの表示に失敗しました。</p>';
+                } finally {
+                    try {
+                        delete window[callbackName];
+                    } catch (_) {
+                        window[callbackName] = undefined;
+                    }
+                }
+            };
+
+            const script = document.createElement('script');
+            script.src = 'https://script.google.com/macros/s/AKfycbwUE7E8zibrWxtPN5n8LHCQgOrJpPKX6kSyV5Dk8raVqOgPB6eTByjJdFzQGRUTWoB54w/exec?callback=' + callbackName + '&_=' + Date.now();
+
+            console.log('JSONP src:', script.src);
+
+            script.onerror = function(err) {
+                console.error('Information JSONP error:', err);
+                list.innerHTML = '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
+
+                try {
+                    delete window[callbackName];
+                } catch (_) {
+                    window[callbackName] = undefined;
+                }
+            };
+
+            document.body.appendChild(script);
         }
 
         // ==========================================
