@@ -165,14 +165,18 @@
 
             list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
 
-            fetch(API_URL)
+            fetch(API_URL + '?t=' + Date.now())
                 .then(res => {
-                    if (!res.ok) {
-                        throw new Error('HTTP status ' + res.status);
-                    }
-                    return res.json();
+                    console.log('status:', res.status);
+                    console.log('ok:', res.ok);
+                    console.log('url:', res.url);
+                    return res.text();
                 })
-                .then(items => {
+                .then(text => {
+                    console.log('raw response:', text);
+
+                    const items = JSON.parse(text);
+
                     if (!items || !items.length) {
                         list.innerHTML = '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
                         return;
