@@ -2317,3 +2317,133 @@ body.shop #mainHeader {
         line-height: 1.9;
     }
 }
+
+/* ==============================
+   HOME Information
+============================== */
+.yc-home-info {
+  margin: 48px 0;
+}
+
+.yc-home-info-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #111;
+}
+
+.yc-home-info-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.yc-home-info-more {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: #111;
+  transition: opacity 0.2s ease;
+}
+
+.yc-home-info-more:hover {
+  opacity: 0.6;
+}
+
+.yc-home-info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.yc-home-info-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.yc-home-info-item a,
+.yc-home-info-item {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+.yc-home-info-item a {
+  padding: 14px 0;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.yc-home-info-item a:hover {
+  background: #f7f7f7;
+  opacity: 1;
+}
+
+.yc-home-info-date {
+  display: inline-block;
+  width: 110px;
+  margin-right: 16px;
+  font-size: 0.9rem;
+  color: #666;
+  vertical-align: top;
+}
+
+.yc-home-info-text {
+  display: inline-block;
+  width: calc(100% - 130px);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #111;
+  vertical-align: top;
+}
+
+.yc-home-info-loading,
+.yc-home-info-empty,
+.yc-home-info-error {
+  margin: 0;
+  padding: 16px 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .yc-home-info {
+    margin: 36px 0;
+  }
+
+  .yc-home-info-head {
+    align-items: flex-end;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+  }
+
+  .yc-home-info-title {
+    font-size: 1.15rem;
+  }
+
+  .yc-home-info-more {
+    font-size: 0.75rem;
+  }
+
+  .yc-home-info-item a {
+    padding: 12px 0;
+  }
+
+  .yc-home-info-date {
+    display: block;
+    width: auto;
+    margin: 0 0 4px;
+    font-size: 0.8rem;
+  }
+
+  .yc-home-info-text {
+    display: block;
+    width: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
