@@ -163,10 +163,15 @@
 
             const API_URL = 'ここにAppsScriptのURL';
 
+            list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
+
             fetch(API_URL)
                 .then(res => res.json())
                 .then(items => {
-                    if (!items || !items.length) return;
+                    if (!items || !items.length) {
+                        list.innerHTML = '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
+                        return;
+                    }
 
                     list.innerHTML = '';
 
@@ -179,7 +184,7 @@
 
                         a.innerHTML = `
                             <span class="yc-home-info-date">${item.date || ''}</span>
-                            <span class="yc-home-info-text">${item.text}</span>
+                            <span class="yc-home-info-text">${item.text || ''}</span>
                         `;
 
                         article.appendChild(a);
@@ -188,6 +193,7 @@
                 })
                 .catch(err => {
                     console.error('Information fetch error:', err);
+                    list.innerHTML = '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
                 });
         }
 
