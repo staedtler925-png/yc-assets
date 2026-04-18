@@ -5,7 +5,6 @@
     // HOME Hero Slider
     // ==========================================
     function initHomeHeroSlider() {
-        console.log('🚀 initHomeHeroSlider START');
 
         var hero = document.getElementById('ycHomeHero');
         var track = document.getElementById('ycHomeHeroTrack');
@@ -166,7 +165,12 @@
             list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
 
             fetch(API_URL)
-                .then(res => res.json())
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('HTTP status ' + res.status);
+                    }
+                    return res.json();
+                })
                 .then(items => {
                     if (!items || !items.length) {
                         list.innerHTML = '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
@@ -182,8 +186,12 @@
                         const a = document.createElement('a');
                         a.href = item.link || '#';
 
+                        const date = item.date
+                            ? new Date(item.date).toLocaleDateString('ja-JP')
+                            : '';
+
                         a.innerHTML = `
-                            <span class="yc-home-info-date">${item.date || ''}</span>
+                            <span class="yc-home-info-date">${date}</span>
                             <span class="yc-home-info-text">${item.text || ''}</span>
                         `;
 
