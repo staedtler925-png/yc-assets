@@ -154,6 +154,43 @@
         console.log('✅ HOMEスライダー初期化完了');
     }
 
+        // ==============================
+        // HOME Information
+        // ==============================
+        function initHomeInformation() {
+            const list = document.querySelector('.yc-home-info-list');
+            if (!list) return;
+
+            const API_URL = 'ここにAppsScriptのURL';
+
+            fetch(API_URL)
+                .then(res => res.json())
+                .then(items => {
+                    if (!items || !items.length) return;
+
+                    list.innerHTML = '';
+
+                    items.slice(0, 5).forEach(item => {
+                        const article = document.createElement('article');
+                        article.className = 'yc-home-info-item';
+
+                        const a = document.createElement('a');
+                        a.href = item.link || '#';
+
+                        a.innerHTML = `
+                            <span class="yc-home-info-date">${item.date || ''}</span>
+                            <span class="yc-home-info-text">${item.text}</span>
+                        `;
+
+                        article.appendChild(a);
+                        list.appendChild(article);
+                    });
+                })
+                .catch(err => {
+                    console.error('Information fetch error:', err);
+                });
+        }
+
         // ==========================================
         // A. KAZUSA 初期化
         // ==========================================
@@ -1537,15 +1574,10 @@
     // ==========================================
     function router() {
         var root = document.getElementById('yc-router-root');
-        if (!root) {
-            console.log('ℹ️ yc-router-root が無いので router は終了（HOMEでは正常）');
-            return;
-        }
+        if (!root) return;
 
         var params = new URLSearchParams(window.location.search);
         var pageKey = params.get('p');
-
-        console.log('🧭 router pageKey:', pageKey);
 
         if (pageKey === 'works') {
             root.innerHTML = renderWorksList();
@@ -1567,31 +1599,30 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        console.log('🔥 DOMContentLoaded fired (yc-gallery.js)');
-
         try {
-            console.log('▶ initHomeHeroSlider() 実行前');
             initHomeHeroSlider();
-            console.log('✅ initHomeHeroSlider() 実行後');
         } catch (e) {
-            console.error('❌ initHomeHeroSlider error:', e);
+            console.error('initHomeHeroSlider error:', e);
         }
 
         try {
-            console.log('▶ router() 実行前');
-            router();
-            console.log('✅ router() 実行後');
+            initHomeInformation();
         } catch (e) {
-            console.error('❌ router error:', e);
+            console.error('initHomeInformation error:', e);
+        }
+
+        try {
+            router();
+        } catch (e) {
+            console.error('router error:', e);
         }
     });
 
     window.addEventListener('popstate', function () {
-        console.log('↩ popstate fired');
         try {
             router();
         } catch (e) {
-            console.error('❌ router error (popstate):', e);
+            console.error('router error (popstate):', e);
         }
     });
-    })();
+})();
