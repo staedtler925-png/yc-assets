@@ -5,6 +5,7 @@
     // HOME Hero Slider
     // ==========================================
     function initHomeHeroSlider() {
+        console.log('🚀 initHomeHeroSlider START');
 
         var hero = document.getElementById('ycHomeHero');
         var track = document.getElementById('ycHomeHeroTrack');
