@@ -161,7 +161,7 @@
             const list = document.querySelector('.yc-home-info-list');
             if (!list) return;
 
-            const API_URL = 'ここにAppsScriptのURL';
+            const API_URL = 'https://script.google.com/macros/s/AKfycbwUE7E8zibrWxtPN5n8LHCQgOrJpPKX6kSyV5Dk8raVqOgPB6eTByjJdFzQGRUTWoB54w/exec';
 
             list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
 
