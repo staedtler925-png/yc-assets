@@ -1,5 +1,6 @@
 /* =========================================
    YANAGI CYCLE ABOUT SPA styles
+   完全統合版
 ========================================= */
 
 /* 1. 既存ABOUT本文の非表示 */
@@ -2320,6 +2321,7 @@ body.shop #mainHeader {
 /* ==============================
    HOME Information
 ============================== */
+
 .yc-home-info {
   margin: 48px 0;
 }
@@ -2329,14 +2331,14 @@ body.shop #mainHeader {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
   border-bottom: 2px solid #111;
 }
 
 .yc-home-info-title {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.2;
@@ -2344,7 +2346,7 @@ body.shop #mainHeader {
 
 .yc-home-info-more {
   flex-shrink: 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -2361,60 +2363,68 @@ body.shop #mainHeader {
   flex-direction: column;
 }
 
+/* 行（コンパクト設計） */
 .yc-home-info-item {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 14px 0;
+  padding: 4px 0;
   border-bottom: 1px solid #ddd;
-  color: #111;
 }
 
+/* 日付 */
 .yc-home-info-date {
   width: 110px;
   flex-shrink: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
   color: #666;
 }
 
+/* テキスト */
 .yc-home-info-text {
   flex: 1;
   min-width: 0;
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #111;
 }
 
+/* 右側リンク（ここだけ余白） */
 .yc-home-info-link {
   flex-shrink: 0;
-  min-width: 90px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.8rem;
   color: #0c4d9c;
   text-decoration: none;
   white-space: nowrap;
-  text-align: right;
-  transition: opacity 0.2s ease;
+
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: background 0.15s ease, opacity 0.15s ease;
 }
 
 .yc-home-info-link:hover {
-  opacity: 0.6;
+  background: #f2f6fb;
+  opacity: 1;
 }
 
+/* リンクなしでも幅を維持 */
 .yc-home-info-link.is-disabled {
   visibility: hidden;
-  pointer-events: none;
 }
 
+/* 状態表示 */
 .yc-home-info-loading,
 .yc-home-info-empty,
 .yc-home-info-error {
   margin: 0;
-  padding: 16px 0;
-  font-size: 0.95rem;
+  padding: 12px 0;
+  font-size: 0.9rem;
   color: #666;
 }
+
+/* ==============================
+   Responsive
+============================== */
 
 @media (max-width: 767px) {
   .yc-home-info {
@@ -2423,41 +2433,41 @@ body.shop #mainHeader {
 
   .yc-home-info-head {
     align-items: flex-end;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
   }
 
   .yc-home-info-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .yc-home-info-more {
     font-size: 0.75rem;
   }
 
+  /* 縦積み */
   .yc-home-info-item {
     display: block;
-    padding: 12px 0;
+    padding: 8px 0;
   }
 
   .yc-home-info-date {
     display: block;
     width: auto;
-    margin: 0 0 4px;
+    margin-bottom: 2px;
     font-size: 0.8rem;
   }
 
   .yc-home-info-text {
     display: block;
-    margin: 0 0 6px;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .yc-home-info-link {
     display: inline-block;
-    min-width: 0;
-    text-align: left;
-    font-size: 0.8rem;
+    padding: 2px 6px;
+    font-size: 0.75rem;
   }
 }
