@@ -181,27 +181,22 @@
 
                     list.innerHTML = '';
 
-                    items.slice(0, 5).forEach(item => {
-                        const article = document.createElement('article');
-                        article.className = 'yc-home-info-item';
+                        items.slice(0, 5).forEach(item => {
+                            const article = document.createElement('article');
+                            article.className = 'yc-home-info-item';
 
-                        if (item.link) {
-                            const a = document.createElement('a');
-                            a.href = item.link;
-                            a.innerHTML = `
-                                <span class="yc-home-info-date">${item.date || ''}</span>
-                                <span class="yc-home-info-text">${item.text || ''}</span>
-                            `;
-                            article.appendChild(a);
-                        } else {
                             article.innerHTML = `
                                 <span class="yc-home-info-date">${item.date || ''}</span>
                                 <span class="yc-home-info-text">${item.text || ''}</span>
+                                ${
+                                    item.link
+                                        ? `<a href="${item.link}" class="yc-home-info-link">詳細はこちら</a>`
+                                        : `<span class="yc-home-info-link is-disabled"></span>`
+                                }
                             `;
-                        }
 
-                        list.appendChild(article);
-                    });
+                            list.appendChild(article);
+                        });
                 } catch (err) {
                     console.error('Information render error:', err);
                     list.innerHTML = '<p class="yc-home-info-error">お知らせの表示に失敗しました。</p>';
