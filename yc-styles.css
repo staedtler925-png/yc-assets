@@ -1,6 +1,5 @@
 /* =========================================
    YANAGI CYCLE ABOUT SPA styles
-   完全統合版
 ========================================= */
 
 /* 1. 既存ABOUT本文の非表示 */
@@ -1625,274 +1624,6 @@ body#shopTopPage {
     color: #555;
 }
 
-/* -----------------------------------------
-   INFORMATION
------------------------------------------ */
-.yc-home-info {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 20px 56px;
-}
-
-.yc-home-section-head {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.yc-home-section-head h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: #222;
-}
-
-.yc-home-info-list {
-    border-top: 1px solid #e8e8e8;
-}
-
-.yc-home-info-item {
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.yc-home-info-item a {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 18px;
-    align-items: center;
-    padding: 18px 6px;
-    color: #222;
-    text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.yc-home-info-item a:hover {
-    background: #fafafa;
-    color: #ED4700;
-}
-
-.yc-home-info-date {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    color: #999;
-}
-
-.yc-home-info-text {
-    display: block;
-    font-size: 14px;
-    line-height: 1.8;
-    color: inherit;
-}
-
-/* -----------------------------------------
-   商品一覧をtadequi風に整える
------------------------------------------ */
-body#shopTopPage #mainContent.itemList {
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 auto 90px;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 40px 24px;
-    overflow: visible;
-    float: none;
-}
-
-body#shopTopPage #mainContent.itemList .item.part,
-body#shopTopPage .item {
-    width: calc(25% - 18px);
-    margin: 0;
-    padding: 0;
-    float: none;
-    text-align: left;
-}
-
-body#shopTopPage .item .itemImg {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0 0 14px;
-    background: #f7f7f7;
-    overflow: hidden;
-}
-
-body#shopTopPage .item:hover .itemImg {
-    border: none;
-    padding: 0;
-}
-
-body#shopTopPage .item .itemImg a {
-    display: block;
-    position: relative;
-}
-
-body#shopTopPage .item .itemImg a::before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
-
-body#shopTopPage .item .itemImg img.image-resize {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.45s ease;
-}
-
-body#shopTopPage .item:hover .itemImg img.image-resize {
-    transform: scale(1.04);
-}
-
-body#shopTopPage .item a {
-    color: #333;
-}
-
-body#shopTopPage .item:hover a {
-    color: #333;
-}
-
-body#shopTopPage .item .itemTitle {
-    margin: 0 0 8px;
-    text-align: left;
-}
-
-body#shopTopPage .item a .itemTitle h2 {
-    width: auto;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.75;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    color: #222;
-}
-
-body#shopTopPage .item .itemDetail .itemPrice {
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: #666;
-}
-
-body#shopTopPage .item .itemImg a .soldout_cover {
-    background-color: rgba(255,255,255,0.84);
-}
-
-body#shopTopPage .item .itemImg a .soldout_cover p {
-    color: #222;
-    font-size: 14px;
-    letter-spacing: 0.12em;
-}
-
-/* 商品一覧タイトルっぽい余白を整える */
-body.shop #mainHeader {
-    margin: 0 auto 22px;
-}
-
-/* -----------------------------------------
-   レスポンシブ
------------------------------------------ */
-@media (max-width: 1024px) {
-    body#shopTopPage #mainContent.itemList .item.part,
-    body#shopTopPage .item {
-        width: calc(33.333% - 16px);
-    }
-}
-
-@media (max-width: 768px) {
-    .yc-home-hero {
-        padding-bottom: 26px;
-    }
-
-    .yc-home-hero-slide img {
-        height: 56vw;
-        min-height: 280px;
-        max-height: 520px;
-    }
-
-    .yc-home-hero-prev,
-    .yc-home-hero-next {
-        width: 40px;
-        height: 40px;
-    }
-
-    .yc-home-hero-prev {
-        left: 12px;
-    }
-
-    .yc-home-hero-next {
-        right: 12px;
-    }
-
-    .yc-home-intro {
-        padding: 18px 16px 44px;
-    }
-
-    .yc-home-intro h2 {
-        font-size: 28px;
-    }
-
-    .yc-home-lead {
-        font-size: 13px;
-        line-height: 2;
-    }
-
-    .yc-home-info {
-        padding: 0 16px 40px;
-    }
-
-    .yc-home-info-item a {
-        grid-template-columns: 1fr;
-        gap: 6px;
-        padding: 16px 2px;
-    }
-
-    .yc-home-info-date {
-        font-size: 10px;
-    }
-
-    body#shopTopPage #mainContent.itemList {
-        padding: 0 16px;
-        gap: 28px 14px;
-        margin-bottom: 70px;
-    }
-
-    body#shopTopPage #mainContent.itemList .item.part,
-    body#shopTopPage .item {
-        width: calc(50% - 7px);
-    }
-
-    body#shopTopPage .item a .itemTitle h2 {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    body#shopTopPage .item .itemDetail .itemPrice {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 420px) {
-    .yc-home-kicker {
-        letter-spacing: 0.14em;
-    }
-
-    .yc-home-intro h2 {
-        font-size: 24px;
-    }
-
-    .yc-home-lead {
-        font-size: 12px;
-        line-height: 1.95;
-    }
-}
-
 /* =========================================
    HOME 完成版 微調整セット
    末尾に追記
@@ -2033,53 +1764,6 @@ body.shop #mainHeader {
     font-size: 11px;
     letter-spacing: 0.22em;
     color: #888;
-}
-
-/* -----------------------------------------
-   INFORMATION
------------------------------------------ */
-.yc-home-info {
-    max-width: 980px;
-    margin: 0 auto 56px;
-    padding: 0 20px;
-}
-
-.yc-home-section-head {
-    text-align: center;
-    margin-bottom: 18px;
-}
-
-.yc-home-section-head h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: #222;
-}
-
-.yc-home-info-list {
-    border-top: 1px solid #e8e8e8;
-    background: #fff;
-}
-
-.yc-home-info-item {
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.yc-home-info-item a {
-    display: block;
-    padding: 18px 8px;
-    color: #222;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1.9;
-    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
-}
-
-.yc-home-info-item a:hover {
-    background: #fafafa;
-    color: #ED4700;
-    padding-left: 14px;
 }
 
 /* -----------------------------------------
@@ -2262,18 +1946,8 @@ body.shop #mainHeader {
         line-height: 2;
     }
 
-    .yc-home-info {
-        margin-bottom: 42px;
-        padding: 0 16px;
-    }
-
     .yc-home-section-head h2 {
         font-size: 21px;
-    }
-
-    .yc-home-info-item a {
-        padding: 15px 2px;
-        font-size: 13px;
     }
 
     body#shopTopPage .itemList {
@@ -2318,12 +1992,15 @@ body.shop #mainHeader {
     }
 }
 
-/* ==============================
+yc-home-info/* ==============================
    HOME Information
+   最終整理版
 ============================== */
 
 .yc-home-info {
-  margin: 48px 0;
+  max-width: 980px;
+  margin: 48px auto 56px;
+  padding: 0 20px;
 }
 
 .yc-home-info-head {
@@ -2361,18 +2038,18 @@ body.shop #mainHeader {
 .yc-home-info-list {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid #e8e8e8;
 }
 
-/* 行（コンパクト設計） */
 .yc-home-info-item {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 4px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 1.4;
 }
 
-/* 日付 */
 .yc-home-info-date {
   width: 110px;
   flex-shrink: 0;
@@ -2380,7 +2057,6 @@ body.shop #mainHeader {
   color: #666;
 }
 
-/* テキスト */
 .yc-home-info-text {
   flex: 1;
   min-width: 0;
@@ -2389,14 +2065,21 @@ body.shop #mainHeader {
   color: #111;
 }
 
-/* 右側リンク（ここだけ余白） */
+.yc-home-info-link,
+.yc-home-info-link.is-disabled {
+  min-width: 90px;
+}
+
 .yc-home-info-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  white-space: nowrap;
   font-size: 0.8rem;
+  line-height: 1;
   color: #0c4d9c;
   text-decoration: none;
-  white-space: nowrap;
-
   padding: 2px 8px;
   border-radius: 4px;
   transition: background 0.15s ease, opacity 0.15s ease;
@@ -2407,12 +2090,14 @@ body.shop #mainHeader {
   opacity: 1;
 }
 
-/* リンクなしでも幅を維持 */
 .yc-home-info-link.is-disabled {
+  display: inline-block;
   visibility: hidden;
+  line-height: 1;
+  padding: 2px 8px;
+  pointer-events: none;
 }
 
-/* 状態表示 */
 .yc-home-info-loading,
 .yc-home-info-empty,
 .yc-home-info-error {
@@ -2422,13 +2107,10 @@ body.shop #mainHeader {
   color: #666;
 }
 
-/* ==============================
-   Responsive
-============================== */
-
 @media (max-width: 767px) {
   .yc-home-info {
-    margin: 36px 0;
+    margin: 36px auto 42px;
+    padding: 0 16px;
   }
 
   .yc-home-info-head {
@@ -2445,7 +2127,6 @@ body.shop #mainHeader {
     font-size: 0.75rem;
   }
 
-  /* 縦積み */
   .yc-home-info-item {
     display: block;
     padding: 8px 0;
@@ -2465,9 +2146,18 @@ body.shop #mainHeader {
     line-height: 1.5;
   }
 
+  .yc-home-info-link,
+  .yc-home-info-link.is-disabled {
+    min-width: 0;
+  }
+
   .yc-home-info-link {
-    display: inline-block;
+    display: inline-flex;
     padding: 2px 6px;
     font-size: 0.75rem;
+  }
+
+  .yc-home-info-link.is-disabled {
+    display: none;
   }
 }
