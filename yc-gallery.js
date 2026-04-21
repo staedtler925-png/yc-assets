@@ -567,7 +567,7 @@
 
         const pages = {
             'kazusa': `
-                <div class="yc-detail-wrapper">
+                <div class="yc-detail-wrapper yc-detail-wrapper-equal">
                     <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
                     <div class="yc-detail-head"><h1>GRAVEL GRINDER KAZUSA (上総)</h1></div>
 
