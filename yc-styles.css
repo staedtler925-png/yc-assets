@@ -1963,84 +1963,88 @@ body.shop #mainHeader {
    Header logo + info layout
 ============================== */
 
-body.shop #shopHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+    body.shop #shopHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-top: 24px;
+        flex-wrap: wrap;
+    }
 
-/* ここが重要：h1 を内容幅に戻す */
-body.shop #shopHeader h1 {
-  margin: 0;
-  width: auto;
-  flex: 0 0 auto;
-  display: block;
-  text-align: left;
-}
+    body.shop #shopHeader h1 {
+        display: block;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin: 0;
+        width: auto;
+        flex: 0 0 auto;
+        text-align: center;
+    }
 
-/* ロゴリンクも内容幅 */
-body.shop #shopHeader h1 a#logo {
-  display: inline-block;
-  width: auto;
-}
+    body.shop #shopHeader h1 a {
+        display: inline-block;
+    }
 
-/* 情報カード */
-.yc-header-info {
-  flex: 0 1 auto;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  padding: 10px 16px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-size: 12px;
-}
+    body.shop #shopHeader h1 img {
+        max-width: 960px;
+        width: 100%;
+        vertical-align: top;
+    }
 
-.yc-header-info-item {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.4;
-}
+    .yc-header-info {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 10px 16px;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 6px;
+        font-size: 12px;
+        flex: 0 1 auto;
+    }
 
-.yc-header-label {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: #888;
-}
+    .yc-header-info-item {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+    }
 
-.yc-header-text {
-  font-size: 12px;
-  color: #111;
-}
+    .yc-header-label {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        color: #888;
+    }
 
-/* スマホ：ロゴ下へ */
-@media (max-width: 767px) {
-  body.shop #shopHeader {
-    align-items: flex-start;
-    gap: 12px;
-  }
+    .yc-header-text {
+        font-size: 12px;
+        color: #111;
+    }
 
-  body.shop #shopHeader h1 {
-    width: 100%;
-  }
+    /* スマホ：ロゴ下へ */
+    @media (max-width: 767px) {
+    body.shop #shopHeader {
+        align-items: flex-start;
+        gap: 12px;
+    }
 
-  .yc-header-info {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 10px 12px;
-  }
+    body.shop #shopHeader h1 {
+        width: 100%;
+    }
 
-  .yc-header-info-item {
-    flex-direction: row;
-    gap: 8px;
-  }
+    .yc-header-info {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 12px;
+    }
 
-  .yc-header-label {
-    min-width: 70px;
-  }
-}
+    .yc-header-info-item {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .yc-header-label {
+        min-width: 70px;
+    }
