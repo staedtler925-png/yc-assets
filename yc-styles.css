@@ -1968,7 +1968,7 @@ body.shop #mainHeader {
         align-items: center;
         justify-content: space-between;
         gap: 24px;
-        padding-top: 45px;
+        padding-top: 50px;
         flex-wrap: wrap;
     }
 
@@ -2021,8 +2021,29 @@ body.shop #mainHeader {
         color: #111;
     }
 
+    /* ==============================
+    Header info 2x2 (tablet range)
+    ============================== */
+
+    @media (min-width: 767px) and (max-width: 975px) {
+
+    .yc-header-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+
+        /* カードの見た目を少し整える */
+        padding: 10px 14px;
+    }
+
+    .yc-header-info-item {
+        display: flex;
+        flex-direction: column;
+    }
+    }
+
     /* スマホ：ロゴ下へ */
-    @media (max-width: 972px) {
+    @media (max-width: 767px) {
     body.shop #shopHeader {
         align-items: flex-start;
         gap: 12px;
