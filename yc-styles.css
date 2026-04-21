@@ -1878,40 +1878,24 @@ body.shop #mainHeader {
 }
 
 @media (max-width: 965px) and (min-width: 481px) {
-  #mainHeader nav ul,
-  .mainHeaderNav ul {
+  #mainHeader ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 0;
   }
 
-  #mainHeader nav ul li,
-  .mainHeaderNav ul li {
-    width: 25%;
+  #mainHeader ul > li {
+    width: 33.333%;
     box-sizing: border-box;
     text-align: center;
   }
 
-  #mainHeader nav ul li a,
-  .mainHeaderNav ul li a,
-  #mainHeader nav ul li span,
-  .mainHeaderNav ul li span {
+  #mainHeader ul > li > a.mainHeaderNavColor,
+  #mainHeader ul > li #category-menu > span.mainHeaderNavColor {
     display: block;
     padding: 8px 6px;
-    white-space: nowrap;
-  }
-}
-
-@media (max-width: 965px) and (min-width: 481px) {
-  #mainHeader nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-  }
-
-  #mainHeader nav ul li {
-    width: 33.333% !important;
+    line-height: 1.4;
+    white-space: normal;
   }
 }
 
