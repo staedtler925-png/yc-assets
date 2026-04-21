@@ -1,5 +1,3 @@
-    console.log('YC GALLERY VERSION: price-table-debug-01');
-
     (function () {
         'use strict';
 
@@ -914,8 +912,6 @@
     // Price Tables
     // ==============================
     function loadPriceTable(options) {
-        console.log('loadPriceTable start', options);
-
         const {
             containerSelector,
             type,
@@ -924,22 +920,13 @@
         } = options;
 
         const container = document.querySelector(containerSelector);
-        console.log('container =', container);
+        if (!container) return;
 
-        if (!container) {
-            console.log('container が見つからない');
-            return;
-        }
-
-        console.log('スケルトン実行');
-        container.innerHTML = createPriceSkeleton();
-        console.log('スケルトン実行後');
+        container.innerHTML = '<p class="yc-price-table-loading">読み込み中...</p>';
 
         const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
 
         window[callbackName] = function(items) {
-            console.log('Price table JSONP callback success:', items);
-
             try {
                 if (!items || !items.length) {
                     container.innerHTML = `<p class="yc-price-table-empty">${emptyMessage}</p>`;
@@ -1014,38 +1001,6 @@
             .replace(/'/g, '&#39;');
     }
 
-    function createPriceSkeleton(rows = 6) {
-        let rowsHtml = '';
-
-        for (let i = 0; i < rows; i++) {
-            rowsHtml += `
-                <tr>
-                    <td><div class="yc-skeleton-line short"></div></td>
-                    <td><div class="yc-skeleton-line"></div></td>
-                    <td><div class="yc-skeleton-line short"></div></td>
-                    <td><div class="yc-skeleton-line"></div></td>
-                </tr>
-            `;
-        }
-
-        return `
-            <div class="yc-price-table-wrap">
-                <table class="yc-price-table-scroll">
-                    <thead>
-                        <tr>
-                            <th>分類</th>
-                            <th>作業内容</th>
-                            <th>価格</th>
-                            <th>備考</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${rowsHtml}
-                    </tbody>
-                </table>
-            </div>
-        `;
-    }
 
     // ==========================================
     // Works data
@@ -1526,9 +1481,6 @@
         var params = new URLSearchParams(window.location.search);
         var pageKey = params.get('p');
 
-        // テスト用
-        console.log('router動いた', pageKey);
-
         if (pageKey === 'works') {
             root.innerHTML = renderWorksList();
         } else if (pageKey && pageKey.indexOf('works-') === 0) {
@@ -1542,16 +1494,11 @@
             if (pageKey === 'quiet-disc') initQuietGallery();
             if (pageKey === 'quiet-mud') initQuietMudGallery();
             if (pageKey === 'price-mod-frame') {
-                // テスト用
-                console.log('price-mod-frame 分岐に入った');
-
-                console.log('loadPriceTable 呼び出し前');
                 loadPriceTable({
                     containerSelector: '#yc-frame-price-table',
                     type: 'frame',
                     tableClass: 'yc-price-table-scroll'
                 });
-                console.log('loadPriceTable 呼び出し後');
             }
             if (pageKey === 'price-mod-bike') {
                 loadPriceTable({
