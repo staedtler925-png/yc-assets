@@ -2048,3 +2048,26 @@ body.shop #mainHeader {
     .yc-header-label {
         min-width: 70px;
     }
+    }
+
+    /* ==============================
+    Header layout fix
+    ============================== */
+
+    body.shop #shopHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    }
+
+    /* ロゴ：横幅を最小に */
+    body.shop #shopHeader h1 {
+    margin: 0;
+    width: auto;
+    flex: 0 0 auto;
+    }
+
+    /* ここが重要：カードを右へ押し出す */
+    .yc-header-info {
+    margin-left: auto;
+    }
