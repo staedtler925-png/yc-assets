@@ -1,3 +1,5 @@
+    const DEBUG = false;
+    
     (function () {
         'use strict';
 
@@ -12,7 +14,7 @@
         var nextBtn = document.getElementById('ycHomeHeroNext');
         var dotsEl = document.getElementById('ycHomeHeroDots');
 
-        console.log('要素チェック', {
+        if (DEBUG) console.log(('要素チェック', {
             hero: hero,
             track: track,
             prevBtn: prevBtn,
@@ -21,19 +23,19 @@
         });
 
         if (!hero || !track || !prevBtn || !nextBtn || !dotsEl) {
-            console.warn('⚠️ HOMEスライダー要素が足りないので初期化中断');
+            if (DEBUG) console.warn('⚠️ HOMEスライダー要素が足りないので初期化中断');
             return;
         }
 
         if (hero.dataset.ycInitialized === 'true') {
-            console.log('ℹ️ HOMEスライダーは初期化済み');
+            if (DEBUG) console.log(('ℹ️ HOMEスライダーは初期化済み');
             return;
         }
 
         var slides = track.children;
 
         if (!slides || slides.length <= 1) {
-            console.warn('⚠️ スライド枚数が1枚以下です');
+            if (DEBUG) console.warn('⚠️ スライド枚数が1枚以下です');
             hero.dataset.ycInitialized = 'true';
             prevBtn.style.display = 'none';
             nextBtn.style.display = 'none';
@@ -57,7 +59,7 @@
                 btn.className = 'yc-home-hero-dot' + (index === 0 ? ' is-active' : '');
                 btn.setAttribute('aria-label', (index + 1) + '枚目へ');
                 btn.addEventListener('click', function () {
-                    console.log('● dot click:', index);
+                    if (DEBUG) console.log(('● dot click:', index);
                     goTo(index);
                     restartAuto();
                 });
@@ -76,7 +78,7 @@
             current = (index + slides.length) % slides.length;
             track.style.transform = 'translateX(' + (-current * 100) + '%)';
             updateDots();
-            console.log('➡️ goTo:', current);
+            if (DEBUG) console.log(('➡️ goTo:', current);
         }
 
         function next() {
@@ -92,14 +94,14 @@
             timer = setInterval(function() {
                 next();
             }, 5000);
-            console.log('⏱ auto start');
+            if (DEBUG) console.log(('⏱ auto start');
         }
 
         function stopAuto() {
             if (timer) {
                 clearInterval(timer);
                 timer = null;
-                console.log('⏹ auto stop');
+                if (DEBUG) console.log(('⏹ auto stop');
             }
         }
 
@@ -109,13 +111,13 @@
         }
 
         prevBtn.addEventListener('click', function () {
-            console.log('◀ prev click');
+            if (DEBUG) console.log(('◀ prev click');
             prev();
             restartAuto();
         });
 
         nextBtn.addEventListener('click', function () {
-            console.log('▶ next click');
+            if (DEBUG) console.log(('▶ next click');
             next();
             restartAuto();
         });
@@ -134,7 +136,7 @@
             if (!isTouching || !e.changedTouches || !e.changedTouches.length) return;
             var diff = startX - e.changedTouches[0].clientX;
 
-            console.log('📱 swipe diff:', diff);
+            if (DEBUG) console.log(('📱 swipe diff:', diff);
 
             if (Math.abs(diff) > 40) {
                 if (diff > 0) {
@@ -150,7 +152,7 @@
 
         goTo(0);
         startAuto();
-        console.log('✅ HOMEスライダー初期化完了');
+        if (DEBUG) console.log(('✅ HOMEスライダー初期化完了');
     }
 
         // ==============================
@@ -159,18 +161,18 @@
         function initHomeInformation() {
             const list = document.querySelector('.yc-home-info-list');
             if (!list) {
-                console.log('yc-home-info-list が見つかりません');
+                if (DEBUG) console.log(('yc-home-info-list が見つかりません');
                 return;
             }
 
-            console.log('initHomeInformation start');
+            if (DEBUG) console.log(('initHomeInformation start');
 
             list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
 
             const callbackName = 'ycHomeInfoCallback_' + Date.now();
 
             window[callbackName] = function(items) {
-                console.log('JSONP callback success:', items);
+                if (DEBUG) console.log(('JSONP callback success:', items);
 
                 try {
                     if (!items || !items.length) {
@@ -211,7 +213,7 @@
             const script = document.createElement('script');
             script.src = 'https://script.google.com/macros/s/AKfycbwUE7E8zibrWxtPN5n8LHCQgOrJpPKX6kSyV5Dk8raVqOgPB6eTByjJdFzQGRUTWoB54w/exec?callback=' + callbackName + '&_=' + Date.now();
 
-            console.log('JSONP src:', script.src);
+            if (DEBUG) console.log(('JSONP src:', script.src);
 
             script.onerror = function(err) {
                 console.error('Information JSONP error:', err);
@@ -856,7 +858,7 @@
             'price-mod-frame': `
                 <div class="yc-price-table-page">
                     <div class="yc-back-nav">
-                        <a href="/about" class="yc-back-btn">← ABOUT</a>
+                        <a href="/" class="yc-back-btn">← HOME</a>
                     </div>
             
                     <div class="yc-price-table-hero">
@@ -878,7 +880,7 @@
             'price-mod-bike': `
                 <div class="yc-price-table-page">
                     <div class="yc-back-nav">
-                        <a href="/about" class="yc-back-btn">← ABOUT</a>
+                        <a href="/" class="yc-back-btn">← HOME</a>
                     </div>
             
                     <div class="yc-price-table-hero">
