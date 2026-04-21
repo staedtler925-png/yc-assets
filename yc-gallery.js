@@ -938,6 +938,8 @@
         const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
 
         window[callbackName] = function(items) {
+            console.log('Price table JSONP callback success:', items);
+
             try {
                 if (!items || !items.length) {
                     container.innerHTML = `<p class="yc-price-table-empty">${emptyMessage}</p>`;
