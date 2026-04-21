@@ -2025,51 +2025,38 @@ body.shop #mainHeader {
     Header info 2x2 (tablet range)
     ============================== */
 
-    @media (min-width: 767px) and (max-width: 975px) {
+@media (min-width: 767px) and (max-width: 975px) {
+  body.shop #shopHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
 
-    .yc-header-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px 20px;
+  body.shop #shopHeader h1 {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
 
-        /* カードの見た目を少し整える */
-        padding: 10px 14px;
-    }
+  .yc-header-info {
+    width: min(100%, 520px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+  }
 
-    .yc-header-info-item {
-        display: flex;
-        flex-direction: column;
-    }
-    }
+  .yc-header-info-item {
+    min-width: 0;
+  }
 
-    /* スマホ：ロゴ下へ */
-    @media (max-width: 767px) {
-    body.shop #shopHeader {
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    body.shop #shopHeader h1 {
-        width: 100%;
-    }
-
-    .yc-header-info {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 10px 12px;
-    }
-
-    .yc-header-info-item {
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .yc-header-label {
-        min-width: 70px;
-    }
-    }
+  .yc-header-text {
+    word-break: break-word;
+  }
+}
 
     /* ==============================
     Header layout fix
