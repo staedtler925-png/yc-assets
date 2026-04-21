@@ -1968,7 +1968,7 @@ body.shop #mainHeader {
         align-items: center;
         justify-content: space-between;
         gap: 24px;
-        padding-top: 24px;
+        padding-top: 45px;
         flex-wrap: wrap;
     }
 
@@ -2022,7 +2022,7 @@ body.shop #mainHeader {
     }
 
     /* スマホ：ロゴ下へ */
-    @media (max-width: 767px) {
+    @media (max-width: 972px) {
     body.shop #shopHeader {
         align-items: flex-start;
         gap: 12px;
