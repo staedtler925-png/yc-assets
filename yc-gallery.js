@@ -912,6 +912,8 @@
     // Price Tables
     // ==============================
     function loadPriceTable(options) {
+        // テスト用
+        console.log('loadPriceTable start', options);
         const {
             containerSelector,
             type,
@@ -924,6 +926,7 @@
 
         console.log('スケルトン実行');
         container.innerHTML = createPriceSkeleton();
+        console.log('スケルトン実行後');
 
         const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
 
@@ -1514,6 +1517,9 @@
         var params = new URLSearchParams(window.location.search);
         var pageKey = params.get('p');
 
+        // テスト用
+        console.log('router動いた', pageKey);
+
         if (pageKey === 'works') {
             root.innerHTML = renderWorksList();
         } else if (pageKey && pageKey.indexOf('works-') === 0) {
@@ -1527,6 +1533,8 @@
             if (pageKey === 'quiet-disc') initQuietGallery();
             if (pageKey === 'quiet-mud') initQuietMudGallery();
             if (pageKey === 'price-mod-frame') {
+                    // テスト用
+                    console.log('price-mod-frame 分岐に入った');
                 loadPriceTable({
                     containerSelector: '#yc-frame-price-table',
                     type: 'frame',
