@@ -2124,6 +2124,10 @@ yc-home-info/* ==============================
   }
 
   .yc-home-info-more {
+    display: none !important;
+  }
+
+  .yc-home-info-more {
     font-size: 0.75rem;
   }
 
