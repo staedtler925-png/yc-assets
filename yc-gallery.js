@@ -1,6 +1,8 @@
     (function () {
         'use strict';
 
+        console.log('YC GALLERY VERSION: price-table-debug-01');
+        
     // ==========================================
     // HOME Hero Slider
     // ==========================================
