@@ -1960,72 +1960,79 @@ body.shop #mainHeader {
 }
 
 /* ==============================
-   Header Info Card
+   Header logo + info layout
 ============================== */
 
-#shopHeader {
+body.shop #shopHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
-/* ロゴ */
-#logo {
-  flex-shrink: 0;
+/* ここが重要：h1 を内容幅に戻す */
+body.shop #shopHeader h1 {
+  margin: 0;
+  width: auto;
+  flex: 0 0 auto;
+  display: block;
+  text-align: left;
+}
+
+/* ロゴリンクも内容幅 */
+body.shop #shopHeader h1 a#logo {
+  display: inline-block;
+  width: auto;
 }
 
 /* 情報カード */
 .yc-header-info {
+  flex: 0 1 auto;
   display: flex;
   gap: 24px;
   align-items: center;
-
   padding: 10px 16px;
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
-
   font-size: 12px;
 }
 
-/* 各項目 */
 .yc-header-info-item {
   display: flex;
   flex-direction: column;
   line-height: 1.4;
 }
 
-/* ラベル */
 .yc-header-label {
   font-size: 10px;
   letter-spacing: 0.08em;
   color: #888;
 }
 
-/* 本文 */
 .yc-header-text {
   font-size: 12px;
   color: #111;
 }
 
-/* ==============================
-   SP対応
-============================== */
-
+/* スマホ：ロゴ下へ */
 @media (max-width: 767px) {
-
-  #shopHeader {
-    flex-direction: column;
+  body.shop #shopHeader {
     align-items: flex-start;
     gap: 12px;
+  }
+
+  body.shop #shopHeader h1 {
+    width: 100%;
   }
 
   .yc-header-info {
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
-    padding: 10px;
+    padding: 10px 12px;
   }
 
   .yc-header-info-item {
