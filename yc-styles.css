@@ -1947,3 +1947,44 @@ body.shop #mainHeader {
     display: none;
   }
 }
+
+/* =========================================
+   ナビ 2段化（安全版）
+========================================= */
+
+@media (max-width: 965px) and (min-width: 481px) {
+
+  /* 親を折り返し可能に */
+  #shopHeader > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  /* 各メニューを均等幅に */
+  #shopHeader > nav > ul > li {
+    width: 33.333%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* リンクをブロック化＋折り返し許可 */
+  #shopHeader > nav > ul > li > a.mainHeaderNavColor,
+  #shopHeader > nav > ul > li #category-menu > span.mainHeaderNavColor {
+    display: block;
+    width: 100%;
+    padding: 8px 6px;
+    line-height: 1.4;
+
+    /* ここが重要 */
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* categoryの箱も幅合わせ */
+  #shopHeader > nav > ul > li #category-menu {
+    width: 100%;
+  }
+}
