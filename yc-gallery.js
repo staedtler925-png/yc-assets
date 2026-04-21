@@ -912,8 +912,8 @@
     // Price Tables
     // ==============================
     function loadPriceTable(options) {
-        // テスト用
         console.log('loadPriceTable start', options);
+
         const {
             containerSelector,
             type,
@@ -922,7 +922,12 @@
         } = options;
 
         const container = document.querySelector(containerSelector);
-        if (!container) return;
+        console.log('container =', container);
+
+        if (!container) {
+            console.log('container が見つからない');
+            return;
+        }
 
         console.log('スケルトン実行');
         container.innerHTML = createPriceSkeleton();
@@ -1533,13 +1538,16 @@
             if (pageKey === 'quiet-disc') initQuietGallery();
             if (pageKey === 'quiet-mud') initQuietMudGallery();
             if (pageKey === 'price-mod-frame') {
-                    // テスト用
-                    console.log('price-mod-frame 分岐に入った');
+                // テスト用
+                console.log('price-mod-frame 分岐に入った');
+
+                console.log('loadPriceTable 呼び出し前');
                 loadPriceTable({
                     containerSelector: '#yc-frame-price-table',
                     type: 'frame',
                     tableClass: 'yc-price-table-scroll'
                 });
+                console.log('loadPriceTable 呼び出し後');
             }
             if (pageKey === 'price-mod-bike') {
                 loadPriceTable({
