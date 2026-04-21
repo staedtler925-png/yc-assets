@@ -1877,6 +1877,33 @@ body.shop #mainHeader {
     margin: 0 auto 20px;
 }
 
+@media (max-width: 965px) and (min-width: 481px) {
+  #mainHeader nav ul,
+  .mainHeaderNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  #mainHeader nav ul li,
+  .mainHeaderNav ul li {
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #mainHeader nav ul li a,
+  .mainHeaderNav ul li a,
+  #mainHeader nav ul li span,
+  .mainHeaderNav ul li span {
+    display: block;
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+}
+
 /* -----------------------------------------
    タブレット
 ----------------------------------------- */
@@ -2121,10 +2148,6 @@ yc-home-info/* ==============================
 
   .yc-home-info-title {
     font-size: 1.1rem;
-  }
-
-  .yc-home-info-more {
-    display: none !important;
   }
 
   .yc-home-info-more {
