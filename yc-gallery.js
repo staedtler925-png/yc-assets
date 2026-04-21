@@ -922,7 +922,7 @@
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
-        container.innerHTML = '<p class="yc-price-table-loading">読み込み中...</p>';
+        container.innerHTML = createPriceSkeleton();
 
         const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
 
@@ -1001,6 +1001,38 @@
             .replace(/'/g, '&#39;');
     }
 
+    function createPriceSkeleton(rows = 6) {
+        let rowsHtml = '';
+
+        for (let i = 0; i < rows; i++) {
+            rowsHtml += `
+                <tr>
+                    <td><div class="yc-skeleton-line short"></div></td>
+                    <td><div class="yc-skeleton-line"></div></td>
+                    <td><div class="yc-skeleton-line short"></div></td>
+                    <td><div class="yc-skeleton-line"></div></td>
+                </tr>
+            `;
+        }
+
+        return `
+            <div class="yc-price-table-wrap">
+                <table class="yc-price-table-scroll">
+                    <thead>
+                        <tr>
+                            <th>分類</th>
+                            <th>作業内容</th>
+                            <th>価格</th>
+                            <th>備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${rowsHtml}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
 
     // ==========================================
     // Works data
