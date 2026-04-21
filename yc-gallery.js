@@ -922,6 +922,7 @@
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
+        console.log('スケルトン実行');
         container.innerHTML = createPriceSkeleton();
 
         const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
