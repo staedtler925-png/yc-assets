@@ -1904,6 +1904,17 @@ body.shop #mainHeader {
   }
 }
 
+@media (max-width: 965px) and (min-width: 481px) {
+  #mainHeader nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  #mainHeader nav ul li {
+    width: 33.333% !important;
+  }
+}
+
 /* -----------------------------------------
    タブレット
 ----------------------------------------- */
