@@ -1947,3 +1947,14 @@ body.shop #mainHeader {
     display: none;
   }
 }
+
+/* 価格表回り */
+.yc-price-table-loading,
+.yc-price-table-empty,
+.yc-price-table-error {
+    margin: 0;
+    padding: 16px 0;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
