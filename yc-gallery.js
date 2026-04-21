@@ -5,7 +5,6 @@
     // HOME Hero Slider
     // ==========================================
     function initHomeHeroSlider() {
-        console.log('🚀 initHomeHeroSlider START');
 
         var hero = document.getElementById('ycHomeHero');
         var track = document.getElementById('ycHomeHeroTrack');
@@ -869,68 +868,7 @@
                         </p>
                     </div>
             
-                    <div class="yc-price-table-wrap">
-                        <table class="yc-price-table-scroll">
-                            <thead>
-                                <tr>
-                                    <th>分類</th>
-                                    <th>作業内容</th>
-                                    <th>価格（税込）</th>
-                                    <th>備考</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>小物</td><td>Wレバー台座取り付け（左右ペア）</td><td>￥5,500</td><td></td></tr>
-                                <tr><td>小物</td><td>センタースタンド台座取り付け</td><td>￥7,260</td><td></td></tr>
-                                <tr><td>小物</td><td>チェーンフック取り付け</td><td>￥3,520</td><td></td></tr>
-                                <tr><td>小物</td><td>ポンプペグ取り付け</td><td>￥5,500</td><td></td></tr>
-                                <tr><td>小物</td><td>ダボ穴取り付け</td><td>￥1,650</td><td>1箇所につき</td></tr>
-                                <tr><td>小物</td><td>アウター受け取り付け</td><td>￥2,200</td><td>1箇所につき</td></tr>
-                                <tr><td>小物</td><td>ライト台座取り付け</td><td>￥2,750〜</td><td>形状、難易度による</td></tr>
-                                <tr><td>小物</td><td>内装穴</td><td>￥5,500</td><td>1箇所につき。ガイド無し、蓋と穴のみ</td></tr>
-            
-                                <tr><td>塗装</td><td>フロントフォーク剥離・全塗装</td><td>￥28,600〜</td><td>単色ソリッドカラーの価格。メタリック・パールベース、塗分け等は別途加算</td></tr>
-                                <tr><td>塗装</td><td>フレームセット剥離・全塗装</td><td>￥69,300〜</td><td>単色ソリッドカラーの価格。メタリック・パールベース、塗分け等は別途加算</td></tr>
-                                <tr><td>塗装</td><td>部分塗装</td><td>￥13,200〜</td><td>2か所まで。色によっては再現不可。</td></tr>
-            
-                                <tr><td>ブレーキ</td><td>ディスクブレーキ台座取り付け</td><td>￥13,200</td><td>スチールフレーム、インターナショナルスタンダード</td></tr>
-                                <tr><td>ブレーキ</td><td>ディスクブレーキ台座取り付け</td><td>￥22,000</td><td>アルミ、補強ブリッジ込み</td></tr>
-                                <tr><td>ブレーキ</td><td>フロントフォーク、キャリパーブレーキ穴開け</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ディスクブレーキ台座取り付け</td><td>￥16,500</td><td>正爪、スチールフレーム</td></tr>
-                                <tr><td>ブレーキ</td><td>カンチ、Vブレーキ台座取り付け</td><td>￥12,100</td><td>片側</td></tr>
-                                <tr><td>ブレーキ</td><td>キャリパーブレーキブリッジ取り付け</td><td>￥12,100</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>センタープル台座取り付け</td><td>￥12,100</td><td>片側、ブレーキバネ引っ掛け穴直付け可</td></tr>
-            
-                                <tr><td>フォーク</td><td>コラムねじ山修正</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>フォーク</td><td>フォークコラム溝切</td><td>￥3,960</td><td></td></tr>
-                                <tr><td>フォーク</td><td>フォークコラム延長（スレッドレス）</td><td>￥7,040</td><td></td></tr>
-                                <tr><td>フォーク</td><td>フォークコラム延長（スレッド）</td><td>￥9,240</td><td></td></tr>
-            
-                                <tr><td>パイプ差し替え</td><td>チェーンステー差し替え</td><td>￥33,000〜</td><td>1本につき。パイプ種類、難易度により変動</td></tr>
-                                <tr><td>パイプ差し替え</td><td>メインパイプ差し替え</td><td>￥33,000〜</td><td>1本につき。パイプ種類、難易度により変動</td></tr>
-                                <tr><td>パイプ差し替え</td><td>シートステー差し替え</td><td>￥22,000〜</td><td>1本につき。パイプ種類、難易度により変動</td></tr>
-                                <tr><td>パイプ差し替え</td><td>ヘッドパイプ差し替え</td><td>￥33,000〜</td><td>例、1インチ用パイプ→オーバーサイズあるいは44mmヘッドなど</td></tr>
-            
-                                <tr><td>カスタムラック、ステム</td><td>リアラック製作（大サイズ、メッキ）</td><td>￥44,000〜</td><td></td></tr>
-                                <tr><td>カスタムラック、ステム</td><td>ステム製作（フィレット仕上げ、研磨、メッキ）</td><td>￥33,000〜</td><td></td></tr>
-                                <tr><td>カスタムラック、ステム</td><td>ステム製作（フィレット仕上げ、塗装込み）</td><td>￥33,000〜</td><td></td></tr>
-                                <tr><td>カスタムラック、ステム</td><td>フロントラック製作（小サイズ、メッキ）</td><td>￥27,500〜</td><td></td></tr>
-            
-                                <tr><td>エンド</td><td>バック広げ</td><td>￥4,400</td><td></td></tr>
-                                <tr><td>エンド</td><td>フォークエンド平行だし</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>エンド</td><td>エンドスロット拡張</td><td>￥4,400</td><td>例：フォークエンド8mm→9mm</td></tr>
-                                <tr><td>エンド</td><td>リアエンド差し替え</td><td>￥33,000〜</td><td></td></tr>
-            
-                                <tr><td>アライメント</td><td>フロントフォーク精度チェック、修正</td><td>￥3,300〜</td><td>度合い、難易度により変動</td></tr>
-                                <tr><td>アライメント</td><td>フレーム精度チェック、修正</td><td>￥4,400〜</td><td>度合い、難易度により変動</td></tr>
-            
-                                <tr><td>その他</td><td>パイプ凹みのロー埋め（小）</td><td>￥4,400</td><td>軽量パイプは不可</td></tr>
-                                <tr><td>その他</td><td>パイプ凹みのロー埋め（中）</td><td>￥5,500</td><td>軽量パイプは不可</td></tr>
-                                <tr><td>その他</td><td>パイプ凹みのロー埋め（大）</td><td>￥6,600</td><td>軽量パイプは不可</td></tr>
-                                <tr><td>その他</td><td>小物、ブレーキ台座など除去</td><td>￥1,650〜</td><td>一箇所につき。サイズ、面積により変動</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div id="yc-frame-price-table"></div>
             
                     <div class="yc-price-table-cta">
                         <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn yc-btn-orange">お問い合わせ</a>
@@ -955,179 +893,12 @@
                     <div class="yc-price-table-section-title sport">ロード、クロスバイク、ツーリング車などのスポーツ車</div>
                     <div class="yc-price-table-notice">※ 価格には部品代金は含まれません。</div>
             
-                    <div class="yc-price-table-wrap">
-                        <table class="yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-sport">
-                            <thead>
-                                <tr>
-                                    <th>分類</th>
-                                    <th>作業内容</th>
-                                    <th>価格（税込）</th>
-                                    <th>備考</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>組み付け等</td><td>組み付け</td><td>￥21,780</td><td>フレームお買い上げ、再塗装、パーツをこちらで用意した場合</td></tr>
-                                <tr><td>組み付け等</td><td>組み付け</td><td>￥36,300</td><td>主にお持ち込みの場合</td></tr>
-                                <tr><td>組み付け等</td><td>ばらし</td><td>￥12,100</td><td></td></tr>
-                                <tr><td>組み付け等</td><td>組み付け</td><td>￥44,000</td><td>ビンテージパーツが主の場合</td></tr>
-            
-                                <tr><td>ホイール</td><td>ハブグリスアップ（フロント）</td><td>￥3,300</td><td>簡易清掃、ガタ取り含む</td></tr>
-                                <tr><td>ホイール</td><td>スポーク交換（フロント）</td><td>￥2,200〜</td><td>スポーク一本につき。2本目以降は＋￥400/1箇所</td></tr>
-                                <tr><td>ホイール</td><td>スポーク交換（リア）</td><td>￥3,300〜</td><td>スポーク一本につき。2本目以降は＋￥400/1箇所</td></tr>
-                                <tr><td>ホイール</td><td>振れ取り</td><td>￥1,100〜</td><td>度合いに応じて加算</td></tr>
-                                <tr><td>ホイール</td><td>ホイール組</td><td>￥7,700</td><td>リム、ハブを当店でお買い上げの場合</td></tr>
-                                <tr><td>ホイール</td><td>ハブグリスアップ（リア）</td><td>￥4,400</td><td>簡易清掃、ガタ取り含む</td></tr>
-                                <tr><td>ホイール</td><td>ホイール組</td><td>￥8,800</td><td>リム、ハブをお持ち込みの場合</td></tr>
-            
-                                <tr><td>ペダル</td><td>ペダル交換</td><td>￥1,100</td><td></td></tr>
-            
-                                <tr><td>ヘッドパーツ</td><td>JIS → ITA化</td><td>￥6,600</td><td>1インチ ITAヘッドセットが入るようにヘッドチューブと下玉押し部を切削</td></tr>
-                                <tr><td>ヘッドパーツ</td><td>ヘッドベアリング玉当たり調整</td><td>￥880</td><td></td></tr>
-                                <tr><td>ヘッドパーツ</td><td>下玉押し圧入のみ</td><td>￥1,100</td><td></td></tr>
-                                <tr><td>ヘッドパーツ</td><td>ヘッドリーマー、フェイシング</td><td>￥3,300</td><td></td></tr>
-                                <tr><td>ヘッドパーツ</td><td>上下カップ、下玉押し交換</td><td>￥3,520</td><td></td></tr>
-            
-                                <tr><td>ブレーキ</td><td>調整のみ</td><td>￥550〜</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキレバー（STI）交換</td><td>￥3,520</td><td>片側、バーテープ・グリップなど付け直し含む</td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキ本体交換</td><td>￥2,640</td><td>片側、調整含む</td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキシュー交換</td><td>￥1,100</td><td>片側、調整含む</td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキワイヤー交換</td><td>￥2,200</td><td>片側、調整含む</td></tr>
-            
-                                <tr><td>フォーク</td><td>コラムカット</td><td>￥1,760</td><td></td></tr>
-                                <tr><td>フォーク</td><td>クラウンレースカット</td><td>￥1,320</td><td></td></tr>
-                                <tr><td>フォーク</td><td>スターファングルナット圧入</td><td>￥880</td><td></td></tr>
-                                <tr><td>フォーク</td><td>フロントフォーク交換</td><td>￥5,280</td><td>下玉押し外し圧入、ブレーキ移植、コラムカット</td></tr>
-            
-                                <tr><td>フェンダー</td><td>イージーrinkoフェンダー加工</td><td>￥5,500</td><td></td></tr>
-                                <tr><td>フェンダー</td><td>フェンダー取り付け</td><td>￥6,600</td><td>片側、本所などの泥除け本体に穴開け加工が必要なタイプ</td></tr>
-                                <tr><td>フェンダー</td><td>フェンダー取り付け</td><td>￥2,200</td><td>片側、泥除け本体に穴開け加工など必要のないタイプ</td></tr>
-                                <tr><td>フェンダー</td><td>フェンダー分割加工</td><td>￥8,000</td><td>本所製フェンダーに限る</td></tr>
-            
-                                <tr><td>ハンドル</td><td>ドロップバー交換</td><td>￥4,400</td><td>レバーの外し取付、バーテープ巻き直し含む</td></tr>
-                                <tr><td>ハンドル</td><td>フラットバー交換</td><td>￥3,520</td><td>グリップ、レバー類の外し取付含む</td></tr>
-                                <tr><td>ハンドル</td><td>グリップ交換</td><td>￥1,100</td><td></td></tr>
-                                <tr><td>ハンドル</td><td>バーテープ交換</td><td>￥1,760</td><td></td></tr>
-            
-                                <tr><td>ディスクブレーキ</td><td>ブレーキキャリパー交換（機械）</td><td>￥3,300</td><td>片側、調整含む</td></tr>
-                                <tr><td>ディスクブレーキ</td><td>ローター交換</td><td>￥1,100</td><td></td></tr>
-                                <tr><td>ディスクブレーキ</td><td>キャリパー・ホース交換（油圧）</td><td>￥6,600</td><td>片側、フルード入れ替え、調整込み（ハンドルやフレームの内装は加算）</td></tr>
-                                <tr><td>ディスクブレーキ</td><td>フルード交換</td><td>￥4,400</td><td></td></tr>
-                                <tr><td>ディスクブレーキ</td><td>ブレーキレバー交換（油圧）</td><td>￥6,600</td><td>片側、フルード・グリップバーテープ交換含む</td></tr>
-                                <tr><td>ディスクブレーキ</td><td>パッド交換</td><td>￥2,200</td><td>片側、調整込み</td></tr>
-            
-                                <tr><td>タイヤ、チューブ</td><td>チューブレスレディタイヤ交換</td><td>￥3,300</td><td>シーラント除去、シーラント注入含む</td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>チューブラータイヤ交換</td><td>￥3,300</td><td>古いセメントなど剥がす場合は別途</td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>タイヤ、チューブ交換</td><td>￥1,320</td><td></td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>パンク修理</td><td>￥1,300</td><td>パッチ1箇所につき。以降2箇所目からは＋￥400/1箇所</td></tr>
-            
-                                <tr><td>ステム</td><td>ステム交換（オープンタイプ）</td><td>￥1,760</td><td></td></tr>
-                                <tr><td>ステム</td><td>ステム交換（クローズドタイプ）</td><td>￥4,400</td><td>レバーの外し取付、バーテープ巻き直し含む</td></tr>
-            
-                                <tr><td>スタンド</td><td>キックスタンド取り付け</td><td>￥1,100</td><td>簡易タイプ</td></tr>
-            
-                                <tr><td>シフト</td><td>変速器交換</td><td>￥3,300</td><td>調整込み</td></tr>
-                                <tr><td>シフト</td><td>ディレイラーハンガー修正</td><td>￥2,200〜</td><td>度合いに応じて加算</td></tr>
-                                <tr><td>シフト</td><td>変速調整</td><td>￥1,100〜</td><td></td></tr>
-                                <tr><td>シフト</td><td>シフトワイヤー交換</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>シフト</td><td>シフト（STI）レバー交換</td><td>￥5,500</td><td>片側、バーテープ・グリップなど付け直し含む</td></tr>
-            
-                                <tr><td>サドル、シート</td><td>シートリーマーがけ</td><td>￥3,300〜</td><td>拡張などは度合いに応じて加算</td></tr>
-                                <tr><td>サドル、シート</td><td>サドル交換</td><td>￥880</td><td></td></tr>
-                                <tr><td>サドル、シート</td><td>シートポスト交換</td><td>￥1,430</td><td>サドル交換含む</td></tr>
-            
-                                <tr><td>サスペンション</td><td>フロントサスペンションOH</td><td>￥11,000</td><td>基本工賃、消耗品や交換部品は別途</td></tr>
-            
-                                <tr><td>ギア、チェーン</td><td>チェーン交換</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>ギア、チェーン</td><td>スプロケット交換</td><td>￥1,320</td><td></td></tr>
-                                <tr><td>ギア、チェーン</td><td>チェーンリング交換</td><td>￥2,200</td><td></td></tr>
-                                <tr><td>ギア、チェーン</td><td>クランク交換</td><td>￥3,300</td><td></td></tr>
-            
-                                <tr><td>オーバーホール、点検メニュー</td><td>自転車洗浄</td><td>￥5,500〜</td><td>水洗いの上、駆動・ブレーキ周り清掃（部品の脱着無し）。汚れがひどい場合は別途オーバーホールメニューとなります。</td></tr>
-                                <tr><td>オーバーホール、点検メニュー</td><td>駆動系洗浄</td><td>￥6,600</td><td>チェーンリング、ディレイラー、スプロケット、チェーンをディグリーザーで洗浄します。汚れがひどい場合に有効です。</td></tr>
-                                <tr><td>オーバーホール、点検メニュー</td><td>フルオーバーホール</td><td>￥49,500</td><td>全てのパーツを最小単位まで分解洗浄、パーツ交換調整費用、グリス・オイルアップ、ホイール振れ取り等 ※機械式ブレーキ</td></tr>
-                                <tr><td>オーバーホール、点検メニュー</td><td>クイック点検</td><td>￥3,300</td><td>各ボルトねじ増し締め、部品交換を伴わない変速機やブレーキの調整、注油、各部点検など。</td></tr>
-            
-                                <tr><td>BB</td><td>BB交換</td><td>￥4,400</td><td>クランク外し、付け直し含む</td></tr>
-                                <tr><td>BB</td><td>BBシェルタッピング</td><td>￥4,400</td><td>BSA, T47</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div id="yc-bike-sport-table"></div>
             
                     <div class="yc-price-table-section-title city">シティサイクル（ままちゃり）</div>
                     <div class="yc-price-table-notice">※ 価格には部品代金は含まれません。</div>
             
-                    <div class="yc-price-table-wrap yc-price-table-wrap-city">
-                        <table class="yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-city">
-                            <thead>
-                                <tr>
-                                    <th>分類</th>
-                                    <th>作業内容</th>
-                                    <th>価格（税込）</th>
-                                    <th>備考</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>鍵</td><td>ワイヤ錠切断</td><td>￥550</td><td></td></tr>
-                                <tr><td>鍵</td><td>リング錠切断、交換</td><td>￥1,100</td><td></td></tr>
-            
-                                <tr><td>荷台</td><td>チャイルドシート取り付け（前）</td><td>￥2,640</td><td></td></tr>
-                                <tr><td>荷台</td><td>チャイルドシート取り付け（後）</td><td>￥3,520</td><td></td></tr>
-            
-                                <tr><td>変速</td><td>変速調整</td><td>￥550</td><td></td></tr>
-                                <tr><td>変速</td><td>変速ワイヤ交換</td><td>￥1,760</td><td></td></tr>
-            
-                                <tr><td>ライト</td><td>ライト交換</td><td>￥880</td><td></td></tr>
-                                <tr><td>ライト</td><td>球切れ交換</td><td>￥550</td><td></td></tr>
-            
-                                <tr><td>ホイール</td><td>スポーク交換（後ホイール脱着あり）</td><td>￥4,840〜</td><td>スポーク一本につき。2本目以降は＋￥400/1箇所</td></tr>
-                                <tr><td>ホイール</td><td>フロントホイール交換</td><td>￥1,760</td><td></td></tr>
-                                <tr><td>ホイール</td><td>振れ取り（後ホイール脱着あり）</td><td>￥3,520〜</td><td>度合いに応じて加算</td></tr>
-                                <tr><td>ホイール</td><td>スポーク交換（前ホイール脱着あり）</td><td>￥3,740〜</td><td>スポーク一本につき。2本目以降は＋￥400/1箇所</td></tr>
-                                <tr><td>ホイール</td><td>振れ取り（前ホイール脱着あり）</td><td>￥2,640〜</td><td>度合いに応じて加算</td></tr>
-                                <tr><td>ホイール</td><td>後ホイール組み換え</td><td>￥7,700</td><td></td></tr>
-                                <tr><td>ホイール</td><td>リアホイール交換</td><td>￥3,520</td><td></td></tr>
-                                <tr><td>ホイール</td><td>ガタ調整、ベアリング交換（後ホイール）</td><td>￥3,520〜</td><td></td></tr>
-                                <tr><td>ホイール</td><td>振れ取り（ホイール脱着せず）</td><td>￥1,100〜</td><td>度合いに応じて加算</td></tr>
-                                <tr><td>ホイール</td><td>前ホイール組み換え</td><td>￥6,600</td><td></td></tr>
-                                <tr><td>ホイール</td><td>ニップル交換（ホイール脱着せず）</td><td>￥1,760</td><td></td></tr>
-                                <tr><td>ホイール</td><td>スポーク交換（ホイール脱着せず）</td><td>￥2,200〜</td><td>スポーク一本につき。2本目以降は＋￥400/1箇所</td></tr>
-                                <tr><td>ホイール</td><td>ガタ調整、ベアリング交換（前ホイール）</td><td>￥1,760</td><td></td></tr>
-            
-                                <tr><td>ペダル</td><td>ペダル交換</td><td>￥880</td><td></td></tr>
-            
-                                <tr><td>ブレーキ</td><td>後ろブレーキ交換（バンドブレーキ等）</td><td>￥3,520</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ローラーブレーキグリス注入</td><td>￥330</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>前ブレーキ交換（キャリパー）</td><td>￥1,760</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキシュー交換</td><td>￥1,100</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキ調整</td><td>￥550</td><td></td></tr>
-                                <tr><td>ブレーキ</td><td>ブレーキワイヤ交換</td><td>￥1,320</td><td></td></tr>
-            
-                                <tr><td>チェーン</td><td>注油</td><td>￥100</td><td></td></tr>
-                                <tr><td>チェーン</td><td>チェーン交換（フルカバー）</td><td>￥3,520</td><td></td></tr>
-                                <tr><td>チェーン</td><td>チェーン交換（ハーフケース）</td><td>￥2,640</td><td></td></tr>
-                                <tr><td>チェーン</td><td>チェーン張り調整</td><td>￥550</td><td></td></tr>
-            
-                                <tr><td>タイヤ、チューブ</td><td>パンク修理</td><td>￥1,300</td><td>パッチ1箇所につき。以降2箇所目からは＋￥400/1箇所</td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>虫ゴム交換</td><td>￥200</td><td></td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>後輪タイヤ、チューブ交換</td><td>￥3,300</td><td>表示価格は工賃。タイヤ代は別途</td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>水調べ</td><td>￥1,000</td><td></td></tr>
-                                <tr><td>タイヤ、チューブ</td><td>前輪タイヤ、チューブ交換</td><td>￥2,200</td><td>表示価格は工賃。タイヤ代は別途</td></tr>
-            
-                                <tr><td>スタンド</td><td>バネ交換</td><td>￥550</td><td></td></tr>
-                                <tr><td>スタンド</td><td>両立スタンド</td><td>￥1,320</td><td></td></tr>
-                                <tr><td>スタンド</td><td>片足スタンド</td><td>￥880</td><td></td></tr>
-            
-                                <tr><td>サドル</td><td>サドル交換</td><td>￥550</td><td></td></tr>
-            
-                                <tr><td>かご</td><td>かご交換</td><td>￥1,320</td><td></td></tr>
-                                <tr><td>かご</td><td>カゴ足交換</td><td>￥2,640</td><td>部品代込み</td></tr>
-                                <tr><td>かご</td><td>ねじ取り付け</td><td>￥220</td><td>ねじ一本につき。2本目以降は＋￥100/1箇所</td></tr>
-            
-                                <tr><td>BB</td><td>ガタ調整</td><td>￥1,320〜</td><td>クランク脱着要の場合は加算</td></tr>
-                                <tr><td>BB</td><td>BB交換</td><td>￥5,280</td><td>クランク脱着含む</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div id="yc-bike-city-table"></div>
             
                     <div class="yc-price-table-cta">
                         <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn yc-btn-orange">お問い合わせ</a>
@@ -1135,6 +906,100 @@
                 </div>
             `,
         };
+
+
+    // ==============================
+    // Price Tables
+    // ==============================
+    function loadPriceTable(options) {
+        const {
+            containerSelector,
+            type,
+            tableClass = 'yc-price-table-scroll',
+            emptyMessage = '料金表はまだありません。'
+        } = options;
+
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        container.innerHTML = '<p class="yc-price-table-loading">読み込み中...</p>';
+
+        const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
+
+        window[callbackName] = function(items) {
+            try {
+                if (!items || !items.length) {
+                    container.innerHTML = `<p class="yc-price-table-empty">${emptyMessage}</p>`;
+                    return;
+                }
+
+                const rowsHtml = items.map(item => `
+                    <tr>
+                        <td>${escapeHtml(item.category || '')}</td>
+                        <td>${escapeHtml(item.work || '')}</td>
+                        <td>${escapeHtml(item.price || '')}</td>
+                        <td>${escapeHtml(item.note || '')}</td>
+                    </tr>
+                `).join('');
+
+                container.innerHTML = `
+                    <div class="yc-price-table-wrap">
+                        <table class="${tableClass}">
+                            <thead>
+                                <tr>
+                                    <th>分類</th>
+                                    <th>作業内容</th>
+                                    <th>価格</th>
+                                    <th>備考</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${rowsHtml}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            } catch (err) {
+                console.error('Price table render error:', err);
+                container.innerHTML = '<p class="yc-price-table-error">料金表の表示に失敗しました。</p>';
+            } finally {
+                try {
+                    delete window[callbackName];
+                } catch (_) {
+                    window[callbackName] = undefined;
+                }
+            }
+        };
+
+        const script = document.createElement('script');
+        script.src =
+            'https://script.google.com/macros/s/AKfycbwJ-5RufwKyHox-mLVIR1PzUXiDCgrbXwI0zzZzkkt3eTLurHpbLra3zgPkugV0ENckVw/exec'
+            + '?type=' + encodeURIComponent(type)
+            + '&callback=' + callbackName
+            + '&_=' + Date.now();
+
+        script.onerror = function(err) {
+            console.error('Price table JSONP error:', err);
+            container.innerHTML = '<p class="yc-price-table-error">料金表を取得できませんでした。</p>';
+
+            try {
+                delete window[callbackName];
+            } catch (_) {
+                window[callbackName] = undefined;
+            }
+        };
+
+        document.body.appendChild(script);
+    }
+
+    function escapeHtml(str) {
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
 
 
     // ==========================================
@@ -1628,6 +1493,27 @@
             if (pageKey === 'kazusa') initKazusaGallery();
             if (pageKey === 'quiet-disc') initQuietGallery();
             if (pageKey === 'quiet-mud') initQuietMudGallery();
+            if (pageKey === 'price-mod-frame') {
+                loadPriceTable({
+                    containerSelector: '#yc-frame-price-table',
+                    type: 'frame',
+                    tableClass: 'yc-price-table-scroll'
+                });
+            }
+            if (pageKey === 'price-mod-bike') {
+                loadPriceTable({
+                    containerSelector: '#yc-bike-sport-table',
+                    type: 'bike_sport',
+                    tableClass: 'yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-sport'
+                });
+
+                loadPriceTable({
+                    containerSelector: '#yc-bike-city-table',
+                    type: 'bike_city',
+                    tableClass: 'yc-price-table-scroll yc-price-table-scroll-bike yc-price-table-scroll-bike-city'
+                });
+            }
+
         } else {
             root.innerHTML = listPage;
         }
