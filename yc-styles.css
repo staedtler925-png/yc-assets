@@ -764,42 +764,6 @@ a.yc-btn-orange {
     }
 }
 
-/* 超小型スマホ対応（400px以下） */
-@media (max-width: 400px) {
-
-    .yc-price-row {
-        display: block;
-        padding: 12px 10px;
-    }
-
-    .yc-price-row-label {
-        display: block;
-        font-size: 15px;
-        margin-bottom: 4px;
-    }
-
-    .yc-price-row-price {
-        display: block;
-        font-size: 16px;
-        color: #ED4700;
-        margin-bottom: 4px;
-        font-weight: bold;
-    }
-
-    .yc-price-row-note {
-        display: block;
-        font-size: 13px;
-    }
-
-    /* 分類を上に出したい場合（あれば） */
-    .yc-price-label {
-        display: block;
-        font-size: 12px;
-        color: #888;
-        margin-bottom: 4px;
-    }
-}
-
 /* 12. 旧 price-mod-bike 用互換スタイル */
 .yc-price-section-title {
     font-size: 20px;
@@ -1267,61 +1231,6 @@ a.yc-btn-orange {
 .yc-price-table-scroll td:nth-child(2),
 .yc-price-table-scroll td:nth-child(4) {
     word-break: normal;
-}
-
-/* =========================================
-   超小型デバイス対応（400px以下）
-========================================= */
-@media (max-width: 400px) {
-
-    /* 横スクロール */
-    .yc-price-table-wrap {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        position: relative;
-    }
-
-    /* テーブルを普通に戻す */
-    .yc-price-table-scroll {
-        display: table;
-        min-width: 520px;
-        border-collapse: collapse;
-    }
-
-    .yc-price-table-scroll thead {
-        display: table-header-group;
-    }
-
-    .yc-price-table-scroll tbody {
-        display: table-row-group;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .yc-price-table-scroll tr {
-        display: table-row;
-    }
-
-    .yc-price-table-scroll th,
-    .yc-price-table-scroll td {
-        display: table-cell;
-        padding: 10px 12px;
-        border-bottom: 1px solid #eee;
-        white-space: nowrap;
-        font-size: 13px;
-    }
-
-    /* ヘッダー色は維持 */
-    .yc-price-table-scroll thead th {
-        color: #fff;
-    }
-   
-   /* 備考だけ折り返す */
-   .yc-price-table-scroll td:nth-child(4) {
-       white-space: normal;
-       word-break: break-word;
-   }
-
 }
 
 /* =========================================
@@ -2159,3 +2068,84 @@ body.shop #mainHeader {
         line-height: 2;
         color: #555;
     }
+
+    /* =========================================
+   price table 400px以下：完全縦並び
+========================================= */
+@media (max-width: 400px) {
+
+    .yc-price-table-wrap {
+        overflow: hidden;
+    }
+
+    .yc-price-table-scroll thead {
+        display: none;
+    }
+
+    .yc-price-table-scroll,
+    .yc-price-table-scroll tbody,
+    .yc-price-table-scroll tr,
+    .yc-price-table-scroll td {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+    }
+
+    .yc-price-table-scroll tbody {
+        max-height: 52vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .yc-price-table-scroll tr {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+    }
+
+    .yc-price-table-scroll td {
+        padding: 0 0 8px !important;
+        border: none !important;
+        white-space: normal !important;
+        word-break: break-word;
+        text-align: left !important;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .yc-price-table-scroll td:nth-child(1)::before {
+        content: "分類：";
+        font-weight: bold;
+        color: #555;
+    }
+
+    .yc-price-table-scroll td:nth-child(2)::before {
+        content: "作業内容：";
+        font-weight: bold;
+        color: #555;
+    }
+
+    .yc-price-table-scroll td:nth-child(3)::before {
+        content: "価格：";
+        font-weight: bold;
+        color: #555;
+    }
+
+    .yc-price-table-scroll td:nth-child(4)::before {
+        content: "備考：";
+        font-weight: bold;
+        color: #555;
+    }
+
+    .yc-price-table-scroll td:nth-child(3) {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .yc-price-table-scroll td:nth-child(4) {
+        color: #777;
+        font-size: 12px;
+        padding-bottom: 0 !important;
+    }
+}
