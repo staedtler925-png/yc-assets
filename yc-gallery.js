@@ -537,7 +537,7 @@
         const listPage = `
             <div class="yc-wrapper">
                 <section class="yc-main-visual" style="text-align:center; padding: 60px 0 0;">
-                    <h1 style="font-size:20px; font-weight:300; letter-spacing:0.4em; color:#2F2E2E;">オリジナルフレーム</h1>
+                    <h1 style="font-size:20px; font-weight:300; letter-spacing:0.4em; color:#2F2E2E;">BIKES</h1>
                 </section>
                 <div class="yc-grid-container">
                     <section class="yc-model-section">
@@ -569,7 +569,7 @@
         const pages = {
             'kazusa': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
-                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
+                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
                     <div class="yc-detail-head"><h1>GRAVEL GRINDER KAZUSA (上総)</h1></div>
 
                     <div class="yc-gallery" id="kazusaGallery">
@@ -630,7 +630,7 @@
             `,
             'quiet-disc': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
-                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
+                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
                     <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET Disc</h1></div>
 
                     <div class="yc-gallery" id="quietDiscGallery">
@@ -699,7 +699,7 @@
             `,
             'quiet-mud': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
-                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
+                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
                     <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET</h1></div>
 
                     <div class="yc-gallery" id="quietMudGallery">
@@ -779,7 +779,7 @@
             `,
             'custom': `
                 <div class="yc-custom-wrapper">
-                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← ALL FRAMES</a></div>
+                    <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
             
                     <div class="yc-custom-hero">
                         <h1>CUSTOM FRAME</h1>
@@ -1324,7 +1324,7 @@
         return `
             <div class="yc-works-page">
                 <div class="yc-back-nav">
-                    <a href="/about" class="yc-back-btn">← ABOUT</a>
+                    <a href="/about" class="yc-back-btn">← BIKES</a>
                 </div>
 
                 <div class="yc-works-hero">
