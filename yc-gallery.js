@@ -1215,18 +1215,18 @@
             `${GH}/Gravel_Bike_for_N-09.jpg`
             ],
         },
-        {
-            slug: '700c-mixte-for-s-2',
-            title: '700c Mixte for S',
-            thumb: '',
-            images: [],
-        },
-        {
-            slug: '700c-mixte-for-s-3',
-            title: '700c Mixte for S',
-            thumb: '',
-            images: [],
-        },
+        // {
+        //     slug: '700c-mixte-for-s-2',
+        //     title: '700c Mixte for S',
+        //     thumb: '',
+        //     images: [],
+        // },
+        // {
+        //     slug: '700c-mixte-for-s-3',
+        //     title: '700c Mixte for S',
+        //     thumb: '',
+        //     images: [],
+        // },
         {
             slug: 'commuter-for-i',
             title: 'Commuter for I',
