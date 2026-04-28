@@ -622,7 +622,7 @@
                                 <div class="yc-price">価格：<span>285,000円</span>（税込￥313,500円）</div>
                                 <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn yc-btn-orange">お問い合わせ</a>
                                 <br>
-                                <a href="https://drive.google.com/uc?export=download&id=ここにGoogleドライブのファイルID" class="yc-btn yc-btn-orange" target="_blank" style="margin-top:10px;">オーダーフォーム (DOCX)</a>
+                                <a href="https://github.com/staedtler925-png/yc-assets/raw/main/docs/YANAGI_OrderForm_QUIET_JPN.docx" class="yc-btn yc-btn-orange" target="_blank" style="margin-top:10px;">オーダーフォーム (DOCX)</a>
                             </div>
                         </div>
                     </div>
