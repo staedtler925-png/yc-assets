@@ -764,6 +764,42 @@ a.yc-btn-orange {
     }
 }
 
+/* 超小型スマホ対応（400px以下） */
+@media (max-width: 400px) {
+
+    .yc-price-row {
+        display: block;
+        padding: 12px 10px;
+    }
+
+    .yc-price-row-label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .yc-price-row-price {
+        display: block;
+        font-size: 16px;
+        color: #ED4700;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
+
+    .yc-price-row-note {
+        display: block;
+        font-size: 13px;
+    }
+
+    /* 分類を上に出したい場合（あれば） */
+    .yc-price-label {
+        display: block;
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 4px;
+    }
+}
+
 /* 12. 旧 price-mod-bike 用互換スタイル */
 .yc-price-section-title {
     font-size: 20px;
