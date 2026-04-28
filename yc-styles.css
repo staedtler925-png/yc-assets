@@ -2108,3 +2108,18 @@ body.shop #mainHeader {
     .yc-header-info {
     margin-left: auto;
     }
+
+
+    /* HOME aboutテキスト */
+    .yc-home-about {
+        max-width: 800px;
+        margin: 60px auto 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .yc-home-about p {
+        font-size: 15px;
+        line-height: 2;
+        color: #555;
+    }
