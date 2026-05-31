@@ -159,7 +159,9 @@
         // HOME Information
         // ==============================
         function initHomeInformation() {
+
             const list = document.querySelector('.yc-home-info-list');
+
             if (!list) {
                 if (DEBUG) console.log('yc-home-info-list が見つかりません');
                 return;
@@ -167,66 +169,92 @@
 
             if (DEBUG) console.log('initHomeInformation start');
 
-            list.innerHTML = '<p class="yc-home-info-loading">読み込み中...</p>';
+            list.innerHTML =
+                '<p class="yc-home-info-loading">読み込み中...</p>';
 
-            const callbackName = 'ycHomeInfoCallback_' + Date.now();
+            const csvUrl =
+                'https://docs.google.com/spreadsheets/d/e/2PACX-1vT7PhbyqlOwktbqCcioWupV62ozSqvW9QKDsz8DW6R9XkmqcMeOHOz2UNHjlnsSknr7TOsaX4rSjaon/pub?gid=0&single=true&output=csv';
 
-            window[callbackName] = function(items) {
-                if (DEBUG) console.log('JSONP callback success:', items);
+            fetch(csvUrl)
+                .then(response => response.text())
+                .then(csv => {
 
-                try {
-                    if (!items || !items.length) {
-                        list.innerHTML = '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
-                        return;
-                    }
+                    Papa.parse(csv, {
 
-                    list.innerHTML = '';
+                        header: true,
+                        skipEmptyLines: true,
 
-                        items.slice(0, 5).forEach(item => {
-                            const article = document.createElement('article');
-                            article.className = 'yc-home-info-item';
+                        complete: function(results) {
 
-                            article.innerHTML = `
-                                <span class="yc-home-info-date">${item.date || ''}</span>
-                                <span class="yc-home-info-text">${item.text || ''}</span>
-                                ${
-                                    item.link
-                                        ? `<a href="${item.link}" class="yc-home-info-link">詳細はこちら</a>`
-                                        : `<span class="yc-home-info-link is-disabled"></span>`
-                                }
-                            `;
+                            const items = results.data;
 
-                            list.appendChild(article);
-                        });
-                } catch (err) {
-                    console.error('Information render error:', err);
-                    list.innerHTML = '<p class="yc-home-info-error">お知らせの表示に失敗しました。</p>';
-                } finally {
-                    try {
-                        delete window[callbackName];
-                    } catch (_) {
-                        window[callbackName] = undefined;
-                    }
-                }
-            };
+                            if (DEBUG) {
+                                console.log('CSV loaded:', items);
+                            }
 
-            const script = document.createElement('script');
-            script.src = 'https://script.google.com/macros/s/AKfycbwUE7E8zibrWxtPN5n8LHCQgOrJpPKX6kSyV5Dk8raVqOgPB6eTByjJdFzQGRUTWoB54w/exec?callback=' + callbackName + '&_=' + Date.now();
+                            if (!items.length) {
 
-            if (DEBUG) console.log('JSONP src:', script.src);
+                                list.innerHTML =
+                                    '<p class="yc-home-info-empty">お知らせはまだありません。</p>';
 
-            script.onerror = function(err) {
-                console.error('Information JSONP error:', err);
-                list.innerHTML = '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
+                                return;
+                            }
 
-                try {
-                    delete window[callbackName];
-                } catch (_) {
-                    window[callbackName] = undefined;
-                }
-            };
+                            list.innerHTML = '';
 
-            document.body.appendChild(script);
+                            items.slice(0, 5).forEach(item => {
+
+                                const article =
+                                    document.createElement('article');
+
+                                article.className =
+                                    'yc-home-info-item';
+
+                                const date =
+                                    escapeHtml(item['日付'] || '');
+
+                                const text =
+                                    escapeHtml(item['テキスト'] || '');
+
+                                const link =
+                                    item['リンク'] || '';
+
+                                article.innerHTML = `
+                                    <span class="yc-home-info-date">${date}</span>
+                                    <span class="yc-home-info-text">${text}</span>
+                                    ${
+                                        link
+                                            ? `<a href="${link}" class="yc-home-info-link">詳細はこちら</a>`
+                                            : `<span class="yc-home-info-link is-disabled"></span>`
+                                    }
+                                `;
+
+                                list.appendChild(article);
+                            });
+                        },
+
+                        error: function(err) {
+
+                            console.error(
+                                'Information CSV parse error:',
+                                err
+                            );
+
+                            list.innerHTML =
+                                '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
+                        }
+                    });
+                })
+                .catch(err => {
+
+                    console.error(
+                        'Information CSV fetch error:',
+                        err
+                    );
+
+                    list.innerHTML =
+                        '<p class="yc-home-info-error">お知らせを取得できませんでした。</p>';
+                });
         }
 
         // ==========================================
@@ -914,6 +942,7 @@
     // Price Tables
     // ==============================
     function loadPriceTable(options) {
+
         const {
             containerSelector,
             type,
@@ -922,76 +951,108 @@
         } = options;
 
         const container = document.querySelector(containerSelector);
+
         if (!container) return;
 
-        container.innerHTML = '<p class="yc-price-table-loading">読み込み中...</p>';
+        const csvUrls = {
 
-        const callbackName = 'ycPriceTableCallback_' + type + '_' + Date.now();
+            frame:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vSMBdWWY9OCTNey8ysifYxkPNi12nO4S8xtgkXRtkne1si1CIO-wZTxgzyvnYHbkSeN5rky6SZ4F9tV/pub?gid=1265783094&single=true&output=csv',
 
-        window[callbackName] = function(items) {
-            try {
-                if (!items || !items.length) {
-                    container.innerHTML = `<p class="yc-price-table-empty">${emptyMessage}</p>`;
-                    return;
-                }
+            bike_sport:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vSMBdWWY9OCTNey8ysifYxkPNi12nO4S8xtgkXRtkne1si1CIO-wZTxgzyvnYHbkSeN5rky6SZ4F9tV/pub?gid=838947431&single=true&output=csv',
 
-                const rowsHtml = items.map(item => `
-                    <tr>
-                        <td>${escapeHtml(item.category || '')}</td>
-                        <td>${escapeHtml(item.work || '')}</td>
-                        <td>${escapeHtml(item.price || '')}</td>
-                        <td>${escapeHtml(item.note || '')}</td>
-                    </tr>
-                `).join('');
-
-                container.innerHTML = `
-                    <div class="yc-price-table-wrap">
-                        <table class="${tableClass}">
-                            <thead>
-                                <tr>
-                                    <th>分類</th>
-                                    <th>作業内容</th>
-                                    <th>価格</th>
-                                    <th>備考</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${rowsHtml}
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            } catch (err) {
-                console.error('Price table render error:', err);
-                container.innerHTML = '<p class="yc-price-table-error">料金表の表示に失敗しました。</p>';
-            } finally {
-                try {
-                    delete window[callbackName];
-                } catch (_) {
-                    window[callbackName] = undefined;
-                }
-            }
+            bike_city:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vSMBdWWY9OCTNey8ysifYxkPNi12nO4S8xtgkXRtkne1si1CIO-wZTxgzyvnYHbkSeN5rky6SZ4F9tV/pub?gid=1591639077&single=true&output=csv'
         };
 
-        const script = document.createElement('script');
-        script.src =
-            'https://script.google.com/macros/s/AKfycbwJ-5RufwKyHox-mLVIR1PzUXiDCgrbXwI0zzZzkkt3eTLurHpbLra3zgPkugV0ENckVw/exec'
-            + '?type=' + encodeURIComponent(type)
-            + '&callback=' + callbackName
-            + '&_=' + Date.now();
+        const csvUrl = csvUrls[type];
 
-        script.onerror = function(err) {
-            console.error('Price table JSONP error:', err);
-            container.innerHTML = '<p class="yc-price-table-error">料金表を取得できませんでした。</p>';
+        if (!csvUrl) {
 
-            try {
-                delete window[callbackName];
-            } catch (_) {
-                window[callbackName] = undefined;
-            }
-        };
+            container.innerHTML =
+            '<p class="yc-price-table-error">CSV URLが設定されていません。</p>';
 
-        document.body.appendChild(script);
+            return;
+        }
+
+        container.innerHTML =
+        '<p class="yc-price-table-loading">読み込み中...</p>';
+
+        fetch(csvUrl)
+            .then(response => response.text())
+            .then(csv => {
+
+                Papa.parse(csv, {
+
+                    header: true,
+                    skipEmptyLines: true,
+
+                    complete: function(results) {
+
+                        const items = results.data;
+
+                        if (!items.length) {
+
+                            container.innerHTML =
+                            `<p class="yc-price-table-empty">${emptyMessage}</p>`;
+
+                            return;
+                        }
+
+                        const rowsHtml = items.map(item => `
+
+                            <tr>
+                                <td>${escapeHtml(item["分類"] || "")}</td>
+                                <td>${escapeHtml(item["作業内容"] || "")}</td>
+                                <td>${escapeHtml(item["価格（税込）"] || "")}</td>
+                                <td>${escapeHtml(item["備考"] || "")}</td>
+                            </tr>
+
+                        `).join('');
+
+                        container.innerHTML = `
+
+                            <div class="yc-price-table-wrap">
+
+                                <table class="${tableClass}">
+
+                                    <thead>
+                                        <tr>
+                                            <th>分類</th>
+                                            <th>作業内容</th>
+                                            <th>価格（税込）</th>
+                                            <th>備考</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        ${rowsHtml}
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        `;
+                    },
+
+                    error: function(err) {
+
+                        console.error(err);
+
+                        container.innerHTML =
+                        '<p class="yc-price-table-error">料金表を取得できませんでした。</p>';
+                    }
+                });
+            })
+            .catch(err => {
+
+                console.error(err);
+
+                container.innerHTML =
+                '<p class="yc-price-table-error">料金表を取得できませんでした。</p>';
+            });
     }
 
     function escapeHtml(str) {
