@@ -598,6 +598,13 @@
             'kazusa': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
                     <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
+
+                    <div class="yc-lang-switch">
+                        <a href="/about?p=kazusa" class="is-active">JP</a>
+                        <span>|</span>
+                        <a href="/about?p=kazusa-en">EN</a>
+                    </div>
+
                     <div class="yc-detail-head"><h1>GRAVEL GRINDER KAZUSA (上総)</h1></div>
 
                     <div class="yc-gallery" id="kazusaGallery">
@@ -656,9 +663,168 @@
                     </div>
                 </div>
             `,
+
+            'kazusa-en': `
+                <div class="yc-detail-wrapper yc-detail-wrapper-equal">
+                    <div class="yc-back-nav">
+                        <a href="/about" class="yc-back-btn">← BIKES</a>
+                    </div>
+                    <div class="yc-lang-switch">
+                        <a href="/about?p=kazusa">JP</a>
+                        <span>|</span>
+                        <a href="/about?p=kazusa-en" class="is-active">EN</a>
+                    </div>
+                    <div class="yc-detail-head">
+                        <h1>GRAVEL GRINDER KAZUSA</h1>
+                    </div>
+                    <div class="yc-gallery" id="kazusaGallery">
+                        <div class="yc-gallery-main">
+                            <div class="yc-gallery-main-track" id="kazusaTrack">
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdc7077de9/kazusa-001.jpg" alt="KAZUSA 01">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdc7c6c675/kazusa-002.jpg" alt="KAZUSA 02">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcbaa10e04a/kazusa-003.jpg" alt="KAZUSA 03">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdc894337e/kazusa-004.jpg" alt="KAZUSA 04">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdc94553f4/kazusa-005.jpg" alt="KAZUSA 05">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdc9e74378/kazusa-006.jpg" alt="KAZUSA 06">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdca7d3b84/kazusa-007.jpg" alt="KAZUSA 07">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdcb12df46/kazusa-008.jpg" alt="KAZUSA 08">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdcbcc0710/kazusa-009.jpg" alt="KAZUSA 09">
+                                </div>
+                                <div class="yc-gallery-main-slide">
+                                    <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dcdcc623b53/kazusa-010.jpg" alt="KAZUSA 10">
+                                </div>
+                            </div>
+                            <button class="yc-gallery-prev" id="kazusaPrev" type="button">&#10094;</button>
+                            <button class="yc-gallery-next" id="kazusaNext" type="button">&#10095;</button>
+                        </div>
+                        <div class="yc-gallery-dots" id="kazusaDots"></div>
+                        <div class="yc-gallery-thumbs" id="kazusaThumbs"></div>
+                    </div>
+                    <div class="yc-detail-main">
+                        <div class="yc-description-col">
+                            <h2>Model: KAZUSA</h2>
+                            <p>
+                                A gravel grinder designed for enjoying forest roads and gravel
+                                with an aggressive and playful riding style.
+                            </p>
+                            <h3>◆ 650 × 47B Road Plus Tires</h3>
+                            <p>
+                                Designed around the 650B Road Plus tire standard, which offers
+                                a generous air volume while remaining lightweight.
+                                This tire size provides excellent performance on a wide range
+                                of surfaces.
+                            </p>
+                            <h3>◆ Low Standover Height</h3>
+                            <p>
+                                The strongly sloping top tube provides generous clearance when
+                                you need to put a foot down unexpectedly on technical descents.
+                                It also helps prevent your knees from contacting the top tube
+                                when leaning the bike aggressively through corners.
+                            </p>
+                            <p>
+                                The low top tube helps riders take full advantage of the strong
+                                grip and confidence provided by Road Plus tires.
+                            </p>
+                            <h3>◆ Road Bike Handlebar Position</h3>
+                            <p>
+                                KAZUSA is not an MTB. It is designed as a road-bike-based
+                                gravel machine, optimized for the feel and control of a
+                                drop handlebar.
+                            </p>
+                            <h3>◆ Columbus ZONA Tubing</h3>
+                            <p>
+                                ZONA is a large-diameter tubing that remains supple rather
+                                than becoming excessively stiff.
+                                The frame's balanced flex improves traction and provides
+                                excellent feedback through a variety of corners.
+                            </p>
+                            <h3>◆ Dropper Post Compatible</h3>
+                            <p>
+                                With high-volume tires and suspension, descending speeds on
+                                forest roads can increase dramatically.
+                                A dropper post allows the rider to adjust body position and
+                                center of gravity effectively.
+                                KAZUSA supports internal routing for a dropper post.
+                            </p>
+                            <h3>◆ Long Front Center</h3>
+                            <p>
+                                The long front-center design provides excellent stability on
+                                descents and a confident, predictable feel when tracing
+                                through corners.
+                            </p>
+                        </div>
+                        <div class="yc-side-col">
+                            <div style="background: #f9f9f9; padding: 30px; position: sticky; top: 20px;">
+                                <h3 style="font-size:16px; color:#ED4700; margin-bottom:20px; font-weight:bold;">
+                                    Specifications
+                                </h3>
+                                <table class="yc-spec-table">
+                                    <tr>
+                                        <td>Tubing</td>
+                                        <td>Columbus ZONA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Front Fork</td>
+                                        <td>Columbus Carbon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brake</td>
+                                        <td>Disc Brake</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maximum Tire Size</td>
+                                        <td>650 × 50B / 27.5 × 2.0"</td>
+                                    </tr>
+                                </table>
+                                <div class="yc-price">
+                                    Price:
+                                    <span>¥285,000</span>
+                                    (¥313,500 incl. tax)
+                                </div>
+                                <a href="https://thebase.com/inquiry/yanagicycle-base-shop?" class="yc-btn yc-btn-orange" >
+                                    CONTACT US
+                                </a><br>
+                                <a
+                                    href="https://github.com/staedtler925-png/yc-assets/raw/main/docs/YANAGI_OrderForm_QUIET_JPN.docx"
+                                    class="yc-btn yc-btn-orange"
+                                    target="_blank"
+                                    style="margin-top:10px;"
+                                >
+                                    ORDER FORM (DOCX)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+
             'quiet-disc': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
                     <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
+
+                    <div class="yc-lang-switch">
+                        <a href="/about?p=quiet-disc" class="is-active">JP</a>
+                        <span>|</span>
+                        <a href="/about?p=quiet-disc-en">EN</a>
+                    </div>
+
                     <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET Disc</h1></div>
 
                     <div class="yc-gallery" id="quietDiscGallery">
@@ -724,10 +890,166 @@
                         </div>
                     </div>
                 </div>
+                `,
+
+            'quiet-disc-en': ` <div class="yc-detail-wrapper yc-detail-wrapper-equal">
+
+                <div class="yc-back-nav">
+                    <a href="/about" class="yc-back-btn">← BIKES</a>
+                </div>
+                <div class="yc-lang-switch">
+                    <a href="/about?p=quiet-disc">JP</a>
+                    <span>|</span>
+                    <a href="/about?p=quiet-disc-en" class="is-active">EN</a>
+                </div>
+                <div class="yc-detail-head">
+                    <h1>ALL ROAD BIKE QUIET Disc</h1>
+                </div>
+                <div class="yc-gallery" id="quietDiscGallery">
+                    <div class="yc-gallery-main">
+                        <div class="yc-gallery-main-track" id="quietTrack">
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6be3dc14/quiet-disc-001.jpg" alt="QUIET Disc 01"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6cb65f88/quiet-disc-002.jpg" alt="QUIET Disc 02"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6d5a5d08/quiet-disc-003.jpg" alt="QUIET Disc 03"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6deb8e42/quiet-disc-004.jpg" alt="QUIET Disc 04"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6e8e1ff4/quiet-disc-005.jpg" alt="QUIET Disc 05"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6f2dd773/quiet-disc-006.jpg" alt="QUIET Disc 06"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce6fcbeb72/quiet-disc-007.jpg" alt="QUIET Disc 07"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce70647cac/quiet-disc-008.jpg" alt="QUIET Disc 08"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce70fe8817/quiet-disc-009.jpg" alt="QUIET Disc 09"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce71b3ea5a/quiet-disc-010.jpg" alt="QUIET Disc 10"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce7292b4b3/quiet-disc-011.jpg" alt="QUIET Disc 11"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dce73ac2dee/quiet-disc-012.jpg" alt="QUIET Disc 12"></div>
+                        </div>
+                        <button class="yc-gallery-prev" id="quietPrev" type="button">&#10094;</button>
+                        <button class="yc-gallery-next" id="quietNext" type="button">&#10095;</button>
+                    </div>
+                    <div class="yc-gallery-dots" id="quietDots"></div>
+                    <div class="yc-gallery-thumbs" id="quietThumbs"></div>
+                </div>
+                <div class="yc-detail-main">
+                    <div class="yc-description-col">
+                        <h2>Model: QUIET Disc</h2>
+                        <p>
+                            YANAGI QUIET Disc is a minimal all-road bike designed around
+                            700 × 30–35C tires.
+                        </p>
+                        <h3>◆ Ideal Frame Stiffness for Touring</h3>
+                        <p>
+                            Slim TANGE CHAMPION No.2 tubing combined with a 1 1/8"
+                            straight-steerer carbon fork provides comfort for
+                            long-distance riding while maintaining sufficient stiffness
+                            and responsiveness.
+                        </p>
+                        <p>
+                            The bike offers enough strength and resilience for riders who
+                            enjoy covering long distances at a steady pace.
+                        </p>
+                        <h3>◆ Long Wheelbase and Low Center of Gravity</h3>
+                        <p>
+                            A slightly longer wheelbase than a conventional road bike and
+                            a lower bottom bracket provide excellent straight-line
+                            stability and smooth, predictable cornering.
+                        </p>
+                        <h3>◆ The Right Tire Volume</h3>
+                        <p>
+                            Tires around 700 × 32C provide a good balance between
+                            efficiency and comfort, allowing riders to cover long
+                            distances with confidence even when fatigue begins to set in.
+                        </p>
+                        <p>
+                            Enjoy a simple and solid riding experience.
+                        </p>
+                        <h3>◆ Choose Your Own Color</h3>
+                        <p>
+                            The frame can be painted in the color of your choice.
+                        </p>
+                    </div>
+                    <div class="yc-side-col">
+                        <div style="background: #f9f9f9; padding: 30px;">
+                            <h3 style="font-size:16px; color:#ED4700; margin-bottom:20px; font-weight:bold;">
+                                Specifications
+                            </h3>
+                            <table class="yc-spec-table">
+                                <tr>
+                                    <td>Tubing</td>
+                                    <td>TANGE Champion No.2</td>
+                                </tr>
+                                <tr>
+                                    <td>Brake</td>
+                                    <td>Flat Mount Disc</td>
+                                </tr>
+                                <tr>
+                                    <td>Recommended Tire Size</td>
+                                    <td>700 × 30–35C</td>
+                                </tr>
+                                <tr>
+                                    <td>Headset</td>
+                                    <td>EC34</td>
+                                </tr>
+                                <tr>
+                                    <td>Seatpost Diameter</td>
+                                    <td>27.2 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Derailleur Clamp</td>
+                                    <td>28.6 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Wheel Fixing</td>
+                                    <td>12 mm Thru Axle</td>
+                                </tr>
+                                <tr>
+                                    <td>Bottom Bracket</td>
+                                    <td>68 mm JIS</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Fork</td>
+                                    <td>Carbon (1 1/8")</td>
+                                </tr>
+                            </table>
+                            <p style="font-weight: bold; margin-bottom:5px;">
+                                Frame & Fork Set (including single-color paint)
+                            </p>
+                            <div class="yc-price">
+                                Price: <span>¥265,500</span>
+                                (¥291,500 incl. tax)
+                            </div>
+                            <a href="https://thebase.com/inquiry/yanagicycle-base-shop?"
+                            class="yc-btn yc-btn-orange">
+                                CONTACT US
+                            </a>
+                            <p style="font-size: 22px; font-weight: bold; margin-top:20px;">
+                                Orders can also be placed through our dealer.<br>
+                                <a href="https://cyclotech.net/wp/"
+                                target="_blank"
+                                style="font-weight: bold; color: #008AFC;">
+                                    Cyclotech Ichikawa (Yamaguchi, Japan)
+                                </a>
+                            </p>
+                            <h3 style="font-size:16px; color:#ED4700; margin-top:30px; margin-bottom:15px; font-weight:bold;">
+                                Geometry (Click to enlarge)
+                            </h3>
+                            <img id="quietGeoImg"
+                                src="https://basefile.akamaized.net/yanagicycle-base-shop/69dced2e09f8d/quiet-disc-013.jpg"
+                                alt="QUIET Disc Geometry"
+                                style="width: 100%; cursor: pointer; border: 1px solid #ddd;">
+                        </div>
+                    </div>
+                </div>
+            </div>
             `,
+
             'quiet-mud': `
                 <div class="yc-detail-wrapper yc-detail-wrapper-equal">
                     <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
+
+                    <div class="yc-lang-switch">
+                        <a href="/about?p=quiet-mud" class="is-active">JP</a>
+                        <span>|</span>
+                        <a href="/about?p=quiet-mud-en">EN</a>
+                    </div>
+
                     <div class="yc-detail-head"><h1>ALL ROAD BIKE QUIET</h1></div>
 
                     <div class="yc-gallery" id="quietMudGallery">
@@ -805,6 +1127,187 @@
                     </div>
                 </div>
             `,
+
+            'quiet-mud-en': ` <div class="yc-detail-wrapper yc-detail-wrapper-equal">
+                <div class="yc-back-nav">
+                    <a href="/about" class="yc-back-btn">← BIKES</a>
+                </div>
+                <div class="yc-lang-switch">
+                    <a href="/about?p=quiet-mud">JP</a>
+                    <span>|</span>
+                    <a href="/about?p=quiet-mud-en" class="is-active">EN</a>
+                </div>
+                <div class="yc-detail-head">
+                    <h1>ALL ROAD BIKE QUIET</h1>
+                </div>
+                <div class="yc-gallery" id="quietMudGallery">
+                    <div class="yc-gallery-main">
+                        <div class="yc-gallery-main-track" id="quietTrack">
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd976ee1b42/quiet-mud-001.jpg" alt="QUIET Mud 01"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd977f9e4c1/quiet-mud-002.jpg" alt="QUIET Mud 02"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd978c13c6b/quiet-mud-003.jpg" alt="QUIET Mud 03"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd979750bde/quiet-mud-004.jpg" alt="QUIET Mud 04"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97a1f2932/quiet-mud-005.jpg" alt="QUIET Mud 05"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97ae642d7/quiet-mud-006.jpg" alt="QUIET Mud 06"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97bcc6179/quiet-mud-007.jpg" alt="QUIET Mud 07"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97c75e58a/quiet-mud-008.jpg" alt="QUIET Mud 08"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97d2f01ca/quiet-mud-009.jpg" alt="QUIET Mud 09"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97e053228/quiet-mud-010.jpg" alt="QUIET Mud 10"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97ea35072/quiet-mud-011.jpg" alt="QUIET Mud 11"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97f4202e6/quiet-mud-012.jpg" alt="QUIET Mud 12"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd97fe85bb5/quiet-mud-013.jpg" alt="QUIET Mud 13"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd9807ecb2a/quiet-mud-014.jpg" alt="QUIET Mud 14"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd981312a2b/quiet-mud-015.jpg" alt="QUIET Mud 15"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd98204ae73/quiet-mud-016.jpg" alt="QUIET Mud 16"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd9830d4810/quiet-mud-017.jpg" alt="QUIET Mud 17"></div>
+                            <div class="yc-gallery-main-slide"><img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd983bba4fb/quiet-mud-018.jpg" alt="QUIET Mud 18"></div>
+                        </div>
+                        <button class="yc-gallery-prev" id="quietPrev" type="button">&#10094;</button>
+                        <button class="yc-gallery-next" id="quietNext" type="button">&#10095;</button>
+                    </div>
+                    <div class="yc-gallery-dots" id="quietDots"></div>
+                    <div class="yc-gallery-thumbs" id="quietThumbs"></div>
+                </div>
+                <div class="yc-detail-main">
+                    <div class="yc-description-col">
+                        <h2>Model: QUIET</h2>
+                        <p>
+                            YANAGI QUIET is an all-road bike designed around
+                            700 × 30–35C tires.
+                        </p>
+                        <p>
+                            Full fenders can be fitted, giving the bike a classic,
+                            sportive appearance. Choosing routes that go one step beyond
+                            ordinary road touring can add a new depth to your cycling.
+                        </p>
+                        <h3>◆ Ideal Frame Stiffness for Touring</h3>
+                        <p>
+                            Slim TANGE CHAMPION No.2 tubing combined with a
+                            1" threadless-steerer fork provides a comfortable balance
+                            of compliance and stiffness.
+                        </p>
+                        <p>
+                            Excessive stiffness has been avoided to reduce fatigue on
+                            long-distance rides. The frame remains composed on slightly
+                            rough roads while still offering sufficient stiffness and
+                            resilience when you put power into the pedals.
+                        </p>
+                        <h3>◆ Long Wheelbase and Low Center of Gravity</h3>
+                        <p>
+                            A slightly longer wheelbase than a conventional road bike
+                            and a low bottom bracket provide excellent straight-line
+                            stability and smooth, predictable handling through corners.
+                        </p>
+                        <h3>◆ The Right Tire Volume</h3>
+                        <p>
+                            We believe that tires around 700 × 32C offer an ideal
+                            balance for long-distance riding.
+                        </p>
+                        <p>
+                            The frame is designed with sufficient clearance for
+                            700 × 30–35C tires. Rather than accommodating extremely
+                            wide gravel tires, it focuses on an efficient and practical
+                            tire size for all-road touring.
+                        </p>
+                        <h3>◆ Cantilever and Mini V-Brakes</h3>
+                        <p>
+                            Simple and reliable rim brakes provide excellent control
+                            with minimal maintenance.
+                        </p>
+                        <p>
+                            Cantilever brakes provide sufficient stopping power while
+                            helping maintain the supple ride quality that makes the frame
+                            comfortable for long-distance cycling.
+                        </p>
+                        <h3>◆ Choose Your Own Color</h3>
+                        <p>
+                            The frame can be painted in the color of your choice.
+                        </p>
+                    </div>
+                    <div class="yc-side-col">
+                        <div style="background: #f9f9f9; padding: 30px;">
+                            <h3 style="font-size:16px; color:#ED4700; margin-bottom:20px; font-weight:bold;">
+                                Specifications
+                            </h3>
+                            <table class="yc-spec-table">
+                                <tr>
+                                    <td>Tubing</td>
+                                    <td>TANGE Champion No.2</td>
+                                </tr>
+                                <tr>
+                                    <td>Brake</td>
+                                    <td>Cantilever Brake / V-Brake</td>
+                                </tr>
+                                <tr>
+                                    <td>Recommended Tire Size</td>
+                                    <td>700 × 30–35C</td>
+                                </tr>
+                                <tr>
+                                    <td>Headset</td>
+                                    <td>EC30</td>
+                                </tr>
+                                <tr>
+                                    <td>Seatpost Diameter</td>
+                                    <td>27.2 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Derailleur Clamp</td>
+                                    <td>28.6 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Wheel Fixing</td>
+                                    <td>9 mm / 10 mm Quick Release</td>
+                                </tr>
+                                <tr>
+                                    <td>Bottom Bracket</td>
+                                    <td>68 mm JIS</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Fork</td>
+                                    <td>1" A-Head Chromoly Fork</td>
+                                </tr>
+                            </table>
+                            <p style="font-weight: bold; margin-bottom:5px;">
+                                Frame & Fork Set (including single-color paint)
+                            </p>
+                            <div class="yc-price">
+                                Price: <span>¥255,000</span>
+                                (¥280,500 incl. tax)
+                            </div>
+                            <p style="font-weight: bold; margin-bottom:5px;">
+                                Frame, Fork & Front Rack Set<br>
+                                (including chrome plating and single-color paint)
+                            </p>
+                            <div class="yc-price">
+                                Price: <span>¥280,000</span>
+                                (¥308,000 incl. tax)
+                            </div>
+                            <a href="https://thebase.com/inquiry/yanagicycle-base-shop?"
+                            class="yc-btn yc-btn-orange">
+                                CONTACT US
+                            </a>
+                            <p style="font-size: 22px; font-weight: bold; margin-top:20px;">
+                                We have a test bike at our shop.<br>
+                                Please feel free to come and try it!
+                            </p>
+                            <img src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd9abc477e1/quiet-mud-020.jpg"
+                                alt="QUIET Mud Test Bike"
+                                style="width: 100%; border: 1px solid #ddd;">
+                            <br>
+                            <h3 style="font-size:16px; color:#ED4700; margin-top:30px; margin-bottom:15px; font-weight:bold;">
+                                Geometry (Click to enlarge)
+                            </h3>
+                            <img id="quietGeoImg"
+                                src="https://basefile.akamaized.net/yanagicycle-base-shop/69dd9a692dc39/quiet-mud-019.jpg"
+                                alt="QUIET Geometry"
+                                style="width: 100%; cursor: pointer; border: 1px solid #ddd;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `,
+
+
             'custom': `
                 <div class="yc-custom-wrapper">
                     <div class="yc-back-nav"><a href="/about" class="yc-back-btn">← BIKES</a></div>
@@ -1553,9 +2056,18 @@
         } else if (pageKey && pages[pageKey]) {
             root.innerHTML = pages[pageKey];
 
-            if (pageKey === 'kazusa') initKazusaGallery();
-            if (pageKey === 'quiet-disc') initQuietGallery();
-            if (pageKey === 'quiet-mud') initQuietMudGallery();
+            if (pageKey === 'kazusa' || pageKey === 'kazusa-en') {
+                initKazusaGallery();
+            }
+
+            if (pageKey === 'quiet-disc' || pageKey === 'quiet-disc-en') {
+                initQuietGallery();
+            }
+
+            if (pageKey === 'quiet-mud' || pageKey === 'quiet-mud-en') {
+                initQuietMudGallery();
+            }
+
             if (pageKey === 'price-mod-frame') {
                 loadPriceTable({
                     containerSelector: '#yc-frame-price-table',
