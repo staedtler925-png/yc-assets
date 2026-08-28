@@ -2161,3 +2161,36 @@ body.shop #mainHeader {
         padding-bottom: 0 !important;
     }
 }
+
+/* ==============================
+   Language Switch
+============================== */
+
+.yc-lang-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 20px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+.yc-lang-switch a {
+    color: #777;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.yc-lang-switch a:hover {
+    opacity: 0.6;
+}
+
+.yc-lang-switch a.is-active {
+    color: #ED4700;
+    font-weight: bold;
+}
+
+.yc-lang-switch span {
+    color: #ccc;
+}
