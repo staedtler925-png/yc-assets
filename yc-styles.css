@@ -2171,7 +2171,7 @@ body.shop #mainHeader {
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
-    margin: 0 0 20px;
+    margin: 0 20px 20px 0;
     font-size: 13px;
     letter-spacing: 0.08em;
 }
